@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "x+RBo3DlmLw9IcchHUCpCBap0tunRA+C7fJYz951jO5PkJE/ZPIxjZUxgHRQ021d+MrNwTSZTf03nhnrZiv40g==",
+  "dgSpecHash": "iN2V/V7mMkOd2EM3K7wJ0NQHCGKaVWmpcuGK1GGQmVwMW1j5e3bVip4VJNh3uov7CrVALDJ0y5Xl7bl4/LfYDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\GrpcClient\\GrpcClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\catal\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
+    "C:\\Users\\catal\\.nuget\\packages\\grpc.tools\\2.50.0\\grpc.tools.2.50.0.nupkg.sha512"
+  ],
   "logs": []
 }

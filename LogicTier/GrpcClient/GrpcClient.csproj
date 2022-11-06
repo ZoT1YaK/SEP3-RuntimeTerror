@@ -11,4 +11,18 @@
       <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="..\..\DataTier\DataAccess\src\main\proto\protobuf.proto">
+        <Link>proto\protobuf.proto</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.21.9" />
+      <PackageReference Include="Grpc.Tools" Version="2.50.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
 </Project>
