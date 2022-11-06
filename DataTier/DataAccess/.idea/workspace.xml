@@ -26,7 +26,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/VIA_SEP/SEP3/SEP3-RuntimeTerror"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667754575488</updated>
       <workItem from="1667754576741" duration="244000" />
+      <workItem from="1667755517812" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="T2 commit">
       <created>1667754724100</created>
