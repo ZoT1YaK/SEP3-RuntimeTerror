@@ -10,7 +10,12 @@ public class UserDao : IUserDAO
         throw new NotImplementedException();
     }
 
-    public Task<User?> GetByUsernameAsync(string userName)
+    public Task<UserCreationDTO> CreateUserAsync(Shared.DTOs.User user)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Shared.DTOs.User?> GetByUsernameAsync(string userName)
     {
         throw new NotImplementedException();
     }
