@@ -20,11 +20,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddGrpcClient<UserService.UserServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:8084");
+    o.Address = new Uri("http://localhost:7129");
 });
-// builder.Services.AddScoped<FileContext>();
 builder.Services.AddScoped<IUserDAO, UserDao>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {

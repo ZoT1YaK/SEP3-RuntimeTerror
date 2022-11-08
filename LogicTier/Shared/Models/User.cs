@@ -1,4 +1,4 @@
-namespace Shared.DTOs;
+namespace Shared.Models;
 
 public class User
 {
