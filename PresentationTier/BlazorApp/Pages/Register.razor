@@ -1,0 +1,43 @@
+﻿@page "/Register"
+
+<div class="">
+    <h3>Register</h3>
+    <form>
+        <label for="username">User name:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname">
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+        <label for="type">Password:</label><br>
+        <input type="text" id="type" name="type">
+    </form>
+</div>
+
+@code {
+    private string userName;
+    private string password;
+    private string fName;
+    private string lName;
+    private string type;
+
+    private async Task Create()
+    {
+        resultMsg = "";
+
+        try
+        {
+            await UserService.Create(new UserCreationDto(username));
+            username = "";
+            resultMsg = "User successfully created";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            resultMsg = e.Message;
+        }
+    }
+
+}
