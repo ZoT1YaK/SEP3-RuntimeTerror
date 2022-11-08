@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\HttpClient\HttpClient.csproj" />
+        <ProjectReference Include="..\HttpClients\HttpClients.csproj" />
     </ItemGroup>
 
     <ItemGroup>
