@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj": {}
+    "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj": {}
   },
   "projects": {
-    "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj": {
+    "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj",
+        "projectUniqueName": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj",
         "projectName": "BlazorApp",
-        "projectPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj",
-        "packagesPath": "C:\\Users\\catal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\obj\\",
+        "projectPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj",
+        "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\catal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -25,7 +28,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj": {
+                "projectPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -37,6 +44,21 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[6.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,21 +78,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj": {
+    "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
+        "projectUniqueName": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
         "projectName": "HttpClients",
-        "projectPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
-        "packagesPath": "C:\\Users\\catal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\obj\\",
+        "projectPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
+        "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\catal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -82,8 +107,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj": {
-                "projectPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj"
+              "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj": {
+                "projectPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj"
               }
             }
           }
@@ -113,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

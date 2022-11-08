@@ -5,9 +5,10 @@ using HttpClients.ClientInterfaces;
 using Shared.DTOs;
 using Shared.Models;
 
+
 namespace HttpClients.ClientImpl;
 
-public class UserHttpClient
+public class UserHttpClient : IUserService
 {
     private readonly HttpClient Client;
     public static string? Jwt { get; private set; } = "";

@@ -1,4 +1,8 @@
-﻿@page "/Register"
+﻿@inject IUserService UserService
+@page "/Register"
+@using HttpClients.ClientInterfaces
+@using global::Shared.DTOs
+@using
 
 <div class="">
     <h3>Register</h3>
@@ -25,12 +29,12 @@
 
     private async Task Create()
     {
-        resultMsg = "";
+        var resultMsg = "";
 
         try
         {
             await UserService.Create(new UserCreationDto(username));
-            username = "";
+            var username = "";
             resultMsg = "User successfully created";
         }
         catch (Exception e)
@@ -38,6 +42,15 @@
             Console.WriteLine(e);
             resultMsg = e.Message;
         }
+
+        var userCreationDto = new UserCreationDto
+        {
+            
+        };
+
+        await UserService.Create(userCreationDto);
     }
+    
+    
 
 }
