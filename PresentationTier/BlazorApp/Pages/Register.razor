@@ -2,7 +2,7 @@
 @page "/Register"
 @using HttpClients.ClientInterfaces
 @using global::Shared.DTOs
-@using
+
 
 <div class="">
     <h3>Register</h3>
@@ -26,31 +26,53 @@
     private string fName;
     private string lName;
     private string type;
+    private int credits;
+
+    // private async Task Create()
+    // {
+    //     var resultMsg = "";
+    //
+    //     try
+    //     {
+    //         await UserService.Create(new UserCreationDto(username));
+    //         var username = "";
+    //         resultMsg = "User successfully created";
+    //     }
+    //     catch (Exception e)
+    //     {
+    //         Console.WriteLine(e);
+    //         resultMsg = e.Message;
+    //     }
+    //
+    //     var userCreationDto = new UserCreationDto
+    //     {
+    //         
+    //     };
+    //
+    //     await UserService.Create(userCreationDto);
+    // }
 
     private async Task Create()
     {
-        var resultMsg = "";
 
         try
         {
-            await UserService.Create(new UserCreationDto(username));
-            var username = "";
-            resultMsg = "User successfully created";
+            UserCreationDTO dto = new();
+            dto.password = password;
+            dto.userName = userName;
+            dto.Credits = credits;
+            dto.FirstName = fName;
+            dto.LastName = lName;
+            dto.type = type;
+
+        await UserService.CreateAsync(dto);
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            resultMsg = e.Message;
+            throw;
         }
-
-        var userCreationDto = new UserCreationDto
-        {
-            
-        };
-
-        await UserService.Create(userCreationDto);
     }
-    
     
 
 }

@@ -18,4 +18,7 @@ public class UserCreationDTO
         Credits = 0;
         this.type = type;
     }
+
+    public UserCreationDTO() { }
+    
 }

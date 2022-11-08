@@ -408,6 +408,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClient\\HttpClient.csproj": "1.0.0",
           "HttpClients": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.8",
           "MudBlazor": "6.0.17"
@@ -1095,23 +1096,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\diana\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\catal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
+      "projectUniqueName": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
       "projectName": "HttpClients",
-      "projectPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
-      "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\obj\\",
+      "projectPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\HttpClients.csproj",
+      "packagesPath": "C:\\Users\\catal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClients\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\catal\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1123,8 +1120,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj": {
-              "projectPath": "C:\\Users\\diana\\RiderProjects\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj"
+            "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj": {
+              "projectPath": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\BlazorApp\\BlazorApp.csproj"
             }
           }
         }
@@ -1154,11 +1151,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClient\\HttpClient.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\catal\\Desktop\\SEP3\\SEP3-RuntimeTerror\\PresentationTier\\HttpClient\\HttpClient.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
     {
       "code": "NU1108",
       "level": "Error",
