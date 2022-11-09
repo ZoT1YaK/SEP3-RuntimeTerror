@@ -15,24 +15,33 @@ public class UserLogic : IUserLogic
         this.userDao = userDao;
     }
     
-    public async Task<UserCreationDTO> CreateUserAsync(UserCreationDTO dto)
+    public async Task<User> CreateUserAsync(UserCreationDTO dto)
     {
-        User? existing = await userDao.GetByUsernameAsync(dto.userName);
-        if (existing != null)
-            throw new Exception("Username already taken!");
+        // User? existing = await userDao.GetByUsernameAsync(dto.userName);
+        // if (existing != null)
+        //     throw new Exception("Username already taken!");
 
         ValidateData(dto);
-        User toCreate = new User(dto.userName, dto.password, dto.FirstName, dto.LastName, dto.Credits, dto.type);
 
-        UserCreationDTO created = await userDao.CreateUserAsync(toCreate);
+        User user = new User
+        {
+            userName = dto.userName,
+            password = dto.password,
+            FirstName = dto.FirstName,
+            LastName = dto.LastName,
+            Credits = dto.Credits,
+            type = dto.type
+        };
+
+        await userDao.CreateUserAsync(user);
     
-        return created;
+        return user;
     }
 
-    public async Task<UserCreationDTO> LogIn(string username, string password)
+    /*public async Task<UserCreationDTO> LogIn(string username, string password)
     {
         throw new NotImplementedException();
-    }
+    }*/
     
     private static void ValidateData(UserCreationDTO user)
     {

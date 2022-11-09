@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddGrpcClient<UserService.UserServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:7129");
+    o.Address = new Uri("http://localhost:8084");
 });
 builder.Services.AddScoped<IUserDAO, UserDao>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
@@ -43,14 +43,9 @@ builder.Services.AddScoped<IUserLogic, UserLogic>();
 
 var app = builder.Build();
 
-app.UseAuthentication();
+/*app.UseAuthentication();*/
 
-//Configure CORS
-app.UseCors(x => x
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .SetIsOriginAllowed(origin => true)
-    .AllowCredentials());
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -64,5 +59,12 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//Configure CORS
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
 
 app.Run();

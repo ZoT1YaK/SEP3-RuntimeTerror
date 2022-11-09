@@ -11,7 +11,7 @@ public class GrpcServer
         FileContext context = new FileContext();
 
         Server server = ServerBuilder
-                .forPort(8070)
+                .forPort(8084)
                 .addService(new UserServiceImpl(context))
                 .build();
 

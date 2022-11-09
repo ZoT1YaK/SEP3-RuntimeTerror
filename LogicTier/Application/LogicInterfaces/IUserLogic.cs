@@ -1,9 +1,10 @@
 ﻿using Shared.DTOs;
+using Shared.Models;
 
 namespace Application.LogicInterfaces;
 
 public interface IUserLogic
 {
-     Task<UserCreationDTO> CreateUserAsync(UserCreationDTO userToCreate);
-    Task<UserCreationDTO> LogIn(string username, string password);
+     Task<User> CreateUserAsync(UserCreationDTO userToCreate);
+    // Task<UserCreationDTO> LogIn(string username, string password);
 }

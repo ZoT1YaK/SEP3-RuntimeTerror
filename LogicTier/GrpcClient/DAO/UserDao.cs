@@ -13,7 +13,7 @@ public class UserDao : IUserDAO
         this.userServiceClient = userServiceClient;
     }
 
-    public async Task<UserCreationDTO> CreateUserAsync(Shared.Models.User user)
+    public async Task CreateUserAsync(Shared.Models.User user)
     {
         var userToCreate = new User
         {
@@ -25,12 +25,7 @@ public class UserDao : IUserDAO
             Type = user.type
         };
 
-        var userCreationDTO = new UserCreationDTO(user.userName, user.password, user.FirstName, user.LastName,
-            user.Credits, user.type);
-
-        await userServiceClient.CreateUserAsync(userToCreate);
-
-        return userCreationDTO;
+        _ = await userServiceClient.CreateUserAsync(userToCreate);
     }
 
     public Task<Shared.Models.User?> GetByUsernameAsync(string userName)

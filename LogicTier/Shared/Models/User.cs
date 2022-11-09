@@ -18,4 +18,9 @@ public class User
         Credits = credits;
         this.type = type;
     }
+
+    public User()
+    {
+        
+    }
 }
