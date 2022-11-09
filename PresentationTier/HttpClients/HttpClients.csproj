@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <RootNamespace>HttpClients</RootNamespace>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <Reference Include="Shared">
             <HintPath>..\..\LogicTier\Shared\bin\Debug\net6.0\Shared.dll</HintPath>

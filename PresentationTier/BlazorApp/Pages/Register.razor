@@ -1,5 +1,5 @@
-﻿@inject IUserService UserService
-@page "/Register"
+﻿@page "/Register"
+@inject IUserService UserService
 @using HttpClients.ClientInterfaces
 @using global::Shared.DTOs
 
@@ -15,7 +15,9 @@
         <input type="text" id="fname" name="fname">
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname">
-        <label for="type">Password:</label><br>
+        <label for="credits">Credits:</label><br>
+        <input type="text" id="credits" name="credits">
+        <label for="type">Type:</label><br>
         <input type="text" id="type" name="type">
     </form>
 </div>
@@ -54,15 +56,15 @@
 
     private async Task Create()
     {
-
+        
         try
         {
             UserCreationDTO dto = new();
-            dto.password = password;
             dto.userName = userName;
-            dto.Credits = credits;
+            dto.password = password;
             dto.FirstName = fName;
             dto.LastName = lName;
+            dto.Credits = credits;
             dto.type = type;
 
         await UserService.CreateAsync(dto);
