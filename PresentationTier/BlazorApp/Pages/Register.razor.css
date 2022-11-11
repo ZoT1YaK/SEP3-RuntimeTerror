@@ -1,0 +1,66 @@
+﻿.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(180deg, rgba(199, 249, 204, 1) 0%,
+    rgba(128, 237, 153, 1) 21.88%,
+    rgba(87, 204, 153, 1) 45.31%,
+    rgba(56, 163, 165, 1) 68.23%,
+    rgba(34, 87, 122, 1) 100%);
+}
+
+.flex-container{
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.regButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    display: inline-block;
+    margin-top: 2.255%;
+    margin-left: 33%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+input{
+    background: rgb(255, 255, 255, 0.05);
+    border: #FFFFFF;
+}
+
+.name{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 170px;
+    color: #FFFFFF;
+}
+
+.regBox{
+    width: 775px;
+    height: 270px;
+    background: rgba(0, 0, 0, 0.13);
+    border-radius: 76px;
+}
+
+.regButton{
+    width: 124px;
+    height: 39px;
+    background: #213740;
+    border-radius: 11px;
+    color: #FFFFFF;
+    border: #213740;
+    font-family: 'Courier New', Courier, monospace;
+}

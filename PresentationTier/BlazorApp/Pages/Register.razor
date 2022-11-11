@@ -4,25 +4,21 @@
 @using global::Shared.DTOs
 
 
-<div class="">
-    <h3>Register</h3>
-    <div>
-        <label>User name:</label><br>
-        <input type="text" @bind="userName" required="required"><br>
-        <label>Password:</label><br>
-        <input type="text" @bind="password" required="required" ><br>
-        <label>First name:</label><br>
-        <input type="text" @bind="fName" required="required"><br>
-        <label>Last name:</label><br>
-        <input type="text" @bind="lName" required="required"><br>
-        <label>Credits:</label><br>
-        <input type="text" @bind="credits" required="required"><br>
-        <label>Type:</label><br>
-        <input type="text" @bind="type" required="required"><br>
+<div class="background">
+        <div class="flex-container">
+            <div class="name">REVERSO</div>
+            <div class="regBox">
+                <form>
+                    <label for="username">Username:</label><input type="text" id="username" name="username"><br>
+                    <label for="password">Password:</label><input type="text" id="password" name="password"><br>
+                    <label for="fname">First name:</label><input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><input type="text" id="lname" name="lname"><br>
+                    <label for="type">Type:</label><input type="text" id="type" name="type">
+                </form><br>
+                <button class="regButton" type="button">Register</button>
+            </div>
+        </div>
     </div>
-    <br/><br/>
-    <input type="submit" value="Register" class="button btn-success" onclick="@Create"/>
-</div>
 
 @code {
     private string userName;
