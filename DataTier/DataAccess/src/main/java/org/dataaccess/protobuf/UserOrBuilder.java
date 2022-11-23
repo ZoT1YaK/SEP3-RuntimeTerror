@@ -8,66 +8,72 @@ public interface UserOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string username = 1;</code>
+   * <code>int64 id = 1;</code>
+   * @return The id.
+   */
+  long getId();
+
+  /**
+   * <code>string username = 2;</code>
    * @return The username.
    */
   java.lang.String getUsername();
   /**
-   * <code>string username = 1;</code>
+   * <code>string username = 2;</code>
    * @return The bytes for username.
    */
   com.google.protobuf.ByteString
       getUsernameBytes();
 
   /**
-   * <code>string password = 2;</code>
+   * <code>string password = 3;</code>
    * @return The password.
    */
   java.lang.String getPassword();
   /**
-   * <code>string password = 2;</code>
+   * <code>string password = 3;</code>
    * @return The bytes for password.
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
 
   /**
-   * <code>string f_name = 3;</code>
+   * <code>string f_name = 4;</code>
    * @return The fName.
    */
   java.lang.String getFName();
   /**
-   * <code>string f_name = 3;</code>
+   * <code>string f_name = 4;</code>
    * @return The bytes for fName.
    */
   com.google.protobuf.ByteString
       getFNameBytes();
 
   /**
-   * <code>string l_name = 4;</code>
+   * <code>string l_name = 5;</code>
    * @return The lName.
    */
   java.lang.String getLName();
   /**
-   * <code>string l_name = 4;</code>
+   * <code>string l_name = 5;</code>
    * @return The bytes for lName.
    */
   com.google.protobuf.ByteString
       getLNameBytes();
 
   /**
-   * <code>int32 credits = 5;</code>
+   * <code>int32 credits = 6;</code>
    * @return The credits.
    */
   int getCredits();
 
   /**
-   * <code>string type = 6;</code>
+   * <code>string type = 7;</code>
    * @return The type.
    */
   java.lang.String getType();
   /**
-   * <code>string type = 6;</code>
+   * <code>string type = 7;</code>
    * @return The bytes for type.
    */
   com.google.protobuf.ByteString

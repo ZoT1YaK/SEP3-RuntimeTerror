@@ -4,11 +4,21 @@ option java_multiple_files = true;
 option java_package = "org.dataaccess.protobuf";
 
 service UserService{
-  rpc CreateUser(User) returns (User);
-  rpc GetUsers(Void) returns (UsersExist);
+  rpc CreateUser(RegisterUser) returns (User);
+  rpc LoginUsers(LoginUser) returns (User);
 }
 
 message User{
+  int64 id = 1;
+  string username = 2;
+  string password = 3;
+  string f_name = 4;
+  string l_name = 5;
+  int32 credits = 6;
+  string type = 7;
+}
+
+message RegisterUser{
   string username = 1;
   string password = 2;
   string f_name = 3;
@@ -17,10 +27,7 @@ message User{
   string type = 6;
 }
 
-message UsersExist{
-  repeated User users = 1;
-}
-
-message Void{
-
+message LoginUser{
+  string username = 1;
+  string password = 2;
 }

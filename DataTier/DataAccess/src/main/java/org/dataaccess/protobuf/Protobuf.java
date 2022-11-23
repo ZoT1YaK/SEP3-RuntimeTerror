@@ -20,15 +20,15 @@ public final class Protobuf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_User_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_UsersExist_descriptor;
+    internal_static_RegisterUser_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_UsersExist_fieldAccessorTable;
+      internal_static_RegisterUser_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Void_descriptor;
+    internal_static_LoginUser_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Void_fieldAccessorTable;
+      internal_static_LoginUser_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,13 +38,17 @@ public final class Protobuf {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016protobuf.proto\"i\n\004User\022\020\n\010username\030\001 \001" +
-      "(\t\022\020\n\010password\030\002 \001(\t\022\016\n\006f_name\030\003 \001(\t\022\016\n\006" +
-      "l_name\030\004 \001(\t\022\017\n\007credits\030\005 \001(\005\022\014\n\004type\030\006 " +
-      "\001(\t\"\"\n\nUsersExist\022\024\n\005users\030\001 \003(\0132\005.User\"" +
-      "\006\n\004Void2I\n\013UserService\022\032\n\nCreateUser\022\005.U" +
-      "ser\032\005.User\022\036\n\010GetUsers\022\005.Void\032\013.UsersExi" +
-      "stB\033\n\027org.dataaccess.protobufP\001b\006proto3"
+      "\n\016protobuf.proto\"u\n\004User\022\n\n\002id\030\001 \001(\003\022\020\n\010" +
+      "username\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\022\016\n\006f_na" +
+      "me\030\004 \001(\t\022\016\n\006l_name\030\005 \001(\t\022\017\n\007credits\030\006 \001(" +
+      "\005\022\014\n\004type\030\007 \001(\t\"q\n\014RegisterUser\022\020\n\010usern" +
+      "ame\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\016\n\006f_name\030\003 " +
+      "\001(\t\022\016\n\006l_name\030\004 \001(\t\022\017\n\007credits\030\005 \001(\005\022\014\n\004" +
+      "type\030\006 \001(\t\"/\n\tLoginUser\022\020\n\010username\030\001 \001(" +
+      "\t\022\020\n\010password\030\002 \001(\t2R\n\013UserService\022\"\n\nCr" +
+      "eateUser\022\r.RegisterUser\032\005.User\022\037\n\nLoginU" +
+      "sers\022\n.LoginUser\032\005.UserB\033\n\027org.dataacces" +
+      "s.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -55,19 +59,19 @@ public final class Protobuf {
     internal_static_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_User_descriptor,
-        new java.lang.String[] { "Username", "Password", "FName", "LName", "Credits", "Type", });
-    internal_static_UsersExist_descriptor =
+        new java.lang.String[] { "Id", "Username", "Password", "FName", "LName", "Credits", "Type", });
+    internal_static_RegisterUser_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_UsersExist_fieldAccessorTable = new
+    internal_static_RegisterUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_UsersExist_descriptor,
-        new java.lang.String[] { "Users", });
-    internal_static_Void_descriptor =
+        internal_static_RegisterUser_descriptor,
+        new java.lang.String[] { "Username", "Password", "FName", "LName", "Credits", "Type", });
+    internal_static_LoginUser_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_Void_fieldAccessorTable = new
+    internal_static_LoginUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Void_descriptor,
-        new java.lang.String[] { });
+        internal_static_LoginUser_descriptor,
+        new java.lang.String[] { "Username", "Password", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

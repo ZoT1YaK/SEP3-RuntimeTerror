@@ -14,27 +14,27 @@ public final class UserServiceGrpc {
   public static final String SERVICE_NAME = "UserService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.User,
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.RegisterUser,
       org.dataaccess.protobuf.User> getCreateUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateUser",
-      requestType = org.dataaccess.protobuf.User.class,
+      requestType = org.dataaccess.protobuf.RegisterUser.class,
       responseType = org.dataaccess.protobuf.User.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.User,
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.RegisterUser,
       org.dataaccess.protobuf.User> getCreateUserMethod() {
-    io.grpc.MethodDescriptor<org.dataaccess.protobuf.User, org.dataaccess.protobuf.User> getCreateUserMethod;
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.RegisterUser, org.dataaccess.protobuf.User> getCreateUserMethod;
     if ((getCreateUserMethod = UserServiceGrpc.getCreateUserMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getCreateUserMethod = UserServiceGrpc.getCreateUserMethod) == null) {
           UserServiceGrpc.getCreateUserMethod = getCreateUserMethod =
-              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.User, org.dataaccess.protobuf.User>newBuilder()
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.RegisterUser, org.dataaccess.protobuf.User>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.dataaccess.protobuf.User.getDefaultInstance()))
+                  org.dataaccess.protobuf.RegisterUser.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.dataaccess.protobuf.User.getDefaultInstance()))
               .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("CreateUser"))
@@ -45,35 +45,35 @@ public final class UserServiceGrpc {
     return getCreateUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.Void,
-      org.dataaccess.protobuf.UsersExist> getGetUsersMethod;
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.LoginUser,
+      org.dataaccess.protobuf.User> getLoginUsersMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetUsers",
-      requestType = org.dataaccess.protobuf.Void.class,
-      responseType = org.dataaccess.protobuf.UsersExist.class,
+      fullMethodName = SERVICE_NAME + '/' + "LoginUsers",
+      requestType = org.dataaccess.protobuf.LoginUser.class,
+      responseType = org.dataaccess.protobuf.User.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.Void,
-      org.dataaccess.protobuf.UsersExist> getGetUsersMethod() {
-    io.grpc.MethodDescriptor<org.dataaccess.protobuf.Void, org.dataaccess.protobuf.UsersExist> getGetUsersMethod;
-    if ((getGetUsersMethod = UserServiceGrpc.getGetUsersMethod) == null) {
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.LoginUser,
+      org.dataaccess.protobuf.User> getLoginUsersMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.LoginUser, org.dataaccess.protobuf.User> getLoginUsersMethod;
+    if ((getLoginUsersMethod = UserServiceGrpc.getLoginUsersMethod) == null) {
       synchronized (UserServiceGrpc.class) {
-        if ((getGetUsersMethod = UserServiceGrpc.getGetUsersMethod) == null) {
-          UserServiceGrpc.getGetUsersMethod = getGetUsersMethod =
-              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.Void, org.dataaccess.protobuf.UsersExist>newBuilder()
+        if ((getLoginUsersMethod = UserServiceGrpc.getLoginUsersMethod) == null) {
+          UserServiceGrpc.getLoginUsersMethod = getLoginUsersMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.LoginUser, org.dataaccess.protobuf.User>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUsers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LoginUsers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.dataaccess.protobuf.Void.getDefaultInstance()))
+                  org.dataaccess.protobuf.LoginUser.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.dataaccess.protobuf.UsersExist.getDefaultInstance()))
-              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetUsers"))
+                  org.dataaccess.protobuf.User.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("LoginUsers"))
               .build();
         }
       }
     }
-    return getGetUsersMethod;
+    return getLoginUsersMethod;
   }
 
   /**
@@ -126,16 +126,16 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void createUser(org.dataaccess.protobuf.User request,
+    public void createUser(org.dataaccess.protobuf.RegisterUser request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void getUsers(org.dataaccess.protobuf.Void request,
-        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.UsersExist> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUsersMethod(), responseObserver);
+    public void loginUsers(org.dataaccess.protobuf.LoginUser request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginUsersMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -144,16 +144,16 @@ public final class UserServiceGrpc {
             getCreateUserMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                org.dataaccess.protobuf.User,
+                org.dataaccess.protobuf.RegisterUser,
                 org.dataaccess.protobuf.User>(
                   this, METHODID_CREATE_USER)))
           .addMethod(
-            getGetUsersMethod(),
+            getLoginUsersMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                org.dataaccess.protobuf.Void,
-                org.dataaccess.protobuf.UsersExist>(
-                  this, METHODID_GET_USERS)))
+                org.dataaccess.protobuf.LoginUser,
+                org.dataaccess.protobuf.User>(
+                  this, METHODID_LOGIN_USERS)))
           .build();
     }
   }
@@ -174,7 +174,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void createUser(org.dataaccess.protobuf.User request,
+    public void createUser(org.dataaccess.protobuf.RegisterUser request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request, responseObserver);
@@ -182,10 +182,10 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void getUsers(org.dataaccess.protobuf.Void request,
-        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.UsersExist> responseObserver) {
+    public void loginUsers(org.dataaccess.protobuf.LoginUser request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetUsersMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getLoginUsersMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -205,16 +205,16 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public org.dataaccess.protobuf.User createUser(org.dataaccess.protobuf.User request) {
+    public org.dataaccess.protobuf.User createUser(org.dataaccess.protobuf.RegisterUser request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public org.dataaccess.protobuf.UsersExist getUsers(org.dataaccess.protobuf.Void request) {
+    public org.dataaccess.protobuf.User loginUsers(org.dataaccess.protobuf.LoginUser request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetUsersMethod(), getCallOptions(), request);
+          getChannel(), getLoginUsersMethod(), getCallOptions(), request);
     }
   }
 
@@ -235,22 +235,22 @@ public final class UserServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.User> createUser(
-        org.dataaccess.protobuf.User request) {
+        org.dataaccess.protobuf.RegisterUser request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.UsersExist> getUsers(
-        org.dataaccess.protobuf.Void request) {
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.User> loginUsers(
+        org.dataaccess.protobuf.LoginUser request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetUsersMethod(), getCallOptions()), request);
+          getChannel().newCall(getLoginUsersMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE_USER = 0;
-  private static final int METHODID_GET_USERS = 1;
+  private static final int METHODID_LOGIN_USERS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -270,12 +270,12 @@ public final class UserServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_USER:
-          serviceImpl.createUser((org.dataaccess.protobuf.User) request,
+          serviceImpl.createUser((org.dataaccess.protobuf.RegisterUser) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User>) responseObserver);
           break;
-        case METHODID_GET_USERS:
-          serviceImpl.getUsers((org.dataaccess.protobuf.Void) request,
-              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.UsersExist>) responseObserver);
+        case METHODID_LOGIN_USERS:
+          serviceImpl.loginUsers((org.dataaccess.protobuf.LoginUser) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -339,7 +339,7 @@ public final class UserServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new UserServiceFileDescriptorSupplier())
               .addMethod(getCreateUserMethod())
-              .addMethod(getGetUsersMethod())
+              .addMethod(getLoginUsersMethod())
               .build();
         }
       }
