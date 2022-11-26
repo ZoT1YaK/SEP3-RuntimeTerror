@@ -1,5 +1,4 @@
 using Application.DAOInterfaces;
-using Shared.DTOs;
 
 namespace GrpcClient.DAO;
 
@@ -13,9 +12,9 @@ public class UserDao : IUserDAO
         this.userServiceClient = userServiceClient;
     }
 
-    public async Task CreateUserAsync(Shared.Models.User user)
+    public async Task<Shared.Models.User> CreateUserAsync(Shared.Models.User user)
     {
-        var userToCreate = new User
+        /*var userToCreate = new User
         {
             Username = user.userName,
             Credits = user.Credits,
@@ -25,7 +24,19 @@ public class UserDao : IUserDAO
             Type = user.type
         };
 
-        _ = await userServiceClient.CreateUserAsync(userToCreate);
+        _ = await userServiceClient.CreateUserAsync(userToCreate);*/
+
+        await userServiceClient.CreateUserAsync(new RegisterUser
+        {
+            Username = user.userName,
+            Password = user.password,
+            FName = user.FirstName,
+            LName = user.LastName,
+            Credits = user.Credits,
+            Type = user.type
+        });
+        
+        return await Task.FromResult(user);
     }
 
     public Task<Shared.Models.User?> GetByUsernameAsync(string userName)

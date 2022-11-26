@@ -1,6 +1,7 @@
 package org.dataaccess.services;
 
 import io.grpc.stub.StreamObserver;
+import org.dataaccess.DAOInterfaces.UserDAO;
 import org.dataaccess.mappers.UserMapper;
 import org.dataaccess.protobuf.LoginUser;
 import org.dataaccess.protobuf.RegisterUser;
@@ -16,23 +17,24 @@ import java.util.Optional;
 public class UserService extends UserServiceGrpc.UserServiceImplBase
 {
     @Autowired
-    private final UserRepository userRepository;
+    private UserDAO userDAO;
 
-    public UserService(UserRepository userRepository)
+    public UserService()
     {
-        this.userRepository = userRepository;
     }
 
     @Override
     public void loginUsers(LoginUser request, StreamObserver<User> responseObserver)
     {
-        String username = request.getUsername();
-        String password = request.getPassword();
+        org.dataaccess.Shared.User user = new org.dataaccess.Shared.User();
 
-        Optional<org.dataaccess.Shared.User> user = userRepository.findUser(username, password);
-        if (user.isPresent())
+        user.setUsername(request.getUsername());
+        user.setPassword(request.getPassword());
+
+        org.dataaccess.Shared.User checkUser = userDAO.loginUser(user);
+        if (checkUser != null)
         {
-            responseObserver.onNext(UserMapper.mapProto(user.get()));
+            responseObserver.onNext(UserMapper.mapProto(checkUser));
             responseObserver.onCompleted();
         }
         else
@@ -44,28 +46,18 @@ public class UserService extends UserServiceGrpc.UserServiceImplBase
     @Override
     public void createUser(RegisterUser request, StreamObserver<User> responseObserver)
     {
-        String username = request.getUsername();
+        org.dataaccess.Shared.User user = new org.dataaccess.Shared.User(
+                request.getUsername(),
+                request.getPassword(),
+                request.getFName(),
+                request.getLName(),
+                request.getCredits(),
+                request.getType());
 
-        Optional<org.dataaccess.Shared.User> user = userRepository.findUserByUsername(username);
+        org.dataaccess.Shared.User checkUser = userDAO.registerUser(user);
 
-        if (!user.isPresent())
-        {
-            org.dataaccess.Shared.User user1 = new org.dataaccess.Shared.User(
-                    request.getUsername(),
-                    request.getPassword(),
-                    request.getFName(),
-                    request.getLName(),
-                    request.getCredits()
-            );
+        responseObserver.onNext(UserMapper.mapProto(checkUser));
+        responseObserver.onCompleted();
 
-            org.dataaccess.Shared.User newUser = userRepository.save(user1);
-
-            responseObserver.onNext(UserMapper.mapProto(newUser));
-            responseObserver.onCompleted();
-        }
-        else
-        {
-            responseObserver.onError(new Exception("The username already exists"));
-        }
     }
 }

@@ -7,7 +7,6 @@ public abstract class UserMapper
     public static User mapProto(org.dataaccess.Shared.User user)
     {
         return User.newBuilder()
-                .setId(user.getId())
                 .setUsername(user.getUsername())
                 .setPassword(user.getPassword())
                 .setFName(user.getF_name())

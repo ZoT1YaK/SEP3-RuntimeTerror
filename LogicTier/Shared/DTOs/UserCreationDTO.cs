@@ -15,7 +15,7 @@ public class UserCreationDTO
         this.password = password;
         FirstName = firstName;
         LastName = lastName;
-        Credits = 0;
+        Credits = credits;
         this.type = type;
     }
 

@@ -1,64 +1,41 @@
 package org.dataaccess.Shared;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "\"user\"")
-public class User
+@Table(name = "\"user\"", schema = "reverso_sep")
+public class User implements Serializable
 {
     @Id
-    @SequenceGenerator(
-            name="user_id _sequence",
-            sequenceName = "user_id_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "user_id_sequence"
-    )
-
-    private Long id;
-
+    @Column(name = "username")
     private String username;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "f_name")
     private String f_name;
 
+    @Column(name = "l_name")
     private String l_name;
 
+    @Column(name = "credits")
     private int credits;
 
+    @Column(name = "type")
     private String type;
 
     public User() {
     }
 
-    public User(Long id, String username, String password, String f_name, String l_name, int credits, String type) {
-        this.id = id;
+    public User(String username, String password, String f_name, String l_name, int credits, String type) {
         this.username = username;
         this.password = password;
         this.f_name = f_name;
         this.l_name = l_name;
         this.credits = credits;
         this.type = type;
-    }
-
-    public User(String username, String password, String f_name, String l_name, int credits) {
-        this.username = username;
-        this.password = password;
-        this.f_name = f_name;
-        this.l_name = l_name;
-        this.credits = credits;
-        this.type = "customer";
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getUsername() {

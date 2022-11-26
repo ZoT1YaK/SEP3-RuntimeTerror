@@ -45,27 +45,27 @@ public static partial class UserService
   }
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Marshaller<global::RegisterUser> __Marshaller_RegisterUser = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RegisterUser.Parser));
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Marshaller<global::User> __Marshaller_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::User.Parser));
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-  static readonly grpc::Marshaller<global::Void> __Marshaller_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Void.Parser));
-  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-  static readonly grpc::Marshaller<global::UsersExist> __Marshaller_UsersExist = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UsersExist.Parser));
+  static readonly grpc::Marshaller<global::LoginUser> __Marshaller_LoginUser = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::LoginUser.Parser));
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-  static readonly grpc::Method<global::User, global::User> __Method_CreateUser = new grpc::Method<global::User, global::User>(
+  static readonly grpc::Method<global::RegisterUser, global::User> __Method_CreateUser = new grpc::Method<global::RegisterUser, global::User>(
       grpc::MethodType.Unary,
       __ServiceName,
       "CreateUser",
-      __Marshaller_User,
+      __Marshaller_RegisterUser,
       __Marshaller_User);
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-  static readonly grpc::Method<global::Void, global::UsersExist> __Method_GetUsers = new grpc::Method<global::Void, global::UsersExist>(
+  static readonly grpc::Method<global::LoginUser, global::User> __Method_LoginUsers = new grpc::Method<global::LoginUser, global::User>(
       grpc::MethodType.Unary,
       __ServiceName,
-      "GetUsers",
-      __Marshaller_Void,
-      __Marshaller_UsersExist);
+      "LoginUsers",
+      __Marshaller_LoginUser,
+      __Marshaller_User);
 
   /// <summary>Service descriptor</summary>
   public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -101,44 +101,44 @@ public static partial class UserService
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::User CreateUser(global::User request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual global::User CreateUser(global::RegisterUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
       return CreateUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::User CreateUser(global::User request, grpc::CallOptions options)
+    public virtual global::User CreateUser(global::RegisterUser request, grpc::CallOptions options)
     {
       return CallInvoker.BlockingUnaryCall(__Method_CreateUser, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::User> CreateUserAsync(global::User request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual grpc::AsyncUnaryCall<global::User> CreateUserAsync(global::RegisterUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
       return CreateUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::User> CreateUserAsync(global::User request, grpc::CallOptions options)
+    public virtual grpc::AsyncUnaryCall<global::User> CreateUserAsync(global::RegisterUser request, grpc::CallOptions options)
     {
       return CallInvoker.AsyncUnaryCall(__Method_CreateUser, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::UsersExist GetUsers(global::Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual global::User LoginUsers(global::LoginUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
-      return GetUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      return LoginUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::UsersExist GetUsers(global::Void request, grpc::CallOptions options)
+    public virtual global::User LoginUsers(global::LoginUser request, grpc::CallOptions options)
     {
-      return CallInvoker.BlockingUnaryCall(__Method_GetUsers, null, options, request);
+      return CallInvoker.BlockingUnaryCall(__Method_LoginUsers, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::UsersExist> GetUsersAsync(global::Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual grpc::AsyncUnaryCall<global::User> LoginUsersAsync(global::LoginUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
-      return GetUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      return LoginUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::UsersExist> GetUsersAsync(global::Void request, grpc::CallOptions options)
+    public virtual grpc::AsyncUnaryCall<global::User> LoginUsersAsync(global::LoginUser request, grpc::CallOptions options)
     {
-      return CallInvoker.AsyncUnaryCall(__Method_GetUsers, null, options, request);
+      return CallInvoker.AsyncUnaryCall(__Method_LoginUsers, null, options, request);
     }
     /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

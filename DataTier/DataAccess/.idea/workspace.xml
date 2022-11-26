@@ -4,68 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="DataTier commit">
-      <change afterPath="$PROJECT_DIR$/../.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__javax_persistence_persistence_api_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_12_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_postgresql_postgresql_42_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_aspects_5_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_orm_5_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_tx_5_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_6_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_maven_maven_settings_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_2_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="DataTier(create and login user) DONE">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GrpcServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/UserDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/UserDaoInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/FileData/DataContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/FileData/FileContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DataAccessApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/configs/UserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/configs/UserConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/mappers/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DataAccess-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DataAccess-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GrpcServer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOInterfaces/UserDaoInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/FileData/DataContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/FileData/FileContext$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/FileData/FileContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/Shared/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/Shared/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/DAOInterfaces/IUserDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/DAOInterfaces/IUserDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Application.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Application.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/DAO/UserDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/DAO/UserDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/Protobuf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/Protobuf.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/ProtobufGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/ProtobufGrpc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/0a174907d2173a8a_protobuf.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/0a174907d2173a8a_protobuf.protodep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/GrpcClient.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/GrpcClient.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/GrpcClient.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/GrpcClient.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/DTOs/UserCreationDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/DTOs/UserCreationDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/bin/Debug/net6.0/Shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/bin/Debug/net6.0/Shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/bin/Debug/net6.0/Shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/bin/Debug/net6.0/Shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Debug/net6.0/Shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Shared.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Shared.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Shared.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/Shared.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/WebAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/WebAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/WebAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/WebAPI.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,13 +108,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/VIA_SEP/SEP3/Other Group/SEP3/SEP3/SEP3 Project/DataAccessTier",
+    "last_opened_file_path": "C:/VIA_SEP/SEP3/Other Group/MANGO-SEP3/DataTier/DatabaseAccess",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "Errors",
     "spring.configuration.checksum": "ecef4e1421e9950c84f3fbd46c0935d4"
   },
   "keyToStringList": {
@@ -135,15 +141,15 @@
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="DataAccess" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.dataaccess.Main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.dataaccess.DataAccessApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in DataAccess" />
         <item itemvalue="Application.GrpcServer" />
+        <item itemvalue="JUnit.All in DataAccess" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +169,10 @@
       <workItem from="1669171185829" duration="891000" />
       <workItem from="1669324328474" duration="46000" />
       <workItem from="1669327576236" duration="632000" />
-      <workItem from="1669373018970" duration="4587000" />
+      <workItem from="1669373018970" duration="4937000" />
+      <workItem from="1669395128091" duration="2048000" />
+      <workItem from="1669414599396" duration="1086000" />
+      <workItem from="1669489242026" duration="12223000" />
     </task>
     <task id="LOCAL-00001" summary="T2 commit">
       <created>1667754724100</created>
@@ -179,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669163627599</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DataTier(create and login user) DONE">
+      <created>1669377659036</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669377659036</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +215,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="T2 commit" />
     <MESSAGE value="DataTier commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="DataTier commit" />
+    <MESSAGE value="DataTier(create and login user) DONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="DataTier(create and login user) DONE" />
   </component>
 </project>
