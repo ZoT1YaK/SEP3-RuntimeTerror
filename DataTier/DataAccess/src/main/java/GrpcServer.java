@@ -1,6 +1,6 @@
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import org.dataaccess.services.UserService;
+import services.UserService;
 import org.lognet.springboot.grpc.GRpcService;
 
 import java.io.IOException;

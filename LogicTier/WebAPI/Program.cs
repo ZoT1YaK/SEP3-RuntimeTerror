@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddGrpcClient<UserService.UserServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:8084");
+    o.Address = new Uri("http://localhost:6565");
 });
 builder.Services.AddScoped<IUserDAO, UserDao>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
@@ -55,6 +55,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

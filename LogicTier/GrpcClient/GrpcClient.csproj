@@ -9,11 +9,6 @@
     <ItemGroup>
         <Protobuf Include="..\..\DataTier\DataAccess\src\main\proto\protobuf.proto" OutputDir="./Proto/protobuf.proto" GrpcServices="Client" />
     </ItemGroup>
-    
-    <ItemGroup>
-      <ProjectReference Include="..\Application\Application.csproj" />
-      <ProjectReference Include="..\Shared\Shared.csproj" />
-    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Google.Protobuf" Version="3.21.9" />
@@ -26,6 +21,10 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Application\Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Proto\protobuf.proto" />
     </ItemGroup>
 
 </Project>

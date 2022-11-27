@@ -11,28 +11,25 @@ import java.util.Optional;
 @Repository
 public class UserDAOImpl implements UserDAO
 {
+    @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    public UserDAOImpl(UserRepository userRepository)
+    public UserDAOImpl()
     {
-        this.userRepository = userRepository;
     }
 
     @Override
     public User registerUser(User user) {
 
-        Optional<User> checkUser = userRepository.findUserByUsername(user.getUsername());
-        if (!checkUser.isPresent()) {
+//        Optional<User> checkUser = userRepository.findUserByUsername(user.getUsername());
+//        if (!checkUser.isPresent()) {
             user.setCredits(0);
             user.setType("customer");
 
             userRepository.save(user);
 
             return user;
-        }
-
-        return null;
+//        }
     }
 
     @Override

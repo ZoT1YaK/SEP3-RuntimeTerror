@@ -11,8 +11,7 @@
           "Application": "1.0.0",
           "Google.Protobuf": "3.21.9",
           "Grpc.Core.Api": "2.50.0-pre1",
-          "Grpc.Tools": "2.50.0",
-          "Shared": "1.0.0"
+          "Grpc.Tools": "2.50.0"
         },
         "runtime": {
           "GrpcClient.dll": {}

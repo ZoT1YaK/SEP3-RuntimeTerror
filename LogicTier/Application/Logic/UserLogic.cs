@@ -23,7 +23,7 @@ public class UserLogic : IUserLogic
 
         ValidateData(dto);
 
-        User user = new User
+        var user = new User
         {
             userName = dto.userName,
             password = dto.password,
@@ -33,9 +33,7 @@ public class UserLogic : IUserLogic
             type = dto.type
         };
 
-        await userDao.CreateUserAsync(user);
-    
-        return user;
+        return await userDao.CreateUserAsync(user);
     }
 
     /*public async Task<UserCreationDTO> LogIn(string username, string password)

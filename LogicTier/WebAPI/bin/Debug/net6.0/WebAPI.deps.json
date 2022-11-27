@@ -289,8 +289,7 @@
         "dependencies": {
           "Application": "1.0.0",
           "Google.Protobuf": "3.21.9",
-          "Grpc.Core.Api": "2.50.0-pre1",
-          "Shared": "1.0.0"
+          "Grpc.Core.Api": "2.50.0-pre1"
         },
         "runtime": {
           "GrpcClient.dll": {}
