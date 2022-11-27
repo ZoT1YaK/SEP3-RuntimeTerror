@@ -1,85 +1,64 @@
 ﻿@page "/Register"
-@inject IUserService UserService
 @using HttpClients.ClientInterfaces
 @using global::Shared.DTOs
+@inject IUserService UserService
+@inject NavigationManager NavManager
 
 
 <div class="background">
-        <div class="flex-container">
-            <div class="name">REVERSO</div>
-            <div class="regBox">
-                <form>
-                    <label for="username">Username:</label><input type="text" id="username" name="username"><br>
-                    <label for="password">Password:</label><input type="text" id="password" name="password"><br>
-                    <label for="fname">First name:</label><input type="text" id="fname" name="fname"><br>
-                    <label for="lname">Last name:</label><input type="text" id="lname" name="lname"><br>
-                    <label for="type">Type:</label><input type="text" id="type" name="type">
-                </form><br>
-                <button class="regButton" type="button">Register</button>
-            </div>
+    <div class="flex-container">
+        <div class="name">REVERSO</div>
+        <div class="regBox">
+            <form>
+                <label for="username">Username:</label><input type="text" @bind="userName" required="required"><br>
+                <label for="password">Password:</label><input type="text" @bind="password" required="required"><br>
+                <label for="fname">First name:</label><input type="text" @bind="fName" required="required"><br>
+                <label for="lname">Last name:</label><input type="text" @bind="lName" required="required"><br>
+            </form><br>
+            <button class="regButton" type="button"  @onclick="Create">Register</button>
         </div>
+    </div>
+     <span style="color: red">@msg</span>
     </div>
 
 @code {
-    private string userName;
-    private string password;
-    private string fName;
-    private string lName;
-    private string type;
-    private int credits;
-
-    // private async Task Create()
-    // {
-    //     var resultMsg = "";
-    //
-    //     try
-    //     {
-    //         await UserService.Create(new UserCreationDto(username));
-    //         var username = "";
-    //         resultMsg = "User successfully created";
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         Console.WriteLine(e);
-    //         resultMsg = e.Message;
-    //     }
-    //
-    //     var userCreationDto = new UserCreationDto
-    //     {
-    //         
-    //     };
-    //
-    //     await UserService.Create(userCreationDto);
-    // }
+    string userName;
+    string password;
+    string fName;
+    string lName;
+    string msg = "";
 
     private async Task Create()
     {
+        msg = "";
+        
+        if (userName == "" || password == "" || fName == "" || lName == "")
+        {
+            msg = "All fields are required";
+            return;
+        }
         
         try
         {
             UserCreationDTO dto = new();
-            dto.userName = userName;
             dto.password = password;
+            dto.userName = userName;
+            dto.Credits = 0;
             dto.FirstName = fName;
             dto.LastName = lName;
-            dto.Credits = credits;
-            dto.type = type;
-
-        await UserService.CreateAsync(dto);
+            dto.type = "string";
+            
+            
+            await UserService.CreateAsync(dto);
+            NavManager.NavigateTo("/Login");
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
+            msg = e.Message;
         }
-
-        userName = "";
-        password = "";
-        fName = "";
-        lName = "";
-        credits = 0;
-        type = "";
     }
+
     
 
 }

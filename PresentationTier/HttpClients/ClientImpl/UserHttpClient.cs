@@ -11,22 +11,29 @@ namespace HttpClients.ClientImpl;
 public class UserHttpClient : IUserService
 {
     private readonly HttpClient Client;
-    // public static string? Jwt { get; private set; } = "";
-    
+
     public UserHttpClient(HttpClient client)
     {
         Client = client;
     }
     
-    public async Task CreateAsync(UserCreationDTO dto)
+    public async Task<User> CreateAsync(UserCreationDTO dto)
     {
-        HttpResponseMessage response = await Client.PostAsJsonAsync("/user", dto);
+        HttpResponseMessage response = await Client.PostAsJsonAsync("/user/register", dto);
         
         if (!response.IsSuccessStatusCode)
         {
             string result = await response.Content.ReadAsStringAsync();
             throw new Exception(result);
         }
+        
+        
+        var user = await response.Content.ReadFromJsonAsync<User>();
+        if (user == null)
+        {
+            throw new Exception("Read User - Error");
+        }
+        return user;
 
         // User user = JsonSerializer.Deserialize<User>(result, new JsonSerializerOptions
         // {
