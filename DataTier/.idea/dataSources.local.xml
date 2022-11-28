@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-222.4167.29">
-    <data-source name="sep3_db@localhost" uuid="385f97bb-dca8-4a7d-b96d-d118bc9c09b0">
-      <database-info product="PostgreSQL" version="14.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="14.1" exact-driver-version="42.5">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="postgres@localhost" uuid="ff4aab69-a02f-4d2f-a30c-25c1276111d3">
+    <data-source name="postgres@localhost" uuid="e906ed4c-cac3-4290-9e89-f30f683bd887">
       <database-info product="PostgreSQL" version="14.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="14.1" exact-driver-version="42.5">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -30,10 +15,7 @@
               <node kind="schema" qname="@" />
             </node>
             <node kind="database" qname="postgres">
-              <node kind="schema">
-                <name qname="postgres" />
-                <name qname="reverso_sep" />
-              </node>
+              <node kind="schema" qname="reverso_sep" />
             </node>
           </node>
         </introspection-scope>

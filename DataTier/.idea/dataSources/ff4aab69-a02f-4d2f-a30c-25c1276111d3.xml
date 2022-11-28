@@ -4278,6 +4278,7 @@ false Zulu
     <schema id="269" parent="2" name="reverso_sep">
       <IntrospectionStateNumber>12750</IntrospectionStateNumber>
       <ObjectId>64573</ObjectId>
+      <Outdated>1</Outdated>
       <StateNumber>12743</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
