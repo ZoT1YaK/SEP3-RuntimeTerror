@@ -50,6 +50,8 @@ public static partial class UserService
   static readonly grpc::Marshaller<global::User> __Marshaller_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::User.Parser));
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Marshaller<global::LoginUser> __Marshaller_LoginUser = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::LoginUser.Parser));
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Marshaller<global::SearchField> __Marshaller_SearchField = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SearchField.Parser));
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Method<global::RegisterUser, global::User> __Method_CreateUser = new grpc::Method<global::RegisterUser, global::User>(
@@ -65,6 +67,14 @@ public static partial class UserService
       __ServiceName,
       "LoginUsers",
       __Marshaller_LoginUser,
+      __Marshaller_User);
+
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::SearchField, global::User> __Method_FindUser = new grpc::Method<global::SearchField, global::User>(
+      grpc::MethodType.Unary,
+      __ServiceName,
+      "FindUser",
+      __Marshaller_SearchField,
       __Marshaller_User);
 
   /// <summary>Service descriptor</summary>
@@ -139,6 +149,26 @@ public static partial class UserService
     public virtual grpc::AsyncUnaryCall<global::User> LoginUsersAsync(global::LoginUser request, grpc::CallOptions options)
     {
       return CallInvoker.AsyncUnaryCall(__Method_LoginUsers, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::User FindUser(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return FindUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::User FindUser(global::SearchField request, grpc::CallOptions options)
+    {
+      return CallInvoker.BlockingUnaryCall(__Method_FindUser, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::User> FindUserAsync(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return FindUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::User> FindUserAsync(global::SearchField request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncUnaryCall(__Method_FindUser, null, options, request);
     }
     /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

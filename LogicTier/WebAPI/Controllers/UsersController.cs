@@ -10,12 +10,12 @@ namespace WebAPI.Controllers;
 public class UserController : ControllerBase
 {
     private readonly IUserLogic UserLogic;
-    private readonly IConfiguration config;
+    /*private readonly IConfiguration config;*/
 
-    public UserController(IUserLogic userLogic, IConfiguration config)
+    public UserController(IUserLogic userLogic/*, IConfiguration config*/)
     {
         UserLogic = userLogic;
-        this.config = config;
+        /*this.config = config;*/
     }
     
     /*[HttpPost(), Route("register")]*/
@@ -38,7 +38,19 @@ public class UserController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-    
-    
-    
+
+    [HttpPost("login")]
+    public async Task<IActionResult> LoginUserAsync(UserLoginDTO dto)
+    {
+        try
+        {
+            var user = await UserLogic.LoginUserAsync(dto);
+            return Ok(user);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return BadRequest(e.Message);
+        }
+    }
 }

@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     password_ = "";
     fName_ = "";
     lName_ = "";
-    type_ = "";
   }
 
   @java.lang.Override
@@ -75,17 +74,6 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             lName_ = s;
-            break;
-          }
-          case 40: {
-
-            credits_ = input.readInt32();
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            type_ = s;
             break;
           }
           default: {
@@ -274,55 +262,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CREDITS_FIELD_NUMBER = 5;
-  private int credits_;
-  /**
-   * <code>int32 credits = 5;</code>
-   * @return The credits.
-   */
-  @java.lang.Override
-  public int getCredits() {
-    return credits_;
-  }
-
-  public static final int TYPE_FIELD_NUMBER = 6;
-  private volatile java.lang.Object type_;
-  /**
-   * <code>string type = 6;</code>
-   * @return The type.
-   */
-  @java.lang.Override
-  public java.lang.String getType() {
-    java.lang.Object ref = type_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      type_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string type = 6;</code>
-   * @return The bytes for type.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTypeBytes() {
-    java.lang.Object ref = type_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      type_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -349,12 +288,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lName_);
     }
-    if (credits_ != 0) {
-      output.writeInt32(5, credits_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, type_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -375,13 +308,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lName_);
-    }
-    if (credits_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, credits_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -406,10 +332,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFName())) return false;
     if (!getLName()
         .equals(other.getLName())) return false;
-    if (getCredits()
-        != other.getCredits()) return false;
-    if (!getType()
-        .equals(other.getType())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -429,10 +351,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFName().hashCode();
     hash = (37 * hash) + L_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getLName().hashCode();
-    hash = (37 * hash) + CREDITS_FIELD_NUMBER;
-    hash = (53 * hash) + getCredits();
-    hash = (37 * hash) + TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getType().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -574,10 +492,6 @@ private static final long serialVersionUID = 0L;
 
       lName_ = "";
 
-      credits_ = 0;
-
-      type_ = "";
-
       return this;
     }
 
@@ -608,8 +522,6 @@ private static final long serialVersionUID = 0L;
       result.password_ = password_;
       result.fName_ = fName_;
       result.lName_ = lName_;
-      result.credits_ = credits_;
-      result.type_ = type_;
       onBuilt();
       return result;
     }
@@ -672,13 +584,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLName().isEmpty()) {
         lName_ = other.lName_;
-        onChanged();
-      }
-      if (other.getCredits() != 0) {
-        setCredits(other.getCredits());
-      }
-      if (!other.getType().isEmpty()) {
-        type_ = other.type_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -1010,113 +915,6 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       lName_ = value;
-      onChanged();
-      return this;
-    }
-
-    private int credits_ ;
-    /**
-     * <code>int32 credits = 5;</code>
-     * @return The credits.
-     */
-    @java.lang.Override
-    public int getCredits() {
-      return credits_;
-    }
-    /**
-     * <code>int32 credits = 5;</code>
-     * @param value The credits to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCredits(int value) {
-      
-      credits_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 credits = 5;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCredits() {
-      
-      credits_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object type_ = "";
-    /**
-     * <code>string type = 6;</code>
-     * @return The type.
-     */
-    public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string type = 6;</code>
-     * @return The bytes for type.
-     */
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string type = 6;</code>
-     * @param value The type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setType(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      type_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string type = 6;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearType() {
-      
-      type_ = getDefaultInstance().getType();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string type = 6;</code>
-     * @param value The bytes for type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      type_ = value;
       onChanged();
       return this;
     }

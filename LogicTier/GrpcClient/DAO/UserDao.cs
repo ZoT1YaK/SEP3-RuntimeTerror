@@ -15,38 +15,12 @@ public class UserDao : IUserDAO
 
     public async Task<Shared.Models.User> CreateUserAsync(Shared.Models.User user)
     {
-        /*var userToCreate = new User
-        {
-            Username = user.userName,
-            Credits = user.Credits,
-            FName = user.FirstName,
-            LName = user.LastName,
-            Password = user.password,
-            Type = user.type
-        };
-
-        _ = await userServiceClient.CreateUserAsync(userToCreate);*/
-
-        /*await userServiceClient.CreateUserAsync(new RegisterUser
+        var userToCreate = new RegisterUser
         {
             Username = user.userName,
             Password = user.password,
             FName = user.FirstName,
-            LName = user.LastName,
-            Credits = user.Credits,
-            Type = user.type
-        });
-        
-        return await Task.FromResult(user);*/
-
-        var userToCreate = new global::RegisterUser
-        {
-            Username = user.userName,
-            Password = user.password,
-            FName = user.FirstName,
-            LName = user.LastName,
-            Credits = user.Credits,
-            Type = user.type
+            LName = user.LastName
         };
 
         User grpcUserToCreate = await userServiceClient.CreateUserAsync(userToCreate);
@@ -54,11 +28,37 @@ public class UserDao : IUserDAO
         return ConvertGrpcUserToSharedUser(grpcUserToCreate);
     }
 
-    public Task<Shared.Models.User?> GetByUsernameAsync(string userName)
+    public async Task<Shared.Models.User> LoginUserAsync(Shared.Models.User user)
     {
-        throw new NotImplementedException();
+        var userToLogin = new LoginUser
+        {
+            Username = user.userName,
+            Password = user.password
+        };
+
+        User grpcUserToLogin = await userServiceClient.LoginUsersAsync(userToLogin);
+
+        return ConvertGrpcUserToSharedUser(grpcUserToLogin);
     }
-    
+
+    public async Task<Shared.Models.User?> FindUserAsync(string userName)
+    {
+        var username = new SearchField
+        {
+            Search = userName
+        };
+
+        try
+        {
+            User user = await userServiceClient.FindUserAsync(username);
+            return ConvertGrpcUserToSharedUser(user);
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
     private Shared.Models.User ConvertGrpcUserToSharedUser(User grpcUser)
     {
         var sharedUser = new Shared.Models.User

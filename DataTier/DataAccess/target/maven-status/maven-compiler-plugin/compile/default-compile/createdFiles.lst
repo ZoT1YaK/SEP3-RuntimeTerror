@@ -1,5 +1,7 @@
 org\dataaccess\DAOImpl\UserDAOImpl.class
+org\dataaccess\protobuf\SearchField$1.class
 org\dataaccess\config\ServerConfig.class
+org\dataaccess\protobuf\SearchField$Builder.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceBlockingStub.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceFileDescriptorSupplier.class
 org\dataaccess\protobuf\User$Builder.class
@@ -11,9 +13,11 @@ org\dataaccess\configs\UserConfig.class
 org\dataaccess\DataAccessApp.class
 org\dataaccess\protobuf\UserServiceGrpc$MethodHandlers.class
 org\dataaccess\mappers\UserMapper.class
+org\dataaccess\protobuf\SearchFieldOrBuilder.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceImplBase.class
 GrpcServer.class
 org\dataaccess\Shared\User.class
+org\dataaccess\protobuf\SearchField.class
 org\dataaccess\protobuf\User$1.class
 services\UserService.class
 org\dataaccess\protobuf\LoginUserOrBuilder.class

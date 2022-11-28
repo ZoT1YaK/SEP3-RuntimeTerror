@@ -53,41 +53,36 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-
-            id_ = input.readInt64();
-            break;
-          }
-          case 18: {
+          case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
             username_ = s;
             break;
           }
-          case 26: {
+          case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
             password_ = s;
             break;
           }
-          case 34: {
+          case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
             fName_ = s;
             break;
           }
-          case 42: {
+          case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
             lName_ = s;
             break;
           }
-          case 48: {
+          case 40: {
 
             credits_ = input.readInt32();
             break;
           }
-          case 58: {
+          case 50: {
             java.lang.String s = input.readStringRequireUtf8();
 
             type_ = s;
@@ -127,21 +122,10 @@ private static final long serialVersionUID = 0L;
             org.dataaccess.protobuf.User.class, org.dataaccess.protobuf.User.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
-  private long id_;
-  /**
-   * <code>int64 id = 1;</code>
-   * @return The id.
-   */
-  @java.lang.Override
-  public long getId() {
-    return id_;
-  }
-
-  public static final int USERNAME_FIELD_NUMBER = 2;
+  public static final int USERNAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object username_;
   /**
-   * <code>string username = 2;</code>
+   * <code>string username = 1;</code>
    * @return The username.
    */
   @java.lang.Override
@@ -158,7 +142,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string username = 2;</code>
+   * <code>string username = 1;</code>
    * @return The bytes for username.
    */
   @java.lang.Override
@@ -176,10 +160,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PASSWORD_FIELD_NUMBER = 3;
+  public static final int PASSWORD_FIELD_NUMBER = 2;
   private volatile java.lang.Object password_;
   /**
-   * <code>string password = 3;</code>
+   * <code>string password = 2;</code>
    * @return The password.
    */
   @java.lang.Override
@@ -196,7 +180,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string password = 3;</code>
+   * <code>string password = 2;</code>
    * @return The bytes for password.
    */
   @java.lang.Override
@@ -214,10 +198,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int F_NAME_FIELD_NUMBER = 4;
+  public static final int F_NAME_FIELD_NUMBER = 3;
   private volatile java.lang.Object fName_;
   /**
-   * <code>string f_name = 4;</code>
+   * <code>string f_name = 3;</code>
    * @return The fName.
    */
   @java.lang.Override
@@ -234,7 +218,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string f_name = 4;</code>
+   * <code>string f_name = 3;</code>
    * @return The bytes for fName.
    */
   @java.lang.Override
@@ -252,10 +236,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int L_NAME_FIELD_NUMBER = 5;
+  public static final int L_NAME_FIELD_NUMBER = 4;
   private volatile java.lang.Object lName_;
   /**
-   * <code>string l_name = 5;</code>
+   * <code>string l_name = 4;</code>
    * @return The lName.
    */
   @java.lang.Override
@@ -272,7 +256,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string l_name = 5;</code>
+   * <code>string l_name = 4;</code>
    * @return The bytes for lName.
    */
   @java.lang.Override
@@ -290,10 +274,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CREDITS_FIELD_NUMBER = 6;
+  public static final int CREDITS_FIELD_NUMBER = 5;
   private int credits_;
   /**
-   * <code>int32 credits = 6;</code>
+   * <code>int32 credits = 5;</code>
    * @return The credits.
    */
   @java.lang.Override
@@ -301,10 +285,10 @@ private static final long serialVersionUID = 0L;
     return credits_;
   }
 
-  public static final int TYPE_FIELD_NUMBER = 7;
+  public static final int TYPE_FIELD_NUMBER = 6;
   private volatile java.lang.Object type_;
   /**
-   * <code>string type = 7;</code>
+   * <code>string type = 6;</code>
    * @return The type.
    */
   @java.lang.Override
@@ -321,7 +305,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string type = 7;</code>
+   * <code>string type = 6;</code>
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -353,26 +337,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (id_ != 0L) {
-      output.writeInt64(1, id_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, lName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lName_);
     }
     if (credits_ != 0) {
-      output.writeInt32(6, credits_);
+      output.writeInt32(5, credits_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, type_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, type_);
     }
     unknownFields.writeTo(output);
   }
@@ -383,28 +364,24 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (id_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, id_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, lName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lName_);
     }
     if (credits_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(6, credits_);
+        .computeInt32Size(5, credits_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, type_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -421,8 +398,6 @@ private static final long serialVersionUID = 0L;
     }
     org.dataaccess.protobuf.User other = (org.dataaccess.protobuf.User) obj;
 
-    if (getId()
-        != other.getId()) return false;
     if (!getUsername()
         .equals(other.getUsername())) return false;
     if (!getPassword()
@@ -446,9 +421,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getId());
     hash = (37 * hash) + USERNAME_FIELD_NUMBER;
     hash = (53 * hash) + getUsername().hashCode();
     hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
@@ -594,8 +566,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      id_ = 0L;
-
       username_ = "";
 
       password_ = "";
@@ -634,7 +604,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.dataaccess.protobuf.User buildPartial() {
       org.dataaccess.protobuf.User result = new org.dataaccess.protobuf.User(this);
-      result.id_ = id_;
       result.username_ = username_;
       result.password_ = password_;
       result.fName_ = fName_;
@@ -689,9 +658,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.dataaccess.protobuf.User other) {
       if (other == org.dataaccess.protobuf.User.getDefaultInstance()) return this;
-      if (other.getId() != 0L) {
-        setId(other.getId());
-      }
       if (!other.getUsername().isEmpty()) {
         username_ = other.username_;
         onChanged();
@@ -744,40 +710,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long id_ ;
-    /**
-     * <code>int64 id = 1;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public long getId() {
-      return id_;
-    }
-    /**
-     * <code>int64 id = 1;</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setId(long value) {
-      
-      id_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 id = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      
-      id_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object username_ = "";
     /**
-     * <code>string username = 2;</code>
+     * <code>string username = 1;</code>
      * @return The username.
      */
     public java.lang.String getUsername() {
@@ -793,7 +728,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string username = 2;</code>
+     * <code>string username = 1;</code>
      * @return The bytes for username.
      */
     public com.google.protobuf.ByteString
@@ -810,7 +745,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string username = 2;</code>
+     * <code>string username = 1;</code>
      * @param value The username to set.
      * @return This builder for chaining.
      */
@@ -825,7 +760,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string username = 2;</code>
+     * <code>string username = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearUsername() {
@@ -835,7 +770,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string username = 2;</code>
+     * <code>string username = 1;</code>
      * @param value The bytes for username to set.
      * @return This builder for chaining.
      */
@@ -853,7 +788,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object password_ = "";
     /**
-     * <code>string password = 3;</code>
+     * <code>string password = 2;</code>
      * @return The password.
      */
     public java.lang.String getPassword() {
@@ -869,7 +804,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string password = 3;</code>
+     * <code>string password = 2;</code>
      * @return The bytes for password.
      */
     public com.google.protobuf.ByteString
@@ -886,7 +821,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string password = 3;</code>
+     * <code>string password = 2;</code>
      * @param value The password to set.
      * @return This builder for chaining.
      */
@@ -901,7 +836,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string password = 3;</code>
+     * <code>string password = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearPassword() {
@@ -911,7 +846,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string password = 3;</code>
+     * <code>string password = 2;</code>
      * @param value The bytes for password to set.
      * @return This builder for chaining.
      */
@@ -929,7 +864,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object fName_ = "";
     /**
-     * <code>string f_name = 4;</code>
+     * <code>string f_name = 3;</code>
      * @return The fName.
      */
     public java.lang.String getFName() {
@@ -945,7 +880,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string f_name = 4;</code>
+     * <code>string f_name = 3;</code>
      * @return The bytes for fName.
      */
     public com.google.protobuf.ByteString
@@ -962,7 +897,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string f_name = 4;</code>
+     * <code>string f_name = 3;</code>
      * @param value The fName to set.
      * @return This builder for chaining.
      */
@@ -977,7 +912,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string f_name = 4;</code>
+     * <code>string f_name = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearFName() {
@@ -987,7 +922,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string f_name = 4;</code>
+     * <code>string f_name = 3;</code>
      * @param value The bytes for fName to set.
      * @return This builder for chaining.
      */
@@ -1005,7 +940,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object lName_ = "";
     /**
-     * <code>string l_name = 5;</code>
+     * <code>string l_name = 4;</code>
      * @return The lName.
      */
     public java.lang.String getLName() {
@@ -1021,7 +956,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string l_name = 5;</code>
+     * <code>string l_name = 4;</code>
      * @return The bytes for lName.
      */
     public com.google.protobuf.ByteString
@@ -1038,7 +973,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string l_name = 5;</code>
+     * <code>string l_name = 4;</code>
      * @param value The lName to set.
      * @return This builder for chaining.
      */
@@ -1053,7 +988,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string l_name = 5;</code>
+     * <code>string l_name = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearLName() {
@@ -1063,7 +998,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string l_name = 5;</code>
+     * <code>string l_name = 4;</code>
      * @param value The bytes for lName to set.
      * @return This builder for chaining.
      */
@@ -1081,7 +1016,7 @@ private static final long serialVersionUID = 0L;
 
     private int credits_ ;
     /**
-     * <code>int32 credits = 6;</code>
+     * <code>int32 credits = 5;</code>
      * @return The credits.
      */
     @java.lang.Override
@@ -1089,7 +1024,7 @@ private static final long serialVersionUID = 0L;
       return credits_;
     }
     /**
-     * <code>int32 credits = 6;</code>
+     * <code>int32 credits = 5;</code>
      * @param value The credits to set.
      * @return This builder for chaining.
      */
@@ -1100,7 +1035,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 credits = 6;</code>
+     * <code>int32 credits = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearCredits() {
@@ -1112,7 +1047,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object type_ = "";
     /**
-     * <code>string type = 7;</code>
+     * <code>string type = 6;</code>
      * @return The type.
      */
     public java.lang.String getType() {
@@ -1128,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 7;</code>
+     * <code>string type = 6;</code>
      * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
@@ -1145,7 +1080,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 7;</code>
+     * <code>string type = 6;</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -1160,7 +1095,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type = 7;</code>
+     * <code>string type = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -1170,7 +1105,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type = 7;</code>
+     * <code>string type = 6;</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */

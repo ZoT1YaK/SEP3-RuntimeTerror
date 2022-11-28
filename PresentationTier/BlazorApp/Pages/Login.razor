@@ -1,18 +1,55 @@
 ﻿@page "/Login"
+@using HttpClients.ClientInterfaces
+@using global::Shared.DTOs
+@inject IUserService UserService
+@inject NavigationManager NavManager
 
 <div class="background">
-        <div class="flex-container">
-            <div class="name">REVERSO</div>
-            <div class="regBox">
-                <form>
-                    <label for="username">Username:</label><input type="text" id="username" name="username"><br>
-                    <label for="password">Password:</label><input type="text" id="password" name="password"><br>
-                </form><br>
-                <button class="loginButton" type="button">Login</button>
-            </div>
+    <div class="flex-container">
+        <div class="name">REVERSO</div>
+        <div class="regBox">
+            <form>
+                <label for="username">Username:</label><input type="text" @bind="userName" required="required"><br>
+                <label for="password">Password:</label><input type="text" @bind="password" required="required"><br>
+            </form><br>
+            <button class="loginButton" type="button" @onclick="LoginUser">Login</button>
         </div>
     </div>
+    <div>
+        <span style="color: red">@msg</span>
+    </div>
+</div>
 
 @code {
-    
+    string userName = "";
+    string password = "";
+    string msg = "";
+
+    private async Task LoginUser()
+    {
+        msg = "";
+        
+        if (userName == "" || password == "")
+        {
+            msg = "All fields are required";
+            return;
+        }
+
+        try
+        {
+            var dto = new UserLoginDTO
+            {
+                Username = userName,
+                Password = password,
+            };
+
+            await UserService.LoginAsync(dto);
+            NavManager.NavigateTo("/counter");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
 }

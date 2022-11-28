@@ -76,6 +76,37 @@ public final class UserServiceGrpc {
     return getLoginUsersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.User> getFindUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FindUser",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.User.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.User> getFindUserMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.User> getFindUserMethod;
+    if ((getFindUserMethod = UserServiceGrpc.getFindUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getFindUserMethod = UserServiceGrpc.getFindUserMethod) == null) {
+          UserServiceGrpc.getFindUserMethod = getFindUserMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.User>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.User.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("FindUser"))
+              .build();
+        }
+      }
+    }
+    return getFindUserMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,13 @@ public final class UserServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginUsersMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void findUser(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindUserMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -154,6 +192,13 @@ public final class UserServiceGrpc {
                 org.dataaccess.protobuf.LoginUser,
                 org.dataaccess.protobuf.User>(
                   this, METHODID_LOGIN_USERS)))
+          .addMethod(
+            getFindUserMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.User>(
+                  this, METHODID_FIND_USER)))
           .build();
     }
   }
@@ -187,6 +232,14 @@ public final class UserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginUsersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void findUser(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFindUserMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -215,6 +268,13 @@ public final class UserServiceGrpc {
     public org.dataaccess.protobuf.User loginUsers(org.dataaccess.protobuf.LoginUser request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginUsersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.User findUser(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFindUserMethod(), getCallOptions(), request);
     }
   }
 
@@ -247,10 +307,19 @@ public final class UserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginUsersMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.User> findUser(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFindUserMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_USER = 0;
   private static final int METHODID_LOGIN_USERS = 1;
+  private static final int METHODID_FIND_USER = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,6 +344,10 @@ public final class UserServiceGrpc {
           break;
         case METHODID_LOGIN_USERS:
           serviceImpl.loginUsers((org.dataaccess.protobuf.LoginUser) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User>) responseObserver);
+          break;
+        case METHODID_FIND_USER:
+          serviceImpl.findUser((org.dataaccess.protobuf.SearchField) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.User>) responseObserver);
           break;
         default:
@@ -340,6 +413,7 @@ public final class UserServiceGrpc {
               .setSchemaDescriptor(new UserServiceFileDescriptorSupplier())
               .addMethod(getCreateUserMethod())
               .addMethod(getLoginUsersMethod())
+              .addMethod(getFindUserMethod())
               .build();
         }
       }

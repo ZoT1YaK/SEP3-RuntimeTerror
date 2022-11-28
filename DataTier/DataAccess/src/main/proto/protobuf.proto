@@ -6,19 +6,10 @@ option java_package = "org.dataaccess.protobuf";
 service UserService{
   rpc CreateUser(RegisterUser) returns (User);
   rpc LoginUsers(LoginUser) returns (User);
+  rpc FindUser(SearchField) returns (User);
 }
 
 message User{
-  int64 id = 1;
-  string username = 2;
-  string password = 3;
-  string f_name = 4;
-  string l_name = 5;
-  int32 credits = 6;
-  string type = 7;
-}
-
-message RegisterUser{
   string username = 1;
   string password = 2;
   string f_name = 3;
@@ -27,7 +18,18 @@ message RegisterUser{
   string type = 6;
 }
 
+message RegisterUser{
+  string username = 1;
+  string password = 2;
+  string f_name = 3;
+  string l_name = 4;
+}
+
 message LoginUser{
   string username = 1;
   string password = 2;
+}
+
+message SearchField{
+  string search = 1;
 }

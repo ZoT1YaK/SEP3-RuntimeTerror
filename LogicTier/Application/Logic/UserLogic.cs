@@ -15,32 +15,46 @@ public class UserLogic : IUserLogic
         this.userDao = userDao;
     }
     
-    public async Task<User> CreateUserAsync(UserCreationDTO dto)
+    public async Task<User> CreateUserAsync(UserCreationDTO userCreationDto)
     {
-        // User? existing = await userDao.GetByUsernameAsync(dto.userName);
-        // if (existing != null)
-        //     throw new Exception("Username already taken!");
+        string userName = userCreationDto.userName;
 
-        ValidateData(dto);
+        var checkUser = await userDao.FindUserAsync(userName);
+
+        if (checkUser != null)
+            throw new Exception("Username already exists");
+        
+        ValidateData(userCreationDto);
 
         var user = new User
         {
-            userName = dto.userName,
-            password = dto.password,
-            FirstName = dto.FirstName,
-            LastName = dto.LastName,
-            Credits = dto.Credits,
-            type = dto.type
+            userName = userCreationDto.userName,
+            password = userCreationDto.password,
+            FirstName = userCreationDto.FirstName,
+            LastName = userCreationDto.LastName
         };
 
         return await userDao.CreateUserAsync(user);
     }
 
-    /*public async Task<UserCreationDTO> LogIn(string username, string password)
+    public async Task<User> LoginUserAsync(UserLoginDTO userLoginDto)
     {
-        throw new NotImplementedException();
-    }*/
-    
+        string userName = userLoginDto.Username;
+        string password = userLoginDto.Password;
+
+        var user = await userDao.FindUserAsync(userName);
+
+        if (user == null)
+            throw new Exception("User does not exist");
+
+        if (!password.Equals(user.password))
+        {
+            throw new Exception("Incorrect username or password");
+        }
+
+        return await userDao.LoginUserAsync(user);
+    }
+
     private static void ValidateData(UserCreationDTO user)
     {
         string username = user.userName;

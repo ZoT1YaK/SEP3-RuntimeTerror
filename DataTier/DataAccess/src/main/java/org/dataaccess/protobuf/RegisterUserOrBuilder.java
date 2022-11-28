@@ -54,22 +54,4 @@ public interface RegisterUserOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLNameBytes();
-
-  /**
-   * <code>int32 credits = 5;</code>
-   * @return The credits.
-   */
-  int getCredits();
-
-  /**
-   * <code>string type = 6;</code>
-   * @return The type.
-   */
-  java.lang.String getType();
-  /**
-   * <code>string type = 6;</code>
-   * @return The bytes for type.
-   */
-  com.google.protobuf.ByteString
-      getTypeBytes();
 }

@@ -18,14 +18,16 @@
             <button class="regButton" type="button"  @onclick="Create">Register</button>
         </div>
     </div>
-     <span style="color: red">@msg</span>
+    <div>
+        <span style="color: red">@msg</span>
     </div>
+</div>
 
 @code {
-    string userName;
-    string password;
-    string fName;
-    string lName;
+    string userName = "";
+    string password = "";
+    string fName = "";
+    string lName = "";
     string msg = "";
 
     private async Task Create()
@@ -40,15 +42,14 @@
         
         try
         {
-            UserCreationDTO dto = new();
-            dto.password = password;
-            dto.userName = userName;
-            dto.Credits = 0;
-            dto.FirstName = fName;
-            dto.LastName = lName;
-            dto.type = "string";
-            
-            
+            var dto = new UserCreationDTO
+            {
+                userName = userName,
+                password = password,
+                FirstName = fName,
+                LastName = lName
+            };
+
             await UserService.CreateAsync(dto);
             NavManager.NavigateTo("/Login");
         }

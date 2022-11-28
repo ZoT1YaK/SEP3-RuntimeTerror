@@ -42,6 +42,23 @@ public class UserHttpClient : IUserService
         // return user;
     }
 
+    public async Task<User> LoginAsync(UserLoginDTO dto)
+    {
+        HttpResponseMessage response = await Client.PostAsJsonAsync("/user/login", dto);
+        if (!response.IsSuccessStatusCode)
+        {
+            string result = await response.Content.ReadAsStringAsync();
+            throw new Exception(result);
+        }
+        
+        var user = await response.Content.ReadFromJsonAsync<User>();
+        if (user == null)
+        {
+            throw new Exception("Read User - Error");
+        }
+        return user;
+    }
+
     // public Task LoginAsync(string username, string password)
     // {
     //     throw new NotImplementedException();

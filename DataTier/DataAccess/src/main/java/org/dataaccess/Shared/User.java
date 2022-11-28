@@ -38,6 +38,13 @@ public class User implements Serializable
         this.type = type;
     }
 
+    public User(String username, String password, String f_name, String l_name) {
+        this.username = username;
+        this.password = password;
+        this.f_name = f_name;
+        this.l_name = l_name;
+    }
+
     public String getUsername() {
         return username;
     }

@@ -29,6 +29,11 @@ public final class Protobuf {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_LoginUser_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SearchField_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SearchField_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,17 +43,18 @@ public final class Protobuf {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016protobuf.proto\"u\n\004User\022\n\n\002id\030\001 \001(\003\022\020\n\010" +
-      "username\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\022\016\n\006f_na" +
-      "me\030\004 \001(\t\022\016\n\006l_name\030\005 \001(\t\022\017\n\007credits\030\006 \001(" +
-      "\005\022\014\n\004type\030\007 \001(\t\"q\n\014RegisterUser\022\020\n\010usern" +
-      "ame\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\016\n\006f_name\030\003 " +
-      "\001(\t\022\016\n\006l_name\030\004 \001(\t\022\017\n\007credits\030\005 \001(\005\022\014\n\004" +
-      "type\030\006 \001(\t\"/\n\tLoginUser\022\020\n\010username\030\001 \001(" +
-      "\t\022\020\n\010password\030\002 \001(\t2R\n\013UserService\022\"\n\nCr" +
-      "eateUser\022\r.RegisterUser\032\005.User\022\037\n\nLoginU" +
-      "sers\022\n.LoginUser\032\005.UserB\033\n\027org.dataacces" +
-      "s.protobufP\001b\006proto3"
+      "\n\016protobuf.proto\"i\n\004User\022\020\n\010username\030\001 \001" +
+      "(\t\022\020\n\010password\030\002 \001(\t\022\016\n\006f_name\030\003 \001(\t\022\016\n\006" +
+      "l_name\030\004 \001(\t\022\017\n\007credits\030\005 \001(\005\022\014\n\004type\030\006 " +
+      "\001(\t\"R\n\014RegisterUser\022\020\n\010username\030\001 \001(\t\022\020\n" +
+      "\010password\030\002 \001(\t\022\016\n\006f_name\030\003 \001(\t\022\016\n\006l_nam" +
+      "e\030\004 \001(\t\"/\n\tLoginUser\022\020\n\010username\030\001 \001(\t\022\020" +
+      "\n\010password\030\002 \001(\t\"\035\n\013SearchField\022\016\n\006searc" +
+      "h\030\001 \001(\t2s\n\013UserService\022\"\n\nCreateUser\022\r.R" +
+      "egisterUser\032\005.User\022\037\n\nLoginUsers\022\n.Login" +
+      "User\032\005.User\022\037\n\010FindUser\022\014.SearchField\032\005." +
+      "UserB\033\n\027org.dataaccess.protobufP\001b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59,19 +65,25 @@ public final class Protobuf {
     internal_static_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_User_descriptor,
-        new java.lang.String[] { "Id", "Username", "Password", "FName", "LName", "Credits", "Type", });
+        new java.lang.String[] { "Username", "Password", "FName", "LName", "Credits", "Type", });
     internal_static_RegisterUser_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_RegisterUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegisterUser_descriptor,
-        new java.lang.String[] { "Username", "Password", "FName", "LName", "Credits", "Type", });
+        new java.lang.String[] { "Username", "Password", "FName", "LName", });
     internal_static_LoginUser_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_LoginUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LoginUser_descriptor,
         new java.lang.String[] { "Username", "Password", });
+    internal_static_SearchField_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_SearchField_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SearchField_descriptor,
+        new java.lang.String[] { "Search", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

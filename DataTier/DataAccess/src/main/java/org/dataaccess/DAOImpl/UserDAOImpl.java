@@ -19,25 +19,32 @@ public class UserDAOImpl implements UserDAO
     }
 
     @Override
-    public User registerUser(User user) {
+    public User registerUser(User user)
+    {
+        user.setCredits(0);
+        user.setType("customer");
 
-//        Optional<User> checkUser = userRepository.findUserByUsername(user.getUsername());
-//        if (!checkUser.isPresent()) {
-            user.setCredits(0);
-            user.setType("customer");
+        userRepository.save(user);
 
-            userRepository.save(user);
-
-            return user;
-//        }
+        return user;
     }
 
     @Override
     public User loginUser(User user)
     {
-        Optional<User> checkUser = userRepository.findUser(user.getUsername(), user.getPassword());
-        if (checkUser.isPresent())
-            return userRepository.getReferenceById(user.getUsername());
+        User checkUser = userRepository.findUser(user.getUsername());
+        if (checkUser != null)
+            return userRepository.findUser(user.getUsername());
+
+        return null;
+    }
+
+    @Override
+    public User findUser(String username)
+    {
+        User checkUser = userRepository.findUser(username);
+        if (checkUser!= null)
+            return userRepository.findUser(username);
 
         return null;
     }
