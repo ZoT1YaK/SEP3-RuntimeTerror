@@ -9,6 +9,11 @@ service UserService{
   rpc FindUser(SearchField) returns (User);
 }
 
+service ProductService{
+  rpc GetProducts(Void) returns (ProductItems);
+  rpc FindProduct(SearchField) returns (Product);
+}
+
 message User{
   string username = 1;
   string password = 2;
@@ -33,3 +38,17 @@ message LoginUser{
 message SearchField{
   string search = 1;
 }
+
+message Product{
+  int32 id = 1;
+  string name = 2;
+  string imgPath = 3;
+  int32 price = 4;
+  string description = 5;
+}
+
+message ProductItems{
+  repeated Product product = 1;
+}
+
+message Void{}

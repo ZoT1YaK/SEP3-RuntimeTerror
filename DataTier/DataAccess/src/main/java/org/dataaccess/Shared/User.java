@@ -11,19 +11,14 @@ public class User implements Serializable
     @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
     private String password;
 
-    @Column(name = "f_name")
     private String f_name;
 
-    @Column(name = "l_name")
     private String l_name;
 
-    @Column(name = "credits")
     private int credits;
 
-    @Column(name = "type")
     private String type;
 
     public User() {
