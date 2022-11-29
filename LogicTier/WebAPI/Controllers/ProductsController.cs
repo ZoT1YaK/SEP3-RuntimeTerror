@@ -1,5 +1,6 @@
 ﻿using Application.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
+using Shared.DTOs;
 
 namespace WebAPI.Controllers;
 
@@ -13,7 +14,22 @@ public class ProductsController : ControllerBase
     {
         this.productLogic = productLogic;
     }
-    
+
+    [HttpPost]
+    public async Task<IActionResult> RegisterAsync(ProductCreationDTO dto)
+    {
+        try
+        {
+            Shared.Models.Product product = await productLogic.RegisterProductAsync(dto);
+            return Created($"/products/{product.Id}", product);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetAsync()
     {

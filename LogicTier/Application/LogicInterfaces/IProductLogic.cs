@@ -5,7 +5,7 @@ namespace Application.LogicInterfaces;
 
 public interface IProductLogic
 {
-    // Task<Product> CreateProductAsync(ProductCreationDTO dto);
+    Task<Product> RegisterProductAsync(ProductCreationDTO dto);
     
     Task<IEnumerable<Product>> GetProductsAsync();
 }

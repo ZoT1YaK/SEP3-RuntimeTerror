@@ -15,23 +15,25 @@ org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceFutureStub.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceBlockingStub.class
 org\dataaccess\protobuf\SearchFieldOrBuilder.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceImplBase.class
-GrpcServer.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceFileDescriptorSupplier.class
 org\dataaccess\Shared\User.class
 org\dataaccess\protobuf\SearchField.class
 org\dataaccess\protobuf\ProductServiceGrpc$2.class
 org\dataaccess\protobuf\Product$Builder.class
 org\dataaccess\protobuf\User$1.class
+org\dataaccess\repositories\ProductRepository.class
 org\dataaccess\protobuf\Void$1.class
 org\dataaccess\protobuf\Product.class
 org\dataaccess\protobuf\RegisterUser.class
 org\dataaccess\protobuf\ProductServiceGrpc$3.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceBaseDescriptorSupplier.class
+org\dataaccess\Shared\Product.class
 org\dataaccess\protobuf\User.class
 org\dataaccess\protobuf\ProductItemsOrBuilder.class
 org\dataaccess\protobuf\Void$Builder.class
 org\dataaccess\protobuf\LoginUser$Builder.class
 org\dataaccess\protobuf\ProductServiceGrpc$MethodHandlers.class
+services\ProductService.class
 org\dataaccess\protobuf\UserServiceGrpc.class
 org\dataaccess\protobuf\ProductItems.class
 org\dataaccess\DAOInterfaces\UserDAO.class
@@ -41,6 +43,7 @@ org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceImplBase.class
 org\dataaccess\protobuf\UserServiceGrpc$3.class
 org\dataaccess\protobuf\RegisterUser$1.class
 org\dataaccess\DAOImpl\UserDAOImpl.class
+org\dataaccess\mappers\ProductMapper.class
 org\dataaccess\protobuf\ProductItems$1.class
 org\dataaccess\protobuf\SearchField$Builder.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceBlockingStub.class
@@ -49,6 +52,7 @@ org\dataaccess\protobuf\UserServiceGrpc$2.class
 org\dataaccess\DataAccessApp.class
 org\dataaccess\mappers\UserMapper.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceBaseDescriptorSupplier.class
+org\dataaccess\DAOImpl\ProductDAOImpl.class
 org\dataaccess\protobuf\ProductOrBuilder.class
 services\UserService.class
 org\dataaccess\protobuf\LoginUserOrBuilder.class
@@ -61,3 +65,4 @@ org\dataaccess\protobuf\ProductServiceGrpc$1.class
 org\dataaccess\protobuf\LoginUser.class
 org\dataaccess\protobuf\Void.class
 org\dataaccess\protobuf\LoginUser$1.class
+org\dataaccess\DAOInterfaces\ProductDAO.class

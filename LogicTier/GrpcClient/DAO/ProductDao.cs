@@ -12,6 +12,21 @@ public class ProductDao : IProductDAO
         this.productService = productService;
     }
 
+    public async Task<Shared.Models.Product> RegisterProductAsync(Shared.Models.Product product)
+    {
+        var registerProduct = new Product
+        {
+            Name = product.Name,
+            ImgPath = product.ImagePath,
+            Price = product.Price,
+            Description = product.Description
+        };
+
+        Product grpcProductToRegister = await productService.RegisterProductAsync(registerProduct);
+
+        return ConvertGrpcProductToSharedProduct(grpcProductToRegister);
+    }
+
     public async Task<IEnumerable<Shared.Models.Product>> GetProductsAsync()
     {
         ProductItems productsProto = await productService.GetProductsAsync(new Void());
