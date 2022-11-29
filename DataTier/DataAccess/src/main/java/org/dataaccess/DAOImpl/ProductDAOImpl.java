@@ -18,6 +18,13 @@ public class ProductDAOImpl implements ProductDAO
     }
 
     @Override
+    public Product registerProduct(Product product) {
+        productRepository.save(product);
+
+        return product;
+    }
+
+    @Override
     public Collection<Product> getProducts() {
         return productRepository.findAll();
     }

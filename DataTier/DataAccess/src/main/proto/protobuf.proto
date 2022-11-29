@@ -10,6 +10,7 @@ service UserService{
 }
 
 service ProductService{
+  rpc RegisterProduct(Product) returns (Product);
   rpc GetProducts(Void) returns (ProductItems);
   rpc FindProduct(SearchField) returns (Product);
 }

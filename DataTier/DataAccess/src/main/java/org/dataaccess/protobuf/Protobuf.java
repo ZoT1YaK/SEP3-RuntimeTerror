@@ -71,8 +71,9 @@ public final class Protobuf {
       "duct\030\001 \003(\0132\010.Product\"\006\n\004Void2s\n\013UserServ" +
       "ice\022\"\n\nCreateUser\022\r.RegisterUser\032\005.User\022" +
       "\037\n\nLoginUsers\022\n.LoginUser\032\005.User\022\037\n\010Find" +
-      "User\022\014.SearchField\032\005.User2\\\n\016ProductServ" +
-      "ice\022#\n\013GetProducts\022\005.Void\032\r.ProductItems" +
+      "User\022\014.SearchField\032\005.User2\203\001\n\016ProductSer" +
+      "vice\022%\n\017RegisterProduct\022\010.Product\032\010.Prod" +
+      "uct\022#\n\013GetProducts\022\005.Void\032\r.ProductItems" +
       "\022%\n\013FindProduct\022\014.SearchField\032\010.ProductB" +
       "\033\n\027org.dataaccess.protobufP\001b\006proto3"
     };

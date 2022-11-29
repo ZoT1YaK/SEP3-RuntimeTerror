@@ -6,6 +6,8 @@ import java.util.Collection;
 
 public interface ProductDAO
 {
+    Product registerProduct(Product product);
+
     Collection<Product> getProducts();
 
     Product findProduct(String productId);

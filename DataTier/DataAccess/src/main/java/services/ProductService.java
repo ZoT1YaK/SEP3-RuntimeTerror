@@ -21,6 +21,22 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
     }
 
     @Override
+    public void registerProduct(Product request, StreamObserver<Product> responseObserver)
+    {
+        org.dataaccess.Shared.Product product = new org.dataaccess.Shared.Product(
+                request.getName(),
+                request.getImgPath(),
+                request.getPrice(),
+                request.getDescription()
+        );
+
+        org.dataaccess.Shared.Product registerProduct = productDAO.registerProduct(product);
+
+        responseObserver.onNext(ProductMapper.mapToProto(registerProduct));
+        responseObserver.onCompleted();
+    }
+
+    @Override
     public void getProducts(Void request, StreamObserver<ProductItems> responseObserver)
     {
         Collection<org.dataaccess.Shared.Product> products = productDAO.getProducts();

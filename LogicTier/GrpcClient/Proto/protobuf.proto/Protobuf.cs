@@ -34,10 +34,10 @@ public static partial class ProtobufReflection {
           "ASADKAsyCC5Qcm9kdWN0IgYKBFZvaWQycwoLVXNlclNlcnZpY2USIgoKQ3Jl",
           "YXRlVXNlchINLlJlZ2lzdGVyVXNlchoFLlVzZXISHwoKTG9naW5Vc2VycxIK",
           "LkxvZ2luVXNlchoFLlVzZXISHwoIRmluZFVzZXISDC5TZWFyY2hGaWVsZBoF",
-          "LlVzZXIyXAoOUHJvZHVjdFNlcnZpY2USIwoLR2V0UHJvZHVjdHMSBS5Wb2lk",
-          "Gg0uUHJvZHVjdEl0ZW1zEiUKC0ZpbmRQcm9kdWN0EgwuU2VhcmNoRmllbGQa",
-          "CC5Qcm9kdWN0QhsKF29yZy5kYXRhYWNjZXNzLnByb3RvYnVmUAFiBnByb3Rv",
-          "Mw=="));
+          "LlVzZXIygwEKDlByb2R1Y3RTZXJ2aWNlEiUKD1JlZ2lzdGVyUHJvZHVjdBII",
+          "LlByb2R1Y3QaCC5Qcm9kdWN0EiMKC0dldFByb2R1Y3RzEgUuVm9pZBoNLlBy",
+          "b2R1Y3RJdGVtcxIlCgtGaW5kUHJvZHVjdBIMLlNlYXJjaEZpZWxkGgguUHJv",
+          "ZHVjdEIbChdvcmcuZGF0YWFjY2Vzcy5wcm90b2J1ZlABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

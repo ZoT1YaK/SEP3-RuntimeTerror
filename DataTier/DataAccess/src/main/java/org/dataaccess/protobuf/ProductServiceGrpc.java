@@ -14,6 +14,37 @@ public final class ProductServiceGrpc {
   public static final String SERVICE_NAME = "ProductService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.Product,
+      org.dataaccess.protobuf.Product> getRegisterProductMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegisterProduct",
+      requestType = org.dataaccess.protobuf.Product.class,
+      responseType = org.dataaccess.protobuf.Product.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.Product,
+      org.dataaccess.protobuf.Product> getRegisterProductMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.Product, org.dataaccess.protobuf.Product> getRegisterProductMethod;
+    if ((getRegisterProductMethod = ProductServiceGrpc.getRegisterProductMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getRegisterProductMethod = ProductServiceGrpc.getRegisterProductMethod) == null) {
+          ProductServiceGrpc.getRegisterProductMethod = getRegisterProductMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.Product, org.dataaccess.protobuf.Product>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterProduct"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Product.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Product.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("RegisterProduct"))
+              .build();
+        }
+      }
+    }
+    return getRegisterProductMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.Void,
       org.dataaccess.protobuf.ProductItems> getGetProductsMethod;
 
@@ -126,6 +157,13 @@ public final class ProductServiceGrpc {
 
     /**
      */
+    public void registerProduct(org.dataaccess.protobuf.Product request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Product> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterProductMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void getProducts(org.dataaccess.protobuf.Void request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.ProductItems> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsMethod(), responseObserver);
@@ -140,6 +178,13 @@ public final class ProductServiceGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getRegisterProductMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.Product,
+                org.dataaccess.protobuf.Product>(
+                  this, METHODID_REGISTER_PRODUCT)))
           .addMethod(
             getGetProductsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -170,6 +215,14 @@ public final class ProductServiceGrpc {
     protected ProductServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductServiceStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public void registerProduct(org.dataaccess.protobuf.Product request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Product> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRegisterProductMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -205,6 +258,13 @@ public final class ProductServiceGrpc {
 
     /**
      */
+    public org.dataaccess.protobuf.Product registerProduct(org.dataaccess.protobuf.Product request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegisterProductMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public org.dataaccess.protobuf.ProductItems getProducts(org.dataaccess.protobuf.Void request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductsMethod(), getCallOptions(), request);
@@ -234,6 +294,14 @@ public final class ProductServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Product> registerProduct(
+        org.dataaccess.protobuf.Product request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRegisterProductMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.ProductItems> getProducts(
         org.dataaccess.protobuf.Void request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -249,8 +317,9 @@ public final class ProductServiceGrpc {
     }
   }
 
-  private static final int METHODID_GET_PRODUCTS = 0;
-  private static final int METHODID_FIND_PRODUCT = 1;
+  private static final int METHODID_REGISTER_PRODUCT = 0;
+  private static final int METHODID_GET_PRODUCTS = 1;
+  private static final int METHODID_FIND_PRODUCT = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -269,6 +338,10 @@ public final class ProductServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_REGISTER_PRODUCT:
+          serviceImpl.registerProduct((org.dataaccess.protobuf.Product) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Product>) responseObserver);
+          break;
         case METHODID_GET_PRODUCTS:
           serviceImpl.getProducts((org.dataaccess.protobuf.Void) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.ProductItems>) responseObserver);
@@ -338,6 +411,7 @@ public final class ProductServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
+              .addMethod(getRegisterProductMethod())
               .addMethod(getGetProductsMethod())
               .addMethod(getFindProductMethod())
               .build();
