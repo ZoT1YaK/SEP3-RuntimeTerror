@@ -2,6 +2,7 @@ package services;
 
 import io.grpc.stub.StreamObserver;
 import org.dataaccess.DAOInterfaces.ProductDAO;
+import org.dataaccess.mappers.CategoryMapper;
 import org.dataaccess.mappers.ProductMapper;
 import org.dataaccess.protobuf.*;
 import org.dataaccess.protobuf.Void;
@@ -27,8 +28,13 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
                 request.getName(),
                 request.getImgPath(),
                 request.getPrice(),
-                request.getDescription()
+                request.getDescription(),
+                CategoryMapper.mapToShared(request.getCategory())
         );
+
+        org.dataaccess.Shared.Category category = productDAO.getCategory(request.getCategory().getCategoryName());
+        if (category != null)
+            product.setCategory(category);
 
         org.dataaccess.Shared.Product registerProduct = productDAO.registerProduct(product);
 

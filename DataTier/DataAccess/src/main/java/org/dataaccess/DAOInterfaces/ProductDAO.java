@@ -1,5 +1,6 @@
 package org.dataaccess.DAOInterfaces;
 
+import org.dataaccess.Shared.Category;
 import org.dataaccess.Shared.Product;
 
 import java.util.Collection;
@@ -11,4 +12,6 @@ public interface ProductDAO
     Collection<Product> getProducts();
 
     Product findProduct(String productId);
+
+    Category getCategory(String categoryName);
 }

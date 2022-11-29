@@ -79,6 +79,19 @@ private static final long serialVersionUID = 0L;
             description_ = s;
             break;
           }
+          case 50: {
+            org.dataaccess.protobuf.Category.Builder subBuilder = null;
+            if (category_ != null) {
+              subBuilder = category_.toBuilder();
+            }
+            category_ = input.readMessage(org.dataaccess.protobuf.Category.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(category_);
+              category_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -249,6 +262,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CATEGORY_FIELD_NUMBER = 6;
+  private org.dataaccess.protobuf.Category category_;
+  /**
+   * <code>.Category category = 6;</code>
+   * @return Whether the category field is set.
+   */
+  @java.lang.Override
+  public boolean hasCategory() {
+    return category_ != null;
+  }
+  /**
+   * <code>.Category category = 6;</code>
+   * @return The category.
+   */
+  @java.lang.Override
+  public org.dataaccess.protobuf.Category getCategory() {
+    return category_ == null ? org.dataaccess.protobuf.Category.getDefaultInstance() : category_;
+  }
+  /**
+   * <code>.Category category = 6;</code>
+   */
+  @java.lang.Override
+  public org.dataaccess.protobuf.CategoryOrBuilder getCategoryOrBuilder() {
+    return getCategory();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -278,6 +317,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
     }
+    if (category_ != null) {
+      output.writeMessage(6, getCategory());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -304,6 +346,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
     }
+    if (category_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getCategory());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -329,6 +375,11 @@ private static final long serialVersionUID = 0L;
         != other.getPrice()) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
+    if (hasCategory() != other.hasCategory()) return false;
+    if (hasCategory()) {
+      if (!getCategory()
+          .equals(other.getCategory())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -350,6 +401,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPrice();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
+    if (hasCategory()) {
+      hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getCategory().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -493,6 +548,12 @@ private static final long serialVersionUID = 0L;
 
       description_ = "";
 
+      if (categoryBuilder_ == null) {
+        category_ = null;
+      } else {
+        category_ = null;
+        categoryBuilder_ = null;
+      }
       return this;
     }
 
@@ -524,6 +585,11 @@ private static final long serialVersionUID = 0L;
       result.imgPath_ = imgPath_;
       result.price_ = price_;
       result.description_ = description_;
+      if (categoryBuilder_ == null) {
+        result.category_ = category_;
+      } else {
+        result.category_ = categoryBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -589,6 +655,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
         onChanged();
+      }
+      if (other.hasCategory()) {
+        mergeCategory(other.getCategory());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -907,6 +976,125 @@ private static final long serialVersionUID = 0L;
       description_ = value;
       onChanged();
       return this;
+    }
+
+    private org.dataaccess.protobuf.Category category_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        org.dataaccess.protobuf.Category, org.dataaccess.protobuf.Category.Builder, org.dataaccess.protobuf.CategoryOrBuilder> categoryBuilder_;
+    /**
+     * <code>.Category category = 6;</code>
+     * @return Whether the category field is set.
+     */
+    public boolean hasCategory() {
+      return categoryBuilder_ != null || category_ != null;
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     * @return The category.
+     */
+    public org.dataaccess.protobuf.Category getCategory() {
+      if (categoryBuilder_ == null) {
+        return category_ == null ? org.dataaccess.protobuf.Category.getDefaultInstance() : category_;
+      } else {
+        return categoryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    public Builder setCategory(org.dataaccess.protobuf.Category value) {
+      if (categoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        category_ = value;
+        onChanged();
+      } else {
+        categoryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    public Builder setCategory(
+        org.dataaccess.protobuf.Category.Builder builderForValue) {
+      if (categoryBuilder_ == null) {
+        category_ = builderForValue.build();
+        onChanged();
+      } else {
+        categoryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    public Builder mergeCategory(org.dataaccess.protobuf.Category value) {
+      if (categoryBuilder_ == null) {
+        if (category_ != null) {
+          category_ =
+            org.dataaccess.protobuf.Category.newBuilder(category_).mergeFrom(value).buildPartial();
+        } else {
+          category_ = value;
+        }
+        onChanged();
+      } else {
+        categoryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    public Builder clearCategory() {
+      if (categoryBuilder_ == null) {
+        category_ = null;
+        onChanged();
+      } else {
+        category_ = null;
+        categoryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    public org.dataaccess.protobuf.Category.Builder getCategoryBuilder() {
+      
+      onChanged();
+      return getCategoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    public org.dataaccess.protobuf.CategoryOrBuilder getCategoryOrBuilder() {
+      if (categoryBuilder_ != null) {
+        return categoryBuilder_.getMessageOrBuilder();
+      } else {
+        return category_ == null ?
+            org.dataaccess.protobuf.Category.getDefaultInstance() : category_;
+      }
+    }
+    /**
+     * <code>.Category category = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        org.dataaccess.protobuf.Category, org.dataaccess.protobuf.Category.Builder, org.dataaccess.protobuf.CategoryOrBuilder> 
+        getCategoryFieldBuilder() {
+      if (categoryBuilder_ == null) {
+        categoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            org.dataaccess.protobuf.Category, org.dataaccess.protobuf.Category.Builder, org.dataaccess.protobuf.CategoryOrBuilder>(
+                getCategory(),
+                getParentForChildren(),
+                isClean());
+        category_ = null;
+      }
+      return categoryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

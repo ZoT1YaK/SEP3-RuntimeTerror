@@ -54,4 +54,19 @@ public interface ProductOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
+
+  /**
+   * <code>.Category category = 6;</code>
+   * @return Whether the category field is set.
+   */
+  boolean hasCategory();
+  /**
+   * <code>.Category category = 6;</code>
+   * @return The category.
+   */
+  org.dataaccess.protobuf.Category getCategory();
+  /**
+   * <code>.Category category = 6;</code>
+   */
+  org.dataaccess.protobuf.CategoryOrBuilder getCategoryOrBuilder();
 }

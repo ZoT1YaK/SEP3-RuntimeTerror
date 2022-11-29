@@ -45,8 +45,10 @@ org\dataaccess\protobuf\RegisterUser$1.class
 org\dataaccess\DAOImpl\UserDAOImpl.class
 org\dataaccess\mappers\ProductMapper.class
 org\dataaccess\protobuf\ProductItems$1.class
+org\dataaccess\protobuf\CategoryOrBuilder.class
 org\dataaccess\protobuf\SearchField$Builder.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceBlockingStub.class
+org\dataaccess\protobuf\Category$Builder.class
 org\dataaccess\protobuf\User$Builder.class
 org\dataaccess\protobuf\UserServiceGrpc$2.class
 org\dataaccess\DataAccessApp.class
@@ -60,9 +62,11 @@ org\dataaccess\protobuf\Product$1.class
 org\dataaccess\protobuf\UserServiceGrpc$1.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceMethodDescriptorSupplier.class
 org\dataaccess\protobuf\RegisterUser$Builder.class
+org\dataaccess\protobuf\Category$1.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceFutureStub.class
 org\dataaccess\protobuf\ProductServiceGrpc$1.class
 org\dataaccess\protobuf\LoginUser.class
 org\dataaccess\protobuf\Void.class
 org\dataaccess\protobuf\LoginUser$1.class
 org\dataaccess\DAOInterfaces\ProductDAO.class
+org\dataaccess\protobuf\Category.class

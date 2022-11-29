@@ -22,7 +22,8 @@ public class ProductLogic : IProductLogic
             Name = dto.Name,
             ImagePath = dto.ImagePath,
             Price = dto.Price,
-            Description = dto.Description
+            Description = dto.Description,
+            Category = dto.Category
         };
 
         return await productDao.RegisterProductAsync(product);

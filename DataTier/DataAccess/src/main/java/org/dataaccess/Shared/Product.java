@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "\"products\"", schema = "reverso_sep")
+@Table(name = "products", schema = "reverso_sep")
 public class Product implements Serializable
 {
     @Id
@@ -19,25 +19,16 @@ public class Product implements Serializable
 
     private String description;
 
-    public Product(int id, String name, String imgPath, int price, String description) {
-        this.id = id;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    private Category category;
+
+    public Product(String name, String imgPath, int price, String description, Category category) {
         this.name = name;
         this.imgPath = imgPath;
         this.price = price;
         this.description = description;
-    }
-
-    public Product(String name, String imgPath, int price, String description) {
-        this.name = name;
-        this.imgPath = imgPath;
-        this.price = price;
-        this.description = description;
-    }
-
-    public Product(String name, int price, String description) {
-        this.name = name;
-        this.price = price;
-        this.description = description;
+        this.category = category;
     }
 
     public Product() {
@@ -82,5 +73,13 @@ public class Product implements Serializable
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

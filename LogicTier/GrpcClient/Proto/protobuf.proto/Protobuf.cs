@@ -28,16 +28,18 @@ public static partial class ProtobufReflection {
           "VXNlchIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCRIOCgZm",
           "X25hbWUYAyABKAkSDgoGbF9uYW1lGAQgASgJIi8KCUxvZ2luVXNlchIQCgh1",
           "c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSIdCgtTZWFyY2hGaWVs",
-          "ZBIOCgZzZWFyY2gYASABKAkiWAoHUHJvZHVjdBIKCgJpZBgBIAEoBRIMCgRu",
+          "ZBIOCgZzZWFyY2gYASABKAkidQoHUHJvZHVjdBIKCgJpZBgBIAEoBRIMCgRu",
           "YW1lGAIgASgJEg8KB2ltZ1BhdGgYAyABKAkSDQoFcHJpY2UYBCABKAUSEwoL",
-          "ZGVzY3JpcHRpb24YBSABKAkiKQoMUHJvZHVjdEl0ZW1zEhkKB3Byb2R1Y3QY",
-          "ASADKAsyCC5Qcm9kdWN0IgYKBFZvaWQycwoLVXNlclNlcnZpY2USIgoKQ3Jl",
-          "YXRlVXNlchINLlJlZ2lzdGVyVXNlchoFLlVzZXISHwoKTG9naW5Vc2VycxIK",
-          "LkxvZ2luVXNlchoFLlVzZXISHwoIRmluZFVzZXISDC5TZWFyY2hGaWVsZBoF",
-          "LlVzZXIygwEKDlByb2R1Y3RTZXJ2aWNlEiUKD1JlZ2lzdGVyUHJvZHVjdBII",
-          "LlByb2R1Y3QaCC5Qcm9kdWN0EiMKC0dldFByb2R1Y3RzEgUuVm9pZBoNLlBy",
-          "b2R1Y3RJdGVtcxIlCgtGaW5kUHJvZHVjdBIMLlNlYXJjaEZpZWxkGgguUHJv",
-          "ZHVjdEIbChdvcmcuZGF0YWFjY2Vzcy5wcm90b2J1ZlABYgZwcm90bzM="));
+          "ZGVzY3JpcHRpb24YBSABKAkSGwoIY2F0ZWdvcnkYBiABKAsyCS5DYXRlZ29y",
+          "eSIpCgxQcm9kdWN0SXRlbXMSGQoHcHJvZHVjdBgBIAMoCzIILlByb2R1Y3Qi",
+          "IQoIQ2F0ZWdvcnkSFQoNY2F0ZWdvcnlfbmFtZRgBIAEoCSIGCgRWb2lkMnMK",
+          "C1VzZXJTZXJ2aWNlEiIKCkNyZWF0ZVVzZXISDS5SZWdpc3RlclVzZXIaBS5V",
+          "c2VyEh8KCkxvZ2luVXNlcnMSCi5Mb2dpblVzZXIaBS5Vc2VyEh8KCEZpbmRV",
+          "c2VyEgwuU2VhcmNoRmllbGQaBS5Vc2VyMoMBCg5Qcm9kdWN0U2VydmljZRIl",
+          "Cg9SZWdpc3RlclByb2R1Y3QSCC5Qcm9kdWN0GgguUHJvZHVjdBIjCgtHZXRQ",
+          "cm9kdWN0cxIFLlZvaWQaDS5Qcm9kdWN0SXRlbXMSJQoLRmluZFByb2R1Y3QS",
+          "DC5TZWFyY2hGaWVsZBoILlByb2R1Y3RCGwoXb3JnLmRhdGFhY2Nlc3MucHJv",
+          "dG9idWZQAWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -45,8 +47,9 @@ public static partial class ProtobufReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::RegisterUser), global::RegisterUser.Parser, new[]{ "Username", "Password", "FName", "LName" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LoginUser), global::LoginUser.Parser, new[]{ "Username", "Password" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::SearchField), global::SearchField.Parser, new[]{ "Search" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::Product), global::Product.Parser, new[]{ "Id", "Name", "ImgPath", "Price", "Description" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Product), global::Product.Parser, new[]{ "Id", "Name", "ImgPath", "Price", "Description", "Category" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ProductItems), global::ProductItems.Parser, new[]{ "Product" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Category), global::Category.Parser, new[]{ "CategoryName" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::Void), global::Void.Parser, null, null, null, null, null)
         }));
   }
@@ -1182,6 +1185,7 @@ public sealed partial class Product : pb::IMessage<Product>
     imgPath_ = other.imgPath_;
     price_ = other.price_;
     description_ = other.description_;
+    category_ = other.category_ != null ? other.category_.Clone() : null;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -1251,6 +1255,18 @@ public sealed partial class Product : pb::IMessage<Product>
     }
   }
 
+  /// <summary>Field number for the "category" field.</summary>
+  public const int CategoryFieldNumber = 6;
+  private global::Category category_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::Category Category {
+    get { return category_; }
+    set {
+      category_ = value;
+    }
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -1271,6 +1287,7 @@ public sealed partial class Product : pb::IMessage<Product>
     if (ImgPath != other.ImgPath) return false;
     if (Price != other.Price) return false;
     if (Description != other.Description) return false;
+    if (!object.Equals(Category, other.Category)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -1283,6 +1300,7 @@ public sealed partial class Product : pb::IMessage<Product>
     if (ImgPath.Length != 0) hash ^= ImgPath.GetHashCode();
     if (Price != 0) hash ^= Price.GetHashCode();
     if (Description.Length != 0) hash ^= Description.GetHashCode();
+    if (category_ != null) hash ^= Category.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1321,6 +1339,10 @@ public sealed partial class Product : pb::IMessage<Product>
       output.WriteRawTag(42);
       output.WriteString(Description);
     }
+    if (category_ != null) {
+      output.WriteRawTag(50);
+      output.WriteMessage(Category);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -1351,6 +1373,10 @@ public sealed partial class Product : pb::IMessage<Product>
       output.WriteRawTag(42);
       output.WriteString(Description);
     }
+    if (category_ != null) {
+      output.WriteRawTag(50);
+      output.WriteMessage(Category);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -1375,6 +1401,9 @@ public sealed partial class Product : pb::IMessage<Product>
     }
     if (Description.Length != 0) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+    }
+    if (category_ != null) {
+      size += 1 + pb::CodedOutputStream.ComputeMessageSize(Category);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1402,6 +1431,12 @@ public sealed partial class Product : pb::IMessage<Product>
     }
     if (other.Description.Length != 0) {
       Description = other.Description;
+    }
+    if (other.category_ != null) {
+      if (category_ == null) {
+        Category = new global::Category();
+      }
+      Category.MergeFrom(other.Category);
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -1438,6 +1473,13 @@ public sealed partial class Product : pb::IMessage<Product>
           Description = input.ReadString();
           break;
         }
+        case 50: {
+          if (category_ == null) {
+            Category = new global::Category();
+          }
+          input.ReadMessage(Category);
+          break;
+        }
       }
     }
   #endif
@@ -1471,6 +1513,13 @@ public sealed partial class Product : pb::IMessage<Product>
         }
         case 42: {
           Description = input.ReadString();
+          break;
+        }
+        case 50: {
+          if (category_ == null) {
+            Category = new global::Category();
+          }
+          input.ReadMessage(Category);
           break;
         }
       }
@@ -1658,6 +1707,195 @@ public sealed partial class ProductItems : pb::IMessage<ProductItems>
 
 }
 
+public sealed partial class Category : pb::IMessage<Category>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<Category> _parser = new pb::MessageParser<Category>(() => new Category());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pb::MessageParser<Category> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::ProtobufReflection.Descriptor.MessageTypes[6]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public Category() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public Category(Category other) : this() {
+    categoryName_ = other.categoryName_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public Category Clone() {
+    return new Category(this);
+  }
+
+  /// <summary>Field number for the "category_name" field.</summary>
+  public const int CategoryNameFieldNumber = 1;
+  private string categoryName_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string CategoryName {
+    get { return categoryName_; }
+    set {
+      categoryName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as Category);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(Category other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (CategoryName != other.CategoryName) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (CategoryName.Length != 0) hash ^= CategoryName.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (CategoryName.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(CategoryName);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (CategoryName.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(CategoryName);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    if (CategoryName.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(CategoryName);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(Category other) {
+    if (other == null) {
+      return;
+    }
+    if (other.CategoryName.Length != 0) {
+      CategoryName = other.CategoryName;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          CategoryName = input.ReadString();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          CategoryName = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
 public sealed partial class Void : pb::IMessage<Void>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
@@ -1672,7 +1910,7 @@ public sealed partial class Void : pb::IMessage<Void>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtobufReflection.Descriptor.MessageTypes[6]; }
+    get { return global::ProtobufReflection.Descriptor.MessageTypes[7]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

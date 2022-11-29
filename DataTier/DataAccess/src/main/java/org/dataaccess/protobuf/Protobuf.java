@@ -45,6 +45,11 @@ public final class Protobuf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ProductItems_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Category_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Category_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Void_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -65,17 +70,19 @@ public final class Protobuf {
       "\010password\030\002 \001(\t\022\016\n\006f_name\030\003 \001(\t\022\016\n\006l_nam" +
       "e\030\004 \001(\t\"/\n\tLoginUser\022\020\n\010username\030\001 \001(\t\022\020" +
       "\n\010password\030\002 \001(\t\"\035\n\013SearchField\022\016\n\006searc" +
-      "h\030\001 \001(\t\"X\n\007Product\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002" +
+      "h\030\001 \001(\t\"u\n\007Product\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002" +
       " \001(\t\022\017\n\007imgPath\030\003 \001(\t\022\r\n\005price\030\004 \001(\005\022\023\n\013" +
-      "description\030\005 \001(\t\")\n\014ProductItems\022\031\n\007pro" +
-      "duct\030\001 \003(\0132\010.Product\"\006\n\004Void2s\n\013UserServ" +
-      "ice\022\"\n\nCreateUser\022\r.RegisterUser\032\005.User\022" +
-      "\037\n\nLoginUsers\022\n.LoginUser\032\005.User\022\037\n\010Find" +
-      "User\022\014.SearchField\032\005.User2\203\001\n\016ProductSer" +
-      "vice\022%\n\017RegisterProduct\022\010.Product\032\010.Prod" +
-      "uct\022#\n\013GetProducts\022\005.Void\032\r.ProductItems" +
-      "\022%\n\013FindProduct\022\014.SearchField\032\010.ProductB" +
-      "\033\n\027org.dataaccess.protobufP\001b\006proto3"
+      "description\030\005 \001(\t\022\033\n\010category\030\006 \001(\0132\t.Ca" +
+      "tegory\")\n\014ProductItems\022\031\n\007product\030\001 \003(\0132" +
+      "\010.Product\"!\n\010Category\022\025\n\rcategory_name\030\001" +
+      " \001(\t\"\006\n\004Void2s\n\013UserService\022\"\n\nCreateUse" +
+      "r\022\r.RegisterUser\032\005.User\022\037\n\nLoginUsers\022\n." +
+      "LoginUser\032\005.User\022\037\n\010FindUser\022\014.SearchFie" +
+      "ld\032\005.User2\203\001\n\016ProductService\022%\n\017Register" +
+      "Product\022\010.Product\032\010.Product\022#\n\013GetProduc" +
+      "ts\022\005.Void\032\r.ProductItems\022%\n\013FindProduct\022" +
+      "\014.SearchField\032\010.ProductB\033\n\027org.dataacces" +
+      "s.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -110,15 +117,21 @@ public final class Protobuf {
     internal_static_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Product_descriptor,
-        new java.lang.String[] { "Id", "Name", "ImgPath", "Price", "Description", });
+        new java.lang.String[] { "Id", "Name", "ImgPath", "Price", "Description", "Category", });
     internal_static_ProductItems_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ProductItems_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductItems_descriptor,
         new java.lang.String[] { "Product", });
-    internal_static_Void_descriptor =
+    internal_static_Category_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_Category_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Category_descriptor,
+        new java.lang.String[] { "CategoryName", });
+    internal_static_Void_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Void_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Void_descriptor,

@@ -46,10 +46,15 @@ message Product{
   string imgPath = 3;
   int32 price = 4;
   string description = 5;
+  Category category = 6;
 }
 
 message ProductItems{
   repeated Product product = 1;
+}
+
+message Category{
+  string category_name = 1;
 }
 
 message Void{}

@@ -19,12 +19,13 @@ public class ProductDao : IProductDAO
             Name = product.Name,
             ImgPath = product.ImagePath,
             Price = product.Price,
-            Description = product.Description
+            Description = product.Description,
+            Category = ConvertSharedCategoryToGrpcCategory(product.Category)
         };
 
-        Product grpcProductToRegister = await productService.RegisterProductAsync(registerProduct);
+        await productService.RegisterProductAsync(registerProduct);
 
-        return ConvertGrpcProductToSharedProduct(grpcProductToRegister);
+        return product;
     }
 
     public async Task<IEnumerable<Shared.Models.Product>> GetProductsAsync()
@@ -77,7 +78,25 @@ public class ProductDao : IProductDAO
             Name = product.Name,
             ImagePath = product.ImgPath,
             Price = product.Price,
-            Description = product.Description
+            Description = product.Description,
+            Category = ConvertGrpcCategoryToSharedCategory(product.Category)
+        };
+    }
+
+    private Shared.Models.Category ConvertGrpcCategoryToSharedCategory(Category category)
+    {
+        var category1 = new Shared.Models.Category
+        {
+            Name = category.CategoryName
+        };
+        return category1;
+    }
+    
+    private Category ConvertSharedCategoryToGrpcCategory(Shared.Models.Category category)
+    {
+        return new Category
+        {
+            CategoryName = category.Name
         };
     }
 }
