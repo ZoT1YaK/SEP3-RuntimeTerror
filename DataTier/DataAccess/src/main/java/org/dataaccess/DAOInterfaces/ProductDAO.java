@@ -14,4 +14,6 @@ public interface ProductDAO
     Product findProduct(String productId);
 
     Category getCategory(String categoryName);
+
+    void deleteProduct(String productId);
 }

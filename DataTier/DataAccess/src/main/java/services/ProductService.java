@@ -9,6 +9,7 @@ import org.dataaccess.protobuf.Void;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -66,6 +67,16 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
         org.dataaccess.Shared.Product product = productDAO.findProduct(request.getSearch());
 
         responseObserver.onNext(ProductMapper.mapToProto(product));
+        responseObserver.onCompleted();
+    }
+
+    @Transactional
+    @Override
+    public void deleteProduct(SearchField request, StreamObserver<Void> responseObserver)
+    {
+        productDAO.deleteProduct(request.getSearch());
+
+        responseObserver.onNext(Void.newBuilder().build());
         responseObserver.onCompleted();
     }
 }

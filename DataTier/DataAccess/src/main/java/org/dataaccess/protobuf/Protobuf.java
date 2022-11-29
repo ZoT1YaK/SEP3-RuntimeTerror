@@ -78,11 +78,13 @@ public final class Protobuf {
       " \001(\t\"\006\n\004Void2s\n\013UserService\022\"\n\nCreateUse" +
       "r\022\r.RegisterUser\032\005.User\022\037\n\nLoginUsers\022\n." +
       "LoginUser\032\005.User\022\037\n\010FindUser\022\014.SearchFie" +
-      "ld\032\005.User2\203\001\n\016ProductService\022%\n\017Register" +
+      "ld\032\005.User2\317\001\n\016ProductService\022%\n\017Register" +
       "Product\022\010.Product\032\010.Product\022#\n\013GetProduc" +
       "ts\022\005.Void\032\r.ProductItems\022%\n\013FindProduct\022" +
-      "\014.SearchField\032\010.ProductB\033\n\027org.dataacces" +
-      "s.protobufP\001b\006proto3"
+      "\014.SearchField\032\010.Product\022$\n\rUpdateProduct" +
+      "\022\014.SearchField\032\005.Void\022$\n\rDeleteProduct\022\014" +
+      ".SearchField\032\005.VoidB\033\n\027org.dataaccess.pr" +
+      "otobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

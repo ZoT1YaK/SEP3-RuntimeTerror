@@ -49,4 +49,9 @@ public class ProductDAOImpl implements ProductDAO
     public Category getCategory(String categoryName) {
         return categoryRepository.findCategory(categoryName);
     }
+
+    @Override
+    public void deleteProduct(String productId) {
+        productRepository.deleteById(Integer.valueOf(productId));
+    }
 }

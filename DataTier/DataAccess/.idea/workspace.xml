@@ -8,10 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/ProductDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/ProductDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/mappers/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/mappers/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductServiceGrpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/protobuf.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/protobuf.proto" afterDir="false" />
@@ -127,7 +124,7 @@
       <workItem from="1669636960913" duration="1183000" />
       <workItem from="1669673480707" duration="8901000" />
       <workItem from="1669685979111" duration="353000" />
-      <workItem from="1669748826442" duration="13317000" />
+      <workItem from="1669748826442" duration="15391000" />
     </task>
     <task id="LOCAL-00001" summary="T2 commit">
       <created>1667754724100</created>

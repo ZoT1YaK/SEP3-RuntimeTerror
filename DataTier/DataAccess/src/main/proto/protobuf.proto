@@ -13,6 +13,8 @@ service ProductService{
   rpc RegisterProduct(Product) returns (Product);
   rpc GetProducts(Void) returns (ProductItems);
   rpc FindProduct(SearchField) returns (Product);
+  rpc UpdateProduct(SearchField) returns (Void);
+  rpc DeleteProduct(SearchField) returns (Void);
 }
 
 message User{

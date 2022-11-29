@@ -107,6 +107,68 @@ public final class ProductServiceGrpc {
     return getFindProductMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getUpdateProductMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProduct",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.Void.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getUpdateProductMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void> getUpdateProductMethod;
+    if ((getUpdateProductMethod = ProductServiceGrpc.getUpdateProductMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getUpdateProductMethod = ProductServiceGrpc.getUpdateProductMethod) == null) {
+          ProductServiceGrpc.getUpdateProductMethod = getUpdateProductMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProduct"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Void.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("UpdateProduct"))
+              .build();
+        }
+      }
+    }
+    return getUpdateProductMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getDeleteProductMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteProduct",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.Void.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getDeleteProductMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void> getDeleteProductMethod;
+    if ((getDeleteProductMethod = ProductServiceGrpc.getDeleteProductMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getDeleteProductMethod = ProductServiceGrpc.getDeleteProductMethod) == null) {
+          ProductServiceGrpc.getDeleteProductMethod = getDeleteProductMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteProduct"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Void.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("DeleteProduct"))
+              .build();
+        }
+      }
+    }
+    return getDeleteProductMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +238,20 @@ public final class ProductServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindProductMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void updateProduct(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProductMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deleteProduct(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProductMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -199,6 +275,20 @@ public final class ProductServiceGrpc {
                 org.dataaccess.protobuf.SearchField,
                 org.dataaccess.protobuf.Product>(
                   this, METHODID_FIND_PRODUCT)))
+          .addMethod(
+            getUpdateProductMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.Void>(
+                  this, METHODID_UPDATE_PRODUCT)))
+          .addMethod(
+            getDeleteProductMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.Void>(
+                  this, METHODID_DELETE_PRODUCT)))
           .build();
     }
   }
@@ -240,6 +330,22 @@ public final class ProductServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindProductMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateProduct(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateProductMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteProduct(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteProductMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -275,6 +381,20 @@ public final class ProductServiceGrpc {
     public org.dataaccess.protobuf.Product findProduct(org.dataaccess.protobuf.SearchField request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFindProductMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.Void updateProduct(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateProductMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.Void deleteProduct(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteProductMethod(), getCallOptions(), request);
     }
   }
 
@@ -315,11 +435,29 @@ public final class ProductServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFindProductMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> updateProduct(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateProductMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> deleteProduct(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteProductMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_PRODUCT = 0;
   private static final int METHODID_GET_PRODUCTS = 1;
   private static final int METHODID_FIND_PRODUCT = 2;
+  private static final int METHODID_UPDATE_PRODUCT = 3;
+  private static final int METHODID_DELETE_PRODUCT = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -349,6 +487,14 @@ public final class ProductServiceGrpc {
         case METHODID_FIND_PRODUCT:
           serviceImpl.findProduct((org.dataaccess.protobuf.SearchField) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Product>) responseObserver);
+          break;
+        case METHODID_UPDATE_PRODUCT:
+          serviceImpl.updateProduct((org.dataaccess.protobuf.SearchField) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
+          break;
+        case METHODID_DELETE_PRODUCT:
+          serviceImpl.deleteProduct((org.dataaccess.protobuf.SearchField) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -414,6 +560,8 @@ public final class ProductServiceGrpc {
               .addMethod(getRegisterProductMethod())
               .addMethod(getGetProductsMethod())
               .addMethod(getFindProductMethod())
+              .addMethod(getUpdateProductMethod())
+              .addMethod(getDeleteProductMethod())
               .build();
         }
       }
