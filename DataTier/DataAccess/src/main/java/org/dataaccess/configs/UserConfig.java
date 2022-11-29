@@ -39,12 +39,14 @@ public class UserConfig
             return args -> {
                 Product product = new Product(
                         "Greg Huisos",
+                        "sadwe",
                         300,
                         "Sugi Pula"
                 );
 
                 Product product1 = new Product(
                         "Greg Pidr",
+                        "ewrffre",
                         0,
                         "Pizda mati"
                 );

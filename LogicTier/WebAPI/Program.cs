@@ -17,13 +17,24 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-
+// =========================== USER =========================
 builder.Services.AddGrpcClient<UserService.UserServiceClient>(o =>
 {
     o.Address = new Uri("http://localhost:6565");
 });
 builder.Services.AddScoped<IUserDAO, UserDao>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
+
+
+
+// =========================== PRODUCT =========================
+builder.Services.AddGrpcClient<ProductService.ProductServiceClient>(o =>
+{
+    o.Address = new Uri("http://localhost:6565");
+});
+builder.Services.AddScoped<IProductDAO, ProductDao>();
+builder.Services.AddScoped<IProductLogic, ProductLogic>();
+
 
 
 // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
