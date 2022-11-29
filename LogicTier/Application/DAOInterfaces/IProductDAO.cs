@@ -10,4 +10,6 @@ public interface IProductDAO
     Task<IEnumerable<Product>> GetProductsAsync();
 
     Task<Product> FindProductByIdAsync(string productId);
+    
+    Task DeleteProductAsync(string id);
 }

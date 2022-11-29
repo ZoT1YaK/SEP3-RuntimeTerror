@@ -35,4 +35,9 @@ public class ProductLogic : IProductLogic
 
         return products;
     }
+
+    public async Task DeleteProductAsync(string id)
+    {
+        await productDao.DeleteProductAsync(id);
+    }
 }

@@ -8,4 +8,6 @@ public interface IProductLogic
     Task<Product> RegisterProductAsync(ProductCreationDTO dto);
     
     Task<IEnumerable<Product>> GetProductsAsync();
+    
+    Task DeleteProductAsync(string id);
 }

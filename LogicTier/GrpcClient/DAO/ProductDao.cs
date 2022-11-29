@@ -70,6 +70,16 @@ public class ProductDao : IProductDAO
         return productToFind;
     }
 
+    public async Task DeleteProductAsync(string id)
+    {
+        var sf = new SearchField
+        {
+            Search = id
+        };
+
+        await productService.DeleteProductAsync(sf);
+    }
+
     private Shared.Models.Product ConvertGrpcProductToSharedProduct(Product product)
     {
         return new Shared.Models.Product
