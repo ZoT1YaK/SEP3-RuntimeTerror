@@ -12,5 +12,7 @@ public class ProductCreationDTO
     
     public string? Description { get; set; }
     
+    public bool InStock { get; set; }
+    
     public Category Category { get; set; }
 }
