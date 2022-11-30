@@ -19,15 +19,28 @@ public class Product implements Serializable
 
     private String description;
 
+    private boolean inStock;
+
     @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    public Product(String name, String imgPath, int price, String description, Category category) {
+    public Product(int id, String name, String imgPath, int price, String description, boolean inStock, Category category) {
+        this.id = id;
         this.name = name;
         this.imgPath = imgPath;
         this.price = price;
         this.description = description;
+        this.inStock = inStock;
+        this.category = category;
+    }
+
+    public Product(String name, String imgPath, int price, String description, boolean inStock, Category category) {
+        this.name = name;
+        this.imgPath = imgPath;
+        this.price = price;
+        this.description = description;
+        this.inStock = inStock;
         this.category = category;
     }
 
@@ -73,6 +86,14 @@ public class Product implements Serializable
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isInStock() {
+        return inStock;
+    }
+
+    public void setInStock(boolean inStock) {
+        this.inStock = inStock;
     }
 
     public Category getCategory() {

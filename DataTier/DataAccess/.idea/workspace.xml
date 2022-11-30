@@ -4,10 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="Update: Product Delete DataTier">
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/DAOInterfaces/IUserDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/DAOInterfaces/IUserDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/Logic/UserLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/Logic/UserLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/LogicInterfaces/IUserLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/LogicInterfaces/IUserLogic.cs" afterDir="false" />
+    <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="Update: User add/remove credits DataTier">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/ProductDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/ProductDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/ProductServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/protobuf.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/protobuf.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/ProductDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/ProductDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOInterfaces/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOInterfaces/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc$ProductServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/ProductServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Protobuf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Protobuf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/DAOInterfaces/IProductDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/DAOInterfaces/IProductDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/Logic/ProductLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/Logic/ProductLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/LogicInterfaces/IProductLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/LogicInterfaces/IProductLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Shared.dll" afterDir="false" />
@@ -26,7 +53,7 @@
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/DAO/UserDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/DAO/UserDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/DAO/ProductDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/DAO/ProductDao.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/Protobuf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/Protobuf.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/ProtobufGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/ProtobufGrpc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.dll" afterDir="false" />
@@ -63,7 +90,6 @@
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/Controllers/ProductsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />

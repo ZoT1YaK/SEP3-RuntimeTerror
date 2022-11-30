@@ -30,6 +30,7 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
                 request.getImgPath(),
                 request.getPrice(),
                 request.getDescription(),
+                request.getInStock(),
                 CategoryMapper.mapToShared(request.getCategory())
         );
 
@@ -75,6 +76,26 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
     public void deleteProduct(SearchField request, StreamObserver<Void> responseObserver)
     {
         productDAO.deleteProduct(request.getSearch());
+
+        responseObserver.onNext(Void.newBuilder().build());
+        responseObserver.onCompleted();
+    }
+
+    @Transactional
+    @Override
+    public void updateProduct(Product request, StreamObserver<Void> responseObserver)
+    {
+        org.dataaccess.Shared.Product product = new org.dataaccess.Shared.Product(
+                request.getId(),
+                request.getName(),
+                request.getImgPath(),
+                request.getPrice(),
+                request.getDescription(),
+                request.getInStock(),
+                CategoryMapper.mapToShared(request.getCategory())
+        );
+
+        productDAO.updateProduct(product);
 
         responseObserver.onNext(Void.newBuilder().build());
         responseObserver.onCompleted();

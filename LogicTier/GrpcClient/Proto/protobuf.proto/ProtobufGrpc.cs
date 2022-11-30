@@ -310,11 +310,11 @@ public static partial class ProductService
       __Marshaller_Product);
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-  static readonly grpc::Method<global::SearchField, global::Void> __Method_UpdateProduct = new grpc::Method<global::SearchField, global::Void>(
+  static readonly grpc::Method<global::Product, global::Void> __Method_UpdateProduct = new grpc::Method<global::Product, global::Void>(
       grpc::MethodType.Unary,
       __ServiceName,
       "UpdateProduct",
-      __Marshaller_SearchField,
+      __Marshaller_Product,
       __Marshaller_Void);
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -419,22 +419,22 @@ public static partial class ProductService
       return CallInvoker.AsyncUnaryCall(__Method_FindProduct, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::Void UpdateProduct(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual global::Void UpdateProduct(global::Product request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
       return UpdateProduct(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::Void UpdateProduct(global::SearchField request, grpc::CallOptions options)
+    public virtual global::Void UpdateProduct(global::Product request, grpc::CallOptions options)
     {
       return CallInvoker.BlockingUnaryCall(__Method_UpdateProduct, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::Void> UpdateProductAsync(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual grpc::AsyncUnaryCall<global::Void> UpdateProductAsync(global::Product request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
       return UpdateProductAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::Void> UpdateProductAsync(global::SearchField request, grpc::CallOptions options)
+    public virtual grpc::AsyncUnaryCall<global::Void> UpdateProductAsync(global::Product request, grpc::CallOptions options)
     {
       return CallInvoker.AsyncUnaryCall(__Method_UpdateProduct, null, options, request);
     }

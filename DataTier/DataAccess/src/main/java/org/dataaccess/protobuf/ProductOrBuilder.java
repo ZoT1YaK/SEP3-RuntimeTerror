@@ -69,4 +69,10 @@ public interface ProductOrBuilder extends
    * <code>.Category category = 6;</code>
    */
   org.dataaccess.protobuf.CategoryOrBuilder getCategoryOrBuilder();
+
+  /**
+   * <code>bool inStock = 7;</code>
+   * @return The inStock.
+   */
+  boolean getInStock();
 }

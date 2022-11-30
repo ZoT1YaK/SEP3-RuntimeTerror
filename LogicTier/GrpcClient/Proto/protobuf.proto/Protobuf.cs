@@ -29,21 +29,22 @@ public static partial class ProtobufReflection {
           "X25hbWUYAyABKAkSDgoGbF9uYW1lGAQgASgJIi8KCUxvZ2luVXNlchIQCgh1",
           "c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSIwCgtDcmVkaXRzVXNl",
           "chIPCgdjcmVkaXRzGAEgASgFEhAKCHVzZXJuYW1lGAIgASgJIh0KC1NlYXJj",
-          "aEZpZWxkEg4KBnNlYXJjaBgBIAEoCSJ1CgdQcm9kdWN0EgoKAmlkGAEgASgF",
-          "EgwKBG5hbWUYAiABKAkSDwoHaW1nUGF0aBgDIAEoCRINCgVwcmljZRgEIAEo",
-          "BRITCgtkZXNjcmlwdGlvbhgFIAEoCRIbCghjYXRlZ29yeRgGIAEoCzIJLkNh",
-          "dGVnb3J5IikKDFByb2R1Y3RJdGVtcxIZCgdwcm9kdWN0GAEgAygLMgguUHJv",
-          "ZHVjdCIhCghDYXRlZ29yeRIVCg1jYXRlZ29yeV9uYW1lGAEgASgJIgYKBFZv",
-          "aWQyvAEKC1VzZXJTZXJ2aWNlEiIKCkNyZWF0ZVVzZXISDS5SZWdpc3RlclVz",
-          "ZXIaBS5Vc2VyEh8KCkxvZ2luVXNlcnMSCi5Mb2dpblVzZXIaBS5Vc2VyEh8K",
-          "CEZpbmRVc2VyEgwuU2VhcmNoRmllbGQaBS5Vc2VyEiEKCkFkZENyZWRpdHMS",
-          "DC5DcmVkaXRzVXNlchoFLlZvaWQSJAoNUmVtb3ZlQ3JlZGl0cxIMLkNyZWRp",
-          "dHNVc2VyGgUuVm9pZDLPAQoOUHJvZHVjdFNlcnZpY2USJQoPUmVnaXN0ZXJQ",
-          "cm9kdWN0EgguUHJvZHVjdBoILlByb2R1Y3QSIwoLR2V0UHJvZHVjdHMSBS5W",
-          "b2lkGg0uUHJvZHVjdEl0ZW1zEiUKC0ZpbmRQcm9kdWN0EgwuU2VhcmNoRmll",
-          "bGQaCC5Qcm9kdWN0EiQKDVVwZGF0ZVByb2R1Y3QSDC5TZWFyY2hGaWVsZBoF",
-          "LlZvaWQSJAoNRGVsZXRlUHJvZHVjdBIMLlNlYXJjaEZpZWxkGgUuVm9pZEIb",
-          "ChdvcmcuZGF0YWFjY2Vzcy5wcm90b2J1ZlABYgZwcm90bzM="));
+          "aEZpZWxkEg4KBnNlYXJjaBgBIAEoCSKGAQoHUHJvZHVjdBIKCgJpZBgBIAEo",
+          "BRIMCgRuYW1lGAIgASgJEg8KB2ltZ1BhdGgYAyABKAkSDQoFcHJpY2UYBCAB",
+          "KAUSEwoLZGVzY3JpcHRpb24YBSABKAkSGwoIY2F0ZWdvcnkYBiABKAsyCS5D",
+          "YXRlZ29yeRIPCgdpblN0b2NrGAcgASgIIikKDFByb2R1Y3RJdGVtcxIZCgdw",
+          "cm9kdWN0GAEgAygLMgguUHJvZHVjdCIhCghDYXRlZ29yeRIVCg1jYXRlZ29y",
+          "eV9uYW1lGAEgASgJIgYKBFZvaWQyvAEKC1VzZXJTZXJ2aWNlEiIKCkNyZWF0",
+          "ZVVzZXISDS5SZWdpc3RlclVzZXIaBS5Vc2VyEh8KCkxvZ2luVXNlcnMSCi5M",
+          "b2dpblVzZXIaBS5Vc2VyEh8KCEZpbmRVc2VyEgwuU2VhcmNoRmllbGQaBS5V",
+          "c2VyEiEKCkFkZENyZWRpdHMSDC5DcmVkaXRzVXNlchoFLlZvaWQSJAoNUmVt",
+          "b3ZlQ3JlZGl0cxIMLkNyZWRpdHNVc2VyGgUuVm9pZDLLAQoOUHJvZHVjdFNl",
+          "cnZpY2USJQoPUmVnaXN0ZXJQcm9kdWN0EgguUHJvZHVjdBoILlByb2R1Y3QS",
+          "IwoLR2V0UHJvZHVjdHMSBS5Wb2lkGg0uUHJvZHVjdEl0ZW1zEiUKC0ZpbmRQ",
+          "cm9kdWN0EgwuU2VhcmNoRmllbGQaCC5Qcm9kdWN0EiAKDVVwZGF0ZVByb2R1",
+          "Y3QSCC5Qcm9kdWN0GgUuVm9pZBIkCg1EZWxldGVQcm9kdWN0EgwuU2VhcmNo",
+          "RmllbGQaBS5Wb2lkQhsKF29yZy5kYXRhYWNjZXNzLnByb3RvYnVmUAFiBnBy",
+          "b3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,7 +53,7 @@ public static partial class ProtobufReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::LoginUser), global::LoginUser.Parser, new[]{ "Username", "Password" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::CreditsUser), global::CreditsUser.Parser, new[]{ "Credits", "Username" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::SearchField), global::SearchField.Parser, new[]{ "Search" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::Product), global::Product.Parser, new[]{ "Id", "Name", "ImgPath", "Price", "Description", "Category" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Product), global::Product.Parser, new[]{ "Id", "Name", "ImgPath", "Price", "Description", "Category", "InStock" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ProductItems), global::ProductItems.Parser, new[]{ "Product" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::Category), global::Category.Parser, new[]{ "CategoryName" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::Void), global::Void.Parser, null, null, null, null, null)
@@ -1417,6 +1418,7 @@ public sealed partial class Product : pb::IMessage<Product>
     price_ = other.price_;
     description_ = other.description_;
     category_ = other.category_ != null ? other.category_.Clone() : null;
+    inStock_ = other.inStock_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -1498,6 +1500,18 @@ public sealed partial class Product : pb::IMessage<Product>
     }
   }
 
+  /// <summary>Field number for the "inStock" field.</summary>
+  public const int InStockFieldNumber = 7;
+  private bool inStock_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool InStock {
+    get { return inStock_; }
+    set {
+      inStock_ = value;
+    }
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -1519,6 +1533,7 @@ public sealed partial class Product : pb::IMessage<Product>
     if (Price != other.Price) return false;
     if (Description != other.Description) return false;
     if (!object.Equals(Category, other.Category)) return false;
+    if (InStock != other.InStock) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -1532,6 +1547,7 @@ public sealed partial class Product : pb::IMessage<Product>
     if (Price != 0) hash ^= Price.GetHashCode();
     if (Description.Length != 0) hash ^= Description.GetHashCode();
     if (category_ != null) hash ^= Category.GetHashCode();
+    if (InStock != false) hash ^= InStock.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1574,6 +1590,10 @@ public sealed partial class Product : pb::IMessage<Product>
       output.WriteRawTag(50);
       output.WriteMessage(Category);
     }
+    if (InStock != false) {
+      output.WriteRawTag(56);
+      output.WriteBool(InStock);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -1608,6 +1628,10 @@ public sealed partial class Product : pb::IMessage<Product>
       output.WriteRawTag(50);
       output.WriteMessage(Category);
     }
+    if (InStock != false) {
+      output.WriteRawTag(56);
+      output.WriteBool(InStock);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -1635,6 +1659,9 @@ public sealed partial class Product : pb::IMessage<Product>
     }
     if (category_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Category);
+    }
+    if (InStock != false) {
+      size += 1 + 1;
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1668,6 +1695,9 @@ public sealed partial class Product : pb::IMessage<Product>
         Category = new global::Category();
       }
       Category.MergeFrom(other.Category);
+    }
+    if (other.InStock != false) {
+      InStock = other.InStock;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -1711,6 +1741,10 @@ public sealed partial class Product : pb::IMessage<Product>
           input.ReadMessage(Category);
           break;
         }
+        case 56: {
+          InStock = input.ReadBool();
+          break;
+        }
       }
     }
   #endif
@@ -1751,6 +1785,10 @@ public sealed partial class Product : pb::IMessage<Product>
             Category = new global::Category();
           }
           input.ReadMessage(Category);
+          break;
+        }
+        case 56: {
+          InStock = input.ReadBool();
           break;
         }
       }

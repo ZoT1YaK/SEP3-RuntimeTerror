@@ -54,4 +54,9 @@ public class ProductDAOImpl implements ProductDAO
     public void deleteProduct(String productId) {
         productRepository.deleteById(Integer.valueOf(productId));
     }
+
+    @Override
+    public void updateProduct(Product product) {
+        productRepository.updateProduct(product.getId(), product.getName(), product.getImgPath(),product.getPrice(), product.getDescription(), product.isInStock());
+    }
 }

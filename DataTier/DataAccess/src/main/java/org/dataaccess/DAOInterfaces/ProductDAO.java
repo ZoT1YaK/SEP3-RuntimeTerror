@@ -16,4 +16,6 @@ public interface ProductDAO
     Category getCategory(String categoryName);
 
     void deleteProduct(String productId);
+
+    void updateProduct(Product product);
 }

@@ -10,4 +10,6 @@ public interface IProductLogic
     Task<IEnumerable<Product>> GetProductsAsync();
     
     Task DeleteProductAsync(string id);
+
+    Task UpdateProductAsync(Product product);
 }

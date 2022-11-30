@@ -59,5 +59,19 @@ public class ProductsController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-    
+
+    [HttpPut]
+    public async Task<ActionResult> UpdateProductAsync(Shared.Models.Product product)
+    {
+        try
+        {
+            await productLogic.UpdateProductAsync(product);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

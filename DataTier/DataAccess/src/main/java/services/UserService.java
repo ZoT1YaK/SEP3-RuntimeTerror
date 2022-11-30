@@ -8,6 +8,7 @@ import org.dataaccess.protobuf.Void;
 import org.dataaccess.repositories.UserRepository;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -67,6 +68,7 @@ public class UserService extends UserServiceGrpc.UserServiceImplBase
         }
     }
 
+    @Transactional
     @Override
     public void addCredits(CreditsUser request, StreamObserver<Void> responseObserver)
     {
@@ -76,6 +78,7 @@ public class UserService extends UserServiceGrpc.UserServiceImplBase
         responseObserver.onCompleted();
     }
 
+    @Transactional
     @Override
     public void removeCredits(CreditsUser request, StreamObserver<Void> responseObserver)
     {

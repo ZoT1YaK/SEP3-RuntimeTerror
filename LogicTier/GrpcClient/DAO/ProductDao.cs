@@ -20,6 +20,7 @@ public class ProductDao : IProductDAO
             ImgPath = product.ImagePath,
             Price = product.Price,
             Description = product.Description,
+            InStock = product.inStock,
             Category = ConvertSharedCategoryToGrpcCategory(product.Category)
         };
 
@@ -64,7 +65,9 @@ public class ProductDao : IProductDAO
             Name = product.Name,
             ImagePath = product.ImgPath,
             Price = product.Price,
-            Description = product.Description
+            Description = product.Description,
+            inStock = product.InStock,
+            Category = ConvertGrpcCategoryToSharedCategory(product.Category)
         };
 
         return productToFind;
@@ -80,6 +83,21 @@ public class ProductDao : IProductDAO
         await productService.DeleteProductAsync(sf);
     }
 
+    public async Task UpdateProductAsync(Shared.Models.Product product)
+    {
+        var productToSend = new Product
+        {
+            Id = product.Id,
+            Name = product.Name,
+            ImgPath = product.ImagePath,
+            Price = product.Price,
+            Description = product.Description,
+            InStock = product.inStock
+        };
+
+        await productService.UpdateProductAsync(productToSend);
+    }
+
     private Shared.Models.Product ConvertGrpcProductToSharedProduct(Product product)
     {
         return new Shared.Models.Product
@@ -89,6 +107,7 @@ public class ProductDao : IProductDAO
             ImagePath = product.ImgPath,
             Price = product.Price,
             Description = product.Description,
+            inStock = product.InStock,
             Category = ConvertGrpcCategoryToSharedCategory(product.Category)
         };
     }

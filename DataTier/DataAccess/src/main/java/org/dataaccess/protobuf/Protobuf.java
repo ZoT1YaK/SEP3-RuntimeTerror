@@ -76,23 +76,23 @@ public final class Protobuf {
       "e\030\004 \001(\t\"/\n\tLoginUser\022\020\n\010username\030\001 \001(\t\022\020" +
       "\n\010password\030\002 \001(\t\"0\n\013CreditsUser\022\017\n\007credi" +
       "ts\030\001 \001(\005\022\020\n\010username\030\002 \001(\t\"\035\n\013SearchFiel" +
-      "d\022\016\n\006search\030\001 \001(\t\"u\n\007Product\022\n\n\002id\030\001 \001(\005" +
-      "\022\014\n\004name\030\002 \001(\t\022\017\n\007imgPath\030\003 \001(\t\022\r\n\005price" +
-      "\030\004 \001(\005\022\023\n\013description\030\005 \001(\t\022\033\n\010category\030" +
-      "\006 \001(\0132\t.Category\")\n\014ProductItems\022\031\n\007prod" +
-      "uct\030\001 \003(\0132\010.Product\"!\n\010Category\022\025\n\rcateg" +
-      "ory_name\030\001 \001(\t\"\006\n\004Void2\274\001\n\013UserService\022\"" +
-      "\n\nCreateUser\022\r.RegisterUser\032\005.User\022\037\n\nLo" +
-      "ginUsers\022\n.LoginUser\032\005.User\022\037\n\010FindUser\022" +
-      "\014.SearchField\032\005.User\022!\n\nAddCredits\022\014.Cre" +
-      "ditsUser\032\005.Void\022$\n\rRemoveCredits\022\014.Credi" +
-      "tsUser\032\005.Void2\317\001\n\016ProductService\022%\n\017Regi" +
-      "sterProduct\022\010.Product\032\010.Product\022#\n\013GetPr" +
-      "oducts\022\005.Void\032\r.ProductItems\022%\n\013FindProd" +
-      "uct\022\014.SearchField\032\010.Product\022$\n\rUpdatePro" +
-      "duct\022\014.SearchField\032\005.Void\022$\n\rDeleteProdu" +
-      "ct\022\014.SearchField\032\005.VoidB\033\n\027org.dataacces" +
-      "s.protobufP\001b\006proto3"
+      "d\022\016\n\006search\030\001 \001(\t\"\206\001\n\007Product\022\n\n\002id\030\001 \001(" +
+      "\005\022\014\n\004name\030\002 \001(\t\022\017\n\007imgPath\030\003 \001(\t\022\r\n\005pric" +
+      "e\030\004 \001(\005\022\023\n\013description\030\005 \001(\t\022\033\n\010category" +
+      "\030\006 \001(\0132\t.Category\022\017\n\007inStock\030\007 \001(\010\")\n\014Pr" +
+      "oductItems\022\031\n\007product\030\001 \003(\0132\010.Product\"!\n" +
+      "\010Category\022\025\n\rcategory_name\030\001 \001(\t\"\006\n\004Void" +
+      "2\274\001\n\013UserService\022\"\n\nCreateUser\022\r.Registe" +
+      "rUser\032\005.User\022\037\n\nLoginUsers\022\n.LoginUser\032\005" +
+      ".User\022\037\n\010FindUser\022\014.SearchField\032\005.User\022!" +
+      "\n\nAddCredits\022\014.CreditsUser\032\005.Void\022$\n\rRem" +
+      "oveCredits\022\014.CreditsUser\032\005.Void2\313\001\n\016Prod" +
+      "uctService\022%\n\017RegisterProduct\022\010.Product\032" +
+      "\010.Product\022#\n\013GetProducts\022\005.Void\032\r.Produc" +
+      "tItems\022%\n\013FindProduct\022\014.SearchField\032\010.Pr" +
+      "oduct\022 \n\rUpdateProduct\022\010.Product\032\005.Void\022" +
+      "$\n\rDeleteProduct\022\014.SearchField\032\005.VoidB\033\n" +
+      "\027org.dataaccess.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -133,7 +133,7 @@ public final class Protobuf {
     internal_static_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Product_descriptor,
-        new java.lang.String[] { "Id", "Name", "ImgPath", "Price", "Description", "Category", });
+        new java.lang.String[] { "Id", "Name", "ImgPath", "Price", "Description", "Category", "InStock", });
     internal_static_ProductItems_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_ProductItems_fieldAccessorTable = new

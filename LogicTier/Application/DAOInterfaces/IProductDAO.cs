@@ -12,4 +12,6 @@ public interface IProductDAO
     Task<Product> FindProductByIdAsync(string productId);
     
     Task DeleteProductAsync(string id);
+
+    Task UpdateProductAsync(Product product);
 }

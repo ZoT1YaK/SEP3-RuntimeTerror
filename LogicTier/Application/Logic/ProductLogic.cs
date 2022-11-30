@@ -23,6 +23,7 @@ public class ProductLogic : IProductLogic
             ImagePath = dto.ImagePath,
             Price = dto.Price,
             Description = dto.Description,
+            inStock = dto.InStock,
             Category = dto.Category
         };
 
@@ -39,5 +40,27 @@ public class ProductLogic : IProductLogic
     public async Task DeleteProductAsync(string id)
     {
         await productDao.DeleteProductAsync(id);
+    }
+
+    public async Task UpdateProductAsync(Product product)
+    {
+        string productId = product.Id.ToString();
+
+        var checkProduct = await productDao.FindProductByIdAsync(productId);
+
+        if (checkProduct == null)
+            throw new Exception("Product not exists");
+
+        var productToSend = new Product
+        {
+            Id = product.Id,
+            Name = product.Name,
+            ImagePath = product.ImagePath,
+            Price = product.Price,
+            Description = product.Description,
+            inStock = product.inStock
+        };
+
+        await productDao.UpdateProductAsync(productToSend);
     }
 }

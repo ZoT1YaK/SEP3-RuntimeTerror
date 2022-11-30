@@ -92,6 +92,11 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 56: {
+
+            inStock_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -288,6 +293,17 @@ private static final long serialVersionUID = 0L;
     return getCategory();
   }
 
+  public static final int INSTOCK_FIELD_NUMBER = 7;
+  private boolean inStock_;
+  /**
+   * <code>bool inStock = 7;</code>
+   * @return The inStock.
+   */
+  @java.lang.Override
+  public boolean getInStock() {
+    return inStock_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -320,6 +336,9 @@ private static final long serialVersionUID = 0L;
     if (category_ != null) {
       output.writeMessage(6, getCategory());
     }
+    if (inStock_ != false) {
+      output.writeBool(7, inStock_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -349,6 +368,10 @@ private static final long serialVersionUID = 0L;
     if (category_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getCategory());
+    }
+    if (inStock_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, inStock_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -380,6 +403,8 @@ private static final long serialVersionUID = 0L;
       if (!getCategory()
           .equals(other.getCategory())) return false;
     }
+    if (getInStock()
+        != other.getInStock()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -405,6 +430,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getCategory().hashCode();
     }
+    hash = (37 * hash) + INSTOCK_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getInStock());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -554,6 +582,8 @@ private static final long serialVersionUID = 0L;
         category_ = null;
         categoryBuilder_ = null;
       }
+      inStock_ = false;
+
       return this;
     }
 
@@ -590,6 +620,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.category_ = categoryBuilder_.build();
       }
+      result.inStock_ = inStock_;
       onBuilt();
       return result;
     }
@@ -658,6 +689,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCategory()) {
         mergeCategory(other.getCategory());
+      }
+      if (other.getInStock() != false) {
+        setInStock(other.getInStock());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1095,6 +1129,37 @@ private static final long serialVersionUID = 0L;
         category_ = null;
       }
       return categoryBuilder_;
+    }
+
+    private boolean inStock_ ;
+    /**
+     * <code>bool inStock = 7;</code>
+     * @return The inStock.
+     */
+    @java.lang.Override
+    public boolean getInStock() {
+      return inStock_;
+    }
+    /**
+     * <code>bool inStock = 7;</code>
+     * @param value The inStock to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInStock(boolean value) {
+      
+      inStock_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool inStock = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInStock() {
+      
+      inStock_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
