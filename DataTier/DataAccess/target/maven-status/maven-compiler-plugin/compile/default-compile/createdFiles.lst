@@ -3,6 +3,7 @@ org\dataaccess\config\ServerConfig.class
 org\dataaccess\protobuf\VoidOrBuilder.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceFileDescriptorSupplier.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceMethodDescriptorSupplier.class
+org\dataaccess\protobuf\CreditsUser$1.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceStub.class
 org\dataaccess\repositories\UserRepository.class
 org\dataaccess\protobuf\ProductItems$Builder.class
@@ -18,6 +19,7 @@ org\dataaccess\protobuf\UserServiceGrpc$UserServiceImplBase.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceFileDescriptorSupplier.class
 org\dataaccess\Shared\User.class
 org\dataaccess\protobuf\SearchField.class
+org\dataaccess\Shared\Category.class
 org\dataaccess\protobuf\ProductServiceGrpc$2.class
 org\dataaccess\protobuf\Product$Builder.class
 org\dataaccess\protobuf\User$1.class
@@ -37,6 +39,7 @@ services\ProductService.class
 org\dataaccess\protobuf\UserServiceGrpc.class
 org\dataaccess\protobuf\ProductItems.class
 org\dataaccess\DAOInterfaces\UserDAO.class
+org\dataaccess\protobuf\CreditsUser$Builder.class
 org\dataaccess\protobuf\RegisterUserOrBuilder.class
 org\dataaccess\protobuf\UserOrBuilder.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceImplBase.class
@@ -53,12 +56,15 @@ org\dataaccess\protobuf\User$Builder.class
 org\dataaccess\protobuf\UserServiceGrpc$2.class
 org\dataaccess\DataAccessApp.class
 org\dataaccess\mappers\UserMapper.class
+org\dataaccess\mappers\CategoryMapper.class
+org\dataaccess\protobuf\CreditsUserOrBuilder.class
 org\dataaccess\protobuf\ProductServiceGrpc$ProductServiceBaseDescriptorSupplier.class
 org\dataaccess\DAOImpl\ProductDAOImpl.class
 org\dataaccess\protobuf\ProductOrBuilder.class
 services\UserService.class
 org\dataaccess\protobuf\LoginUserOrBuilder.class
 org\dataaccess\protobuf\Product$1.class
+org\dataaccess\protobuf\CreditsUser.class
 org\dataaccess\protobuf\UserServiceGrpc$1.class
 org\dataaccess\protobuf\UserServiceGrpc$UserServiceMethodDescriptorSupplier.class
 org\dataaccess\protobuf\RegisterUser$Builder.class
@@ -68,5 +74,6 @@ org\dataaccess\protobuf\ProductServiceGrpc$1.class
 org\dataaccess\protobuf\LoginUser.class
 org\dataaccess\protobuf\Void.class
 org\dataaccess\protobuf\LoginUser$1.class
+org\dataaccess\repositories\CategoryRepository.class
 org\dataaccess\DAOInterfaces\ProductDAO.class
 org\dataaccess\protobuf\Category.class

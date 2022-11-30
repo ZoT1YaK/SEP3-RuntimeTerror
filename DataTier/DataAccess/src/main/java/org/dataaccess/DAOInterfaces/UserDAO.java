@@ -9,4 +9,8 @@ public interface UserDAO
     User loginUser(User user);
 
     User findUser(String username);
+
+    void addCredits(int credits, String userName);
+
+    void removeCredits(int credits, String userName);
 }

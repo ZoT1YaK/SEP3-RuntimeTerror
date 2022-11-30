@@ -7,6 +7,8 @@ service UserService{
   rpc CreateUser(RegisterUser) returns (User);
   rpc LoginUsers(LoginUser) returns (User);
   rpc FindUser(SearchField) returns (User);
+  rpc AddCredits(CreditsUser) returns (Void);
+  rpc RemoveCredits(CreditsUser) returns(Void);
 }
 
 service ProductService{
@@ -36,6 +38,11 @@ message RegisterUser{
 message LoginUser{
   string username = 1;
   string password = 2;
+}
+
+message CreditsUser{
+  int32 credits = 1;
+  string username = 2;
 }
 
 message SearchField{

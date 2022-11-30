@@ -1,7 +1,10 @@
+C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\CreditsUser.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\SearchField.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\DAOInterfaces\UserDAO.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\Shared\User.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\services\UserService.java
+C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\CreditsUserOrBuilder.java
+C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\repositories\CategoryRepository.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\Category.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\mappers\ProductMapper.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\LoginUserOrBuilder.java
@@ -11,6 +14,7 @@ C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataacc
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\services\ProductService.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\SearchFieldOrBuilder.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\UserServiceGrpc.java
+C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\mappers\CategoryMapper.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\RegisterUser.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\Shared\Product.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\CategoryOrBuilder.java
@@ -20,6 +24,7 @@ C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataacc
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\Product.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\Void.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\DAOImpl\ProductDAOImpl.java
+C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\Shared\Category.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\protobuf\Protobuf.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\config\ServerConfig.java
 C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\DataTier\DataAccess\src\main\java\org\dataaccess\configs\UserConfig.java

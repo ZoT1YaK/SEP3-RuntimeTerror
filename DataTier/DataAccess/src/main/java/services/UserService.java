@@ -4,6 +4,7 @@ import io.grpc.stub.StreamObserver;
 import org.dataaccess.DAOInterfaces.UserDAO;
 import org.dataaccess.mappers.UserMapper;
 import org.dataaccess.protobuf.*;
+import org.dataaccess.protobuf.Void;
 import org.dataaccess.repositories.UserRepository;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,5 +65,23 @@ public class UserService extends UserServiceGrpc.UserServiceImplBase
         {
             responseObserver.onError(new Exception("Error: The user does not exist"));
         }
+    }
+
+    @Override
+    public void addCredits(CreditsUser request, StreamObserver<Void> responseObserver)
+    {
+        userDAO.addCredits(request.getCredits(), request.getUsername());
+
+        responseObserver.onNext(Void.newBuilder().build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void removeCredits(CreditsUser request, StreamObserver<Void> responseObserver)
+    {
+        userDAO.removeCredits(request.getCredits(), request.getUsername());
+
+        responseObserver.onNext(Void.newBuilder().build());
+        responseObserver.onCompleted();
     }
 }
