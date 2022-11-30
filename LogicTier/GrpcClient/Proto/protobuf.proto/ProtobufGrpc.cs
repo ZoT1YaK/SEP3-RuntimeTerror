@@ -52,6 +52,10 @@ public static partial class UserService
   static readonly grpc::Marshaller<global::LoginUser> __Marshaller_LoginUser = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::LoginUser.Parser));
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Marshaller<global::SearchField> __Marshaller_SearchField = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SearchField.Parser));
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Marshaller<global::CreditsUser> __Marshaller_CreditsUser = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::CreditsUser.Parser));
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Marshaller<global::Void> __Marshaller_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Void.Parser));
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Method<global::RegisterUser, global::User> __Method_CreateUser = new grpc::Method<global::RegisterUser, global::User>(
@@ -76,6 +80,22 @@ public static partial class UserService
       "FindUser",
       __Marshaller_SearchField,
       __Marshaller_User);
+
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::CreditsUser, global::Void> __Method_AddCredits = new grpc::Method<global::CreditsUser, global::Void>(
+      grpc::MethodType.Unary,
+      __ServiceName,
+      "AddCredits",
+      __Marshaller_CreditsUser,
+      __Marshaller_Void);
+
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::CreditsUser, global::Void> __Method_RemoveCredits = new grpc::Method<global::CreditsUser, global::Void>(
+      grpc::MethodType.Unary,
+      __ServiceName,
+      "RemoveCredits",
+      __Marshaller_CreditsUser,
+      __Marshaller_Void);
 
   /// <summary>Service descriptor</summary>
   public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -169,6 +189,46 @@ public static partial class UserService
     public virtual grpc::AsyncUnaryCall<global::User> FindUserAsync(global::SearchField request, grpc::CallOptions options)
     {
       return CallInvoker.AsyncUnaryCall(__Method_FindUser, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void AddCredits(global::CreditsUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return AddCredits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void AddCredits(global::CreditsUser request, grpc::CallOptions options)
+    {
+      return CallInvoker.BlockingUnaryCall(__Method_AddCredits, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> AddCreditsAsync(global::CreditsUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return AddCreditsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> AddCreditsAsync(global::CreditsUser request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncUnaryCall(__Method_AddCredits, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void RemoveCredits(global::CreditsUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return RemoveCredits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void RemoveCredits(global::CreditsUser request, grpc::CallOptions options)
+    {
+      return CallInvoker.BlockingUnaryCall(__Method_RemoveCredits, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> RemoveCreditsAsync(global::CreditsUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return RemoveCreditsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> RemoveCreditsAsync(global::CreditsUser request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncUnaryCall(__Method_RemoveCredits, null, options, request);
     }
     /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

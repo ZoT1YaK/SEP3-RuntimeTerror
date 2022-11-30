@@ -59,6 +59,28 @@ public class UserDao : IUserDAO
         }
     }
 
+    public async Task AddCreditsAsync(int credits, string username)
+    {
+        var creditsUser = new CreditsUser
+        {
+            Credits = credits,
+            Username = username
+        };
+
+        await userServiceClient.AddCreditsAsync(creditsUser);
+    }
+
+    public async Task RemoveCreditsAsync(int credits, string username)
+    {
+        var creditsUser = new CreditsUser
+        {
+            Credits = credits,
+            Username = username
+        };
+
+        await userServiceClient.RemoveCreditsAsync(creditsUser);
+    }
+
     private Shared.Models.User ConvertGrpcUserToSharedUser(User grpcUser)
     {
         var sharedUser = new Shared.Models.User

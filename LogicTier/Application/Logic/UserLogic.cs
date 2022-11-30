@@ -55,6 +55,26 @@ public class UserLogic : IUserLogic
         return await userDao.LoginUserAsync(user);
     }
 
+    public async Task AddCreditsAsync(int credits, string username)
+    {
+        if (userDao.FindUserAsync(username).Equals(null))
+        {
+            throw new Exception($"The user {username} does not exits");
+        }
+
+        await userDao.AddCreditsAsync(credits, username);
+    }
+
+    public async Task RemoveCreditsAsync(int credits, string username)
+    {
+        if (userDao.FindUserAsync(username).Equals(null))
+        {
+            throw new Exception($"The user {username} does not exits");
+        }
+
+        await userDao.RemoveCreditsAsync(credits, username);
+    }
+
     private static void ValidateData(UserCreationDTO user)
     {
         string username = user.userName;

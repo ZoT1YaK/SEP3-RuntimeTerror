@@ -9,6 +9,10 @@ public interface IUserDAO
     Task<User> LoginUserAsync(User user);
 
     Task<User?> FindUserAsync(string userName);
-    
-    
+
+    Task AddCreditsAsync(int credits, string username);
+
+    Task RemoveCreditsAsync(int credits, string username);
+
+
 }

@@ -53,4 +53,34 @@ public class UserController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
+    [HttpPut("addcredits")]
+    public async Task<ActionResult> AddCreditsAsync([FromQuery] int credits, string username)
+    {
+        try
+        {
+            await UserLogic.AddCreditsAsync(credits, username);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    
+    [HttpPut("removecredits")]
+    public async Task<ActionResult> RemoveCreditsAsync([FromQuery] int credits, string username)
+    {
+        try
+        {
+            await UserLogic.RemoveCreditsAsync(credits, username);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }
