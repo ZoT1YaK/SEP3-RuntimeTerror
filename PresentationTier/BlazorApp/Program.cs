@@ -14,4 +14,6 @@ builder.Services.AddScoped(sp => new System.Net.Http.HttpClient { BaseAddress = 
 
 builder.Services.AddScoped<IUserService, UserHttpClient>();
 
+builder.Services.AddScoped<IProductService, ProductHttpClient>();
+
 await builder.Build().RunAsync();

@@ -4,15 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="Product Update DataTier/LogicTier">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/config/ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/protobuf.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/protobuf.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+    <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="CartItems Update DataTier/LogicTier">
+      <change afterPath="$PROJECT_DIR$/../../PresentationTier/BlazorApp/Pages/Products.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PresentationTier/BlazorApp/Pages/Products.razor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/ClientImpl/ProductHttpClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/ClientInterfaces/IProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/BlazorApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/BlazorApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/HttpClients.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/HttpClients.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/Shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/Shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/Shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/bin/Debug/net6.0/Shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/ref/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/ref/HttpClients.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/refint/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/Debug/net6.0/refint/HttpClients.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/HttpClients/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +141,7 @@
       <workItem from="1669685979111" duration="353000" />
       <workItem from="1669748826442" duration="18099000" />
       <workItem from="1669768677435" duration="328000" />
-      <workItem from="1669834452385" duration="15009000" />
+      <workItem from="1669834452385" duration="15463000" />
     </task>
     <task id="LOCAL-00001" summary="T2 commit">
       <created>1667754724100</created>
@@ -175,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669773943731</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="CartItems Update DataTier/LogicTier">
+      <created>1669853702132</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669853702133</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +223,7 @@
     <MESSAGE value="Update Product DataTier/LogicTier" />
     <MESSAGE value="Update: Product Delete DataTier" />
     <MESSAGE value="Product Update DataTier/LogicTier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product Update DataTier/LogicTier" />
+    <MESSAGE value="CartItems Update DataTier/LogicTier" />
+    <option name="LAST_COMMIT_MESSAGE" value="CartItems Update DataTier/LogicTier" />
   </component>
 </project>
