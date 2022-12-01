@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj": {}
+    "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj": {
+    "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
-        "outputPath": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Application\\obj\\",
+        "projectPath": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +29,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj"
+              "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj"
               }
             }
           }
@@ -61,17 +64,20 @@
         }
       }
     },
-    "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj": {
+    "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
-        "outputPath": "D:\\VIA\\Semester Projects\\Semester Project 3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diana\\SEP3\\SEP3-RuntimeTerror\\LogicTier\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
