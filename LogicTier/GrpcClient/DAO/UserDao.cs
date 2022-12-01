@@ -41,7 +41,7 @@ public class UserDao : IUserDAO
         return ConvertGrpcUserToSharedUser(grpcUserToLogin);
     }
 
-    public async Task<Shared.Models.User?> FindUserAsync(string userName)
+    public async Task<Shared.Models.User> FindUserAsync(string userName)
     {
         var username = new SearchField
         {

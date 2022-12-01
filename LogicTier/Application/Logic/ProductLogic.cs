@@ -8,7 +8,7 @@ namespace Application.Logic;
 public class ProductLogic : IProductLogic
 {
 
-    private IProductDAO productDao;
+    private readonly IProductDAO productDao;
 
     public ProductLogic(IProductDAO productDao)
     {

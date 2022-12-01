@@ -2,6 +2,7 @@ package org.dataaccess.DAOImpl;
 
 import org.dataaccess.DAOInterfaces.UserDAO;
 import org.dataaccess.Shared.User;
+import org.dataaccess.repositories.CartRepository;
 import org.dataaccess.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -13,6 +14,9 @@ public class UserDAOImpl implements UserDAO
 {
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private CartRepository cartRepository;
 
     public UserDAOImpl()
     {

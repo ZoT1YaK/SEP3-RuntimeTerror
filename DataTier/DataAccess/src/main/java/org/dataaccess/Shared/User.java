@@ -22,6 +22,9 @@ public class User implements Serializable
 
     private String type;
 
+    @OneToOne(mappedBy = "user")
+    private Cart cart;
+
     public User() {
     }
 
@@ -87,6 +90,14 @@ public class User implements Serializable
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }
 

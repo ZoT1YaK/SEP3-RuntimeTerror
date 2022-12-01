@@ -5,9 +5,13 @@ namespace Application.DAOInterfaces;
 
 public interface ICartDAO
 {
-    public Task AddToCartAsync(CartDTO cart);
+    public Task RegisterCartAsync(Cart cart);
+    
+    public Task RegisterCartItemAsync(CartItem cartItem);
 
-    public Task<ICollection<Cart>> GetAllFromCartAsync(string username);
+    public Task<Cart> FindCartAsync(string username);
+
+    public Task<ICollection<CartItem>> GetAllFromCartAsync(string username);
 
     public Task DeleteAllFromCartAsync(string username);
 }

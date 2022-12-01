@@ -1,5 +1,4 @@
 ﻿using Application.DAOInterfaces;
-using Shared.DTOs;
 
 namespace GrpcClient.DAO;
 
@@ -7,31 +6,56 @@ public class CartDao : ICartDAO
 {
     private CartService.CartServiceClient cartService;
 
-    private ProductService.ProductServiceClient productService;
-
-    private ProductDao productDao;
-
-    public CartDao(CartService.CartServiceClient cartService, ProductService.ProductServiceClient productService)
+    public CartDao(CartService.CartServiceClient cartService)
     {
         this.cartService = cartService;
-        this.productService = productService;
     }
 
-    public async Task AddToCartAsync(CartDTO dto)
+    public async Task RegisterCartAsync(Shared.Models.Cart cart)
+    {
+        var registerCart = new Cart
+        {
+            Id = cart.Id,
+            Username = cart.UserName,
+            Total = cart.Total
+        };
+
+        await cartService.RegisterCartAsync(registerCart);
+    }
+
+    public async Task RegisterCartItemAsync(Shared.Models.CartItem cartItem)
     {
         /*Cart cart = ConvertSharedCartToGrpcCart(dto);*/
 
-        var cart = new Cart
+        var registerCartItem = new CartItem
         {
-            ProductId = dto.ProductId,
-            Username = dto.UserName,
-            Quantity = dto.Quantity,
-            Total = dto.Total
+            CartId = cartItem.CartId,
+            ProductId = cartItem.ProductId
         };
-        await cartService.AddToCartAsync(cart);
+
+        await cartService.RegisterCartItemAsync(registerCartItem);
     }
 
-    public async Task<ICollection<Shared.Models.Cart>> GetAllFromCartAsync(string username)
+    public async Task<Shared.Models.Cart> FindCartAsync(string username)
+    {
+        SearchField sf = new SearchField
+        {
+            Search = username
+        };
+
+        Cart cart = await cartService.FindCartAsync(sf);
+
+        Shared.Models.Cart cartToFind = new Shared.Models.Cart
+        {
+            Id = cart.Id,
+            UserName = cart.Username,
+            Total = cart.Total
+        };
+
+        return cartToFind;
+    }
+
+    public async Task<ICollection<Shared.Models.CartItem>> GetAllFromCartAsync(string username)
     {
         var sf = new SearchField
         {
@@ -40,33 +64,18 @@ public class CartDao : ICartDAO
 
         CartItems cartItems = await cartService.GetAllFromCartAsync(sf);
 
-        ProductItems productItems = await productService.GetProductsAsync(new Void());
+        ICollection<Shared.Models.CartItem> collection = new List<Shared.Models.CartItem>();
 
-        ICollection<Shared.Models.Cart> collection = new List<Shared.Models.Cart>();
-
-        foreach (var cartItem in cartItems.CartProducts)
+        foreach (var cartItem in cartItems.CartItems_)
         {
             if (cartItem == null)
                 continue;
 
-            Shared.Models.Product product = new Shared.Models.Product();
-            foreach (var productItem in productItems.Product)
-            {
-                if (productItem.Id == cartItem.ProductId)
-                {
-                    product.Id = productItem.Id;
-                    product.Name = productItem.Name;
-                    product.Price = productItem.Price;
-                }
-            }
-
-            Shared.Models.Cart cart = new Shared.Models.Cart
+            Shared.Models.CartItem cart = new Shared.Models.CartItem
             {
                 Id = cartItem.Id,
-                UserName = cartItem.Username,
-                Product = product,
-                Quantity = cartItem.Quantity,
-                Total = cartItem.Total
+                CartId = cartItem.CartId,
+                ProductId = cartItem.ProductId
             };
             collection.Add(cart);
         }
@@ -82,16 +91,5 @@ public class CartDao : ICartDAO
         };
 
         await cartService.DeleteAllFromCartAsync(sf);
-    }
-
-    public Cart ConvertSharedCartToGrpcCart(CartDTO dto)
-    {
-        return new Cart
-        {
-            ProductId = dto.ProductId,
-            Username = dto.UserName,
-            Quantity = dto.Quantity,
-            Total = dto.Total
-        };
     }
 }

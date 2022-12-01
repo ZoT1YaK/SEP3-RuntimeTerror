@@ -1,4 +1,5 @@
-﻿using Application.DAOInterfaces;
+﻿using System.Collections.ObjectModel;
+using Application.DAOInterfaces;
 using Application.LogicInterfaces;
 using Shared.DTOs;
 using Shared.Models;
@@ -7,35 +8,73 @@ namespace Application.Logic;
 
 public class CartLogic : ICartLogic
 {
-    private ICartDAO cartDao;
+    private readonly ICartDAO cartDao;
+    private readonly IProductDAO productDao;
 
-    private IUserDAO userDao;
-
-    public CartLogic(ICartDAO cartDao, IUserDAO userDao)
+    public CartLogic(ICartDAO cartDao, IProductDAO productDao)
     {
         this.cartDao = cartDao;
-        this.userDao = userDao;
+        this.productDao = productDao;
     }
 
 
-    public async Task AddToCartAsync(CartDTO dto)
+    /*public async Task RegisterCartAsync(CartCreationDTO dto)
     {
-        /*Cart cart = new Cart
-        {
-            UserName = dto.UserName,
-            Product = dto.Product,
-            Quantity = dto.Quantity,
-            Total = dto.Total
-        };*/
+        User user = await userDao.FindUserAsync(dto.UserName);
 
-        await cartDao.AddToCartAsync(dto);
+        if (user == null)
+        {
+            throw new Exception("User does not exist");
+        }
+
+        Cart cart = new Cart
+        {
+            UserName = dto.UserName
+        };
+
+        await cartDao.RegisterCartAsync(cart);
+    }*/
+
+    public async Task RegisterCartItemAsync(CartItemCreationDTO dto)
+    {
+        Cart cart = await cartDao.FindCartAsync(dto.UserName);
+
+        Product product = await productDao.FindProductByIdAsync(dto.ProductId.ToString());
+        
+        if (cart == null)
+        {
+            throw new Exception("Cart does not exist");
+        }
+
+        if (product == null)
+        {
+            throw new Exception("Product does not exist");
+        }
+
+        ICollection<CartItem> cartItems = await cartDao.GetAllFromCartAsync(dto.UserName);
+
+        foreach (var item in cartItems)
+        {
+            if (item.ProductId == product.Id)
+            {
+                throw new Exception("Product already in cart");
+            }
+        }
+
+        CartItem cartItem = new CartItem
+        {
+            CartId = cart.Id,
+            ProductId = dto.ProductId
+        };
+
+        await cartDao.RegisterCartItemAsync(cartItem);
     }
 
-    public async Task<ICollection<Cart>> GetAllFromCartAsync(string username)
+    public async Task<ICollection<CartItem>> GetAllFromCartAsync(string username)
     {
-        if (userDao.FindUserAsync(username).Equals(null))
+        if (cartDao.FindCartAsync(username).Equals(null))
         {
-            throw new Exception("The user does not exists");
+            throw new Exception("The cart does not exists");
         }
 
         return await cartDao.GetAllFromCartAsync(username);
@@ -43,9 +82,9 @@ public class CartLogic : ICartLogic
 
     public async Task DeleteAllFromCartAsync(string username)
     {
-        if (userDao.FindUserAsync(username).Equals(null))
+        if (cartDao.FindCartAsync(username).Equals(null))
         {
-            throw new Exception("The user does not exists");
+            throw new Exception("The cart does not exists");
         }
 
         await cartDao.DeleteAllFromCartAsync(username);

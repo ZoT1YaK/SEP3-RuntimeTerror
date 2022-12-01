@@ -15,12 +15,27 @@ public class CartController : ControllerBase
         this.cartLogic = cartLogic;
     }
 
-    [HttpPost]
-    public async Task<IActionResult> RegisterAsync(CartDTO dto)
+    /*[HttpPost("cart")]
+    public async Task<IActionResult> RegisterCartAsync(CartCreationDTO dto)
     {
         try
         {
-            await cartLogic.AddToCartAsync(dto);
+            await cartLogic.RegisterCartAsync(dto);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }*/
+    
+    [HttpPost("cartItem")]
+    public async Task<IActionResult> RegisterCartItemAsync(CartItemCreationDTO dto)
+    {
+        try
+        {
+            await cartLogic.RegisterCartItemAsync(dto);
             return Ok();
         }
         catch (Exception e)

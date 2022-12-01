@@ -1,6 +1,7 @@
 package services;
 
 import io.grpc.stub.StreamObserver;
+import org.dataaccess.DAOInterfaces.CartDAO;
 import org.dataaccess.DAOInterfaces.UserDAO;
 import org.dataaccess.mappers.UserMapper;
 import org.dataaccess.protobuf.*;
@@ -17,6 +18,9 @@ public class UserService extends UserServiceGrpc.UserServiceImplBase
 {
     @Autowired
     private UserDAO userDAO;
+
+    @Autowired
+    private CartDAO cartDAO;
 
     public UserService()
     {

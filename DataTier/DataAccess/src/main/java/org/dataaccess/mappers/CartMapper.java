@@ -8,9 +8,7 @@ public abstract class CartMapper
     {
         return Cart.newBuilder()
                 .setId(cart.getId())
-                .setUsername(cart.getUsername().getUsername())
-                .setProductId(cart.getProductId().getId())
-                .setQuantity(cart.getQuantity())
+                .setUsername(cart.getUser().getUsername())
                 .setTotal(cart.getTotal())
                 .build();
     }

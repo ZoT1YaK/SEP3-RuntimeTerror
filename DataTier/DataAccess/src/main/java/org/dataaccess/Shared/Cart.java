@@ -2,6 +2,7 @@ package org.dataaccess.Shared;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "cart", schema = "reverso_sep")
@@ -12,25 +13,21 @@ public class Cart implements Serializable
     @Column(name = "cartId")
     private int id;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "username", referencedColumnName = "username")
-    private User username;
-
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "productId", referencedColumnName = "id")
-    private Product productId;
-
-    private int quantity;
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "username")
+    private User user;
 
     private int total;
 
     public Cart() {
     }
 
-    public Cart(User username, Product productId, int quantity, int total) {
-        this.username = username;
-        this.productId = productId;
-        this.quantity = quantity;
+    public Cart(User user) {
+        this.user = user;
+    }
+
+    public Cart(User username, int total) {
+        this.user = username;
         this.total = total;
     }
 
@@ -42,28 +39,12 @@ public class Cart implements Serializable
         this.id = id;
     }
 
-    public User getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(User username) {
-        this.username = username;
-    }
-
-    public Product getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Product productId) {
-        this.productId = productId;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getTotal() {

@@ -509,17 +509,35 @@ public static partial class CartService
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Marshaller<global::Void> __Marshaller_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Void.Parser));
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Marshaller<global::CartItem> __Marshaller_CartItem = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::CartItem.Parser));
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Marshaller<global::SearchField> __Marshaller_SearchField = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SearchField.Parser));
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Marshaller<global::CartItems> __Marshaller_CartItems = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::CartItems.Parser));
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-  static readonly grpc::Method<global::Cart, global::Void> __Method_AddToCart = new grpc::Method<global::Cart, global::Void>(
+  static readonly grpc::Method<global::Cart, global::Void> __Method_RegisterCart = new grpc::Method<global::Cart, global::Void>(
       grpc::MethodType.Unary,
       __ServiceName,
-      "AddToCart",
+      "RegisterCart",
       __Marshaller_Cart,
       __Marshaller_Void);
+
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::CartItem, global::Void> __Method_RegisterCartItem = new grpc::Method<global::CartItem, global::Void>(
+      grpc::MethodType.Unary,
+      __ServiceName,
+      "RegisterCartItem",
+      __Marshaller_CartItem,
+      __Marshaller_Void);
+
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::SearchField, global::Cart> __Method_FindCart = new grpc::Method<global::SearchField, global::Cart>(
+      grpc::MethodType.Unary,
+      __ServiceName,
+      "FindCart",
+      __Marshaller_SearchField,
+      __Marshaller_Cart);
 
   [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
   static readonly grpc::Method<global::SearchField, global::CartItems> __Method_GetAllFromCart = new grpc::Method<global::SearchField, global::CartItems>(
@@ -571,24 +589,64 @@ public static partial class CartService
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::Void AddToCart(global::Cart request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual global::Void RegisterCart(global::Cart request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
-      return AddToCart(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      return RegisterCart(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual global::Void AddToCart(global::Cart request, grpc::CallOptions options)
+    public virtual global::Void RegisterCart(global::Cart request, grpc::CallOptions options)
     {
-      return CallInvoker.BlockingUnaryCall(__Method_AddToCart, null, options, request);
+      return CallInvoker.BlockingUnaryCall(__Method_RegisterCart, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::Void> AddToCartAsync(global::Cart request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    public virtual grpc::AsyncUnaryCall<global::Void> RegisterCartAsync(global::Cart request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
     {
-      return AddToCartAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      return RegisterCartAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public virtual grpc::AsyncUnaryCall<global::Void> AddToCartAsync(global::Cart request, grpc::CallOptions options)
+    public virtual grpc::AsyncUnaryCall<global::Void> RegisterCartAsync(global::Cart request, grpc::CallOptions options)
     {
-      return CallInvoker.AsyncUnaryCall(__Method_AddToCart, null, options, request);
+      return CallInvoker.AsyncUnaryCall(__Method_RegisterCart, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void RegisterCartItem(global::CartItem request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return RegisterCartItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void RegisterCartItem(global::CartItem request, grpc::CallOptions options)
+    {
+      return CallInvoker.BlockingUnaryCall(__Method_RegisterCartItem, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> RegisterCartItemAsync(global::CartItem request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return RegisterCartItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> RegisterCartItemAsync(global::CartItem request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncUnaryCall(__Method_RegisterCartItem, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Cart FindCart(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return FindCart(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Cart FindCart(global::SearchField request, grpc::CallOptions options)
+    {
+      return CallInvoker.BlockingUnaryCall(__Method_FindCart, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Cart> FindCartAsync(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return FindCartAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Cart> FindCartAsync(global::SearchField request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncUnaryCall(__Method_FindCart, null, options, request);
     }
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public virtual global::CartItems GetAllFromCart(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))

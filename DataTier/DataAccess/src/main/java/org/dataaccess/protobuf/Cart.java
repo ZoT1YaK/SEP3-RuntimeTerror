@@ -62,16 +62,6 @@ private static final long serialVersionUID = 0L;
           }
           case 24: {
 
-            productId_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            quantity_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
             total_ = input.readInt32();
             break;
           }
@@ -158,32 +148,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PRODUCTID_FIELD_NUMBER = 3;
-  private int productId_;
-  /**
-   * <code>int32 productId = 3;</code>
-   * @return The productId.
-   */
-  @java.lang.Override
-  public int getProductId() {
-    return productId_;
-  }
-
-  public static final int QUANTITY_FIELD_NUMBER = 4;
-  private int quantity_;
-  /**
-   * <code>int32 quantity = 4;</code>
-   * @return The quantity.
-   */
-  @java.lang.Override
-  public int getQuantity() {
-    return quantity_;
-  }
-
-  public static final int TOTAL_FIELD_NUMBER = 5;
+  public static final int TOTAL_FIELD_NUMBER = 3;
   private int total_;
   /**
-   * <code>int32 total = 5;</code>
+   * <code>int32 total = 3;</code>
    * @return The total.
    */
   @java.lang.Override
@@ -211,14 +179,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
     }
-    if (productId_ != 0) {
-      output.writeInt32(3, productId_);
-    }
-    if (quantity_ != 0) {
-      output.writeInt32(4, quantity_);
-    }
     if (total_ != 0) {
-      output.writeInt32(5, total_);
+      output.writeInt32(3, total_);
     }
     unknownFields.writeTo(output);
   }
@@ -236,17 +198,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
     }
-    if (productId_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, productId_);
-    }
-    if (quantity_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, quantity_);
-    }
     if (total_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, total_);
+        .computeInt32Size(3, total_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -267,10 +221,6 @@ private static final long serialVersionUID = 0L;
         != other.getId()) return false;
     if (!getUsername()
         .equals(other.getUsername())) return false;
-    if (getProductId()
-        != other.getProductId()) return false;
-    if (getQuantity()
-        != other.getQuantity()) return false;
     if (getTotal()
         != other.getTotal()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -288,10 +238,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getId();
     hash = (37 * hash) + USERNAME_FIELD_NUMBER;
     hash = (53 * hash) + getUsername().hashCode();
-    hash = (37 * hash) + PRODUCTID_FIELD_NUMBER;
-    hash = (53 * hash) + getProductId();
-    hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
-    hash = (53 * hash) + getQuantity();
     hash = (37 * hash) + TOTAL_FIELD_NUMBER;
     hash = (53 * hash) + getTotal();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -431,10 +377,6 @@ private static final long serialVersionUID = 0L;
 
       username_ = "";
 
-      productId_ = 0;
-
-      quantity_ = 0;
-
       total_ = 0;
 
       return this;
@@ -465,8 +407,6 @@ private static final long serialVersionUID = 0L;
       org.dataaccess.protobuf.Cart result = new org.dataaccess.protobuf.Cart(this);
       result.id_ = id_;
       result.username_ = username_;
-      result.productId_ = productId_;
-      result.quantity_ = quantity_;
       result.total_ = total_;
       onBuilt();
       return result;
@@ -522,12 +462,6 @@ private static final long serialVersionUID = 0L;
       if (!other.getUsername().isEmpty()) {
         username_ = other.username_;
         onChanged();
-      }
-      if (other.getProductId() != 0) {
-        setProductId(other.getProductId());
-      }
-      if (other.getQuantity() != 0) {
-        setQuantity(other.getQuantity());
       }
       if (other.getTotal() != 0) {
         setTotal(other.getTotal());
@@ -668,71 +602,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int productId_ ;
-    /**
-     * <code>int32 productId = 3;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public int getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>int32 productId = 3;</code>
-     * @param value The productId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProductId(int value) {
-      
-      productId_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 productId = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProductId() {
-      
-      productId_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int quantity_ ;
-    /**
-     * <code>int32 quantity = 4;</code>
-     * @return The quantity.
-     */
-    @java.lang.Override
-    public int getQuantity() {
-      return quantity_;
-    }
-    /**
-     * <code>int32 quantity = 4;</code>
-     * @param value The quantity to set.
-     * @return This builder for chaining.
-     */
-    public Builder setQuantity(int value) {
-      
-      quantity_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 quantity = 4;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearQuantity() {
-      
-      quantity_ = 0;
-      onChanged();
-      return this;
-    }
-
     private int total_ ;
     /**
-     * <code>int32 total = 5;</code>
+     * <code>int32 total = 3;</code>
      * @return The total.
      */
     @java.lang.Override
@@ -740,7 +612,7 @@ private static final long serialVersionUID = 0L;
       return total_;
     }
     /**
-     * <code>int32 total = 5;</code>
+     * <code>int32 total = 3;</code>
      * @param value The total to set.
      * @return This builder for chaining.
      */
@@ -751,7 +623,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 total = 5;</code>
+     * <code>int32 total = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearTotal() {

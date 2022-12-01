@@ -15,34 +15,96 @@ public final class CartServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.Cart,
-      org.dataaccess.protobuf.Void> getAddToCartMethod;
+      org.dataaccess.protobuf.Void> getRegisterCartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddToCart",
+      fullMethodName = SERVICE_NAME + '/' + "RegisterCart",
       requestType = org.dataaccess.protobuf.Cart.class,
       responseType = org.dataaccess.protobuf.Void.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.Cart,
-      org.dataaccess.protobuf.Void> getAddToCartMethod() {
-    io.grpc.MethodDescriptor<org.dataaccess.protobuf.Cart, org.dataaccess.protobuf.Void> getAddToCartMethod;
-    if ((getAddToCartMethod = CartServiceGrpc.getAddToCartMethod) == null) {
+      org.dataaccess.protobuf.Void> getRegisterCartMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.Cart, org.dataaccess.protobuf.Void> getRegisterCartMethod;
+    if ((getRegisterCartMethod = CartServiceGrpc.getRegisterCartMethod) == null) {
       synchronized (CartServiceGrpc.class) {
-        if ((getAddToCartMethod = CartServiceGrpc.getAddToCartMethod) == null) {
-          CartServiceGrpc.getAddToCartMethod = getAddToCartMethod =
+        if ((getRegisterCartMethod = CartServiceGrpc.getRegisterCartMethod) == null) {
+          CartServiceGrpc.getRegisterCartMethod = getRegisterCartMethod =
               io.grpc.MethodDescriptor.<org.dataaccess.protobuf.Cart, org.dataaccess.protobuf.Void>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddToCart"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterCart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.dataaccess.protobuf.Cart.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.dataaccess.protobuf.Void.getDefaultInstance()))
-              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("AddToCart"))
+              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("RegisterCart"))
               .build();
         }
       }
     }
-    return getAddToCartMethod;
+    return getRegisterCartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.CartItem,
+      org.dataaccess.protobuf.Void> getRegisterCartItemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegisterCartItem",
+      requestType = org.dataaccess.protobuf.CartItem.class,
+      responseType = org.dataaccess.protobuf.Void.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.CartItem,
+      org.dataaccess.protobuf.Void> getRegisterCartItemMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.CartItem, org.dataaccess.protobuf.Void> getRegisterCartItemMethod;
+    if ((getRegisterCartItemMethod = CartServiceGrpc.getRegisterCartItemMethod) == null) {
+      synchronized (CartServiceGrpc.class) {
+        if ((getRegisterCartItemMethod = CartServiceGrpc.getRegisterCartItemMethod) == null) {
+          CartServiceGrpc.getRegisterCartItemMethod = getRegisterCartItemMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.CartItem, org.dataaccess.protobuf.Void>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterCartItem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.CartItem.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Void.getDefaultInstance()))
+              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("RegisterCartItem"))
+              .build();
+        }
+      }
+    }
+    return getRegisterCartItemMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Cart> getFindCartMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FindCart",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.Cart.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Cart> getFindCartMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Cart> getFindCartMethod;
+    if ((getFindCartMethod = CartServiceGrpc.getFindCartMethod) == null) {
+      synchronized (CartServiceGrpc.class) {
+        if ((getFindCartMethod = CartServiceGrpc.getFindCartMethod) == null) {
+          CartServiceGrpc.getFindCartMethod = getFindCartMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Cart>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindCart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Cart.getDefaultInstance()))
+              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("FindCart"))
+              .build();
+        }
+      }
+    }
+    return getFindCartMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
@@ -157,9 +219,23 @@ public final class CartServiceGrpc {
 
     /**
      */
-    public void addToCart(org.dataaccess.protobuf.Cart request,
+    public void registerCart(org.dataaccess.protobuf.Cart request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddToCartMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterCartMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void registerCartItem(org.dataaccess.protobuf.CartItem request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterCartItemMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void findCart(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Cart> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindCartMethod(), responseObserver);
     }
 
     /**
@@ -179,12 +255,26 @@ public final class CartServiceGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getAddToCartMethod(),
+            getRegisterCartMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.dataaccess.protobuf.Cart,
                 org.dataaccess.protobuf.Void>(
-                  this, METHODID_ADD_TO_CART)))
+                  this, METHODID_REGISTER_CART)))
+          .addMethod(
+            getRegisterCartItemMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.CartItem,
+                org.dataaccess.protobuf.Void>(
+                  this, METHODID_REGISTER_CART_ITEM)))
+          .addMethod(
+            getFindCartMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.Cart>(
+                  this, METHODID_FIND_CART)))
           .addMethod(
             getGetAllFromCartMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -219,10 +309,26 @@ public final class CartServiceGrpc {
 
     /**
      */
-    public void addToCart(org.dataaccess.protobuf.Cart request,
+    public void registerCart(org.dataaccess.protobuf.Cart request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAddToCartMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRegisterCartMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void registerCartItem(org.dataaccess.protobuf.CartItem request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRegisterCartItemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void findCart(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Cart> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFindCartMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -258,9 +364,23 @@ public final class CartServiceGrpc {
 
     /**
      */
-    public org.dataaccess.protobuf.Void addToCart(org.dataaccess.protobuf.Cart request) {
+    public org.dataaccess.protobuf.Void registerCart(org.dataaccess.protobuf.Cart request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAddToCartMethod(), getCallOptions(), request);
+          getChannel(), getRegisterCartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.Void registerCartItem(org.dataaccess.protobuf.CartItem request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegisterCartItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.Cart findCart(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFindCartMethod(), getCallOptions(), request);
     }
 
     /**
@@ -294,10 +414,26 @@ public final class CartServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> addToCart(
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> registerCart(
         org.dataaccess.protobuf.Cart request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAddToCartMethod(), getCallOptions()), request);
+          getChannel().newCall(getRegisterCartMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> registerCartItem(
+        org.dataaccess.protobuf.CartItem request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRegisterCartItemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Cart> findCart(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFindCartMethod(), getCallOptions()), request);
     }
 
     /**
@@ -317,9 +453,11 @@ public final class CartServiceGrpc {
     }
   }
 
-  private static final int METHODID_ADD_TO_CART = 0;
-  private static final int METHODID_GET_ALL_FROM_CART = 1;
-  private static final int METHODID_DELETE_ALL_FROM_CART = 2;
+  private static final int METHODID_REGISTER_CART = 0;
+  private static final int METHODID_REGISTER_CART_ITEM = 1;
+  private static final int METHODID_FIND_CART = 2;
+  private static final int METHODID_GET_ALL_FROM_CART = 3;
+  private static final int METHODID_DELETE_ALL_FROM_CART = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -338,9 +476,17 @@ public final class CartServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ADD_TO_CART:
-          serviceImpl.addToCart((org.dataaccess.protobuf.Cart) request,
+        case METHODID_REGISTER_CART:
+          serviceImpl.registerCart((org.dataaccess.protobuf.Cart) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
+          break;
+        case METHODID_REGISTER_CART_ITEM:
+          serviceImpl.registerCartItem((org.dataaccess.protobuf.CartItem) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
+          break;
+        case METHODID_FIND_CART:
+          serviceImpl.findCart((org.dataaccess.protobuf.SearchField) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Cart>) responseObserver);
           break;
         case METHODID_GET_ALL_FROM_CART:
           serviceImpl.getAllFromCart((org.dataaccess.protobuf.SearchField) request,
@@ -411,7 +557,9 @@ public final class CartServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CartServiceFileDescriptorSupplier())
-              .addMethod(getAddToCartMethod())
+              .addMethod(getRegisterCartMethod())
+              .addMethod(getRegisterCartItemMethod())
+              .addMethod(getFindCartMethod())
               .addMethod(getGetAllFromCartMethod())
               .addMethod(getDeleteAllFromCartMethod())
               .build();

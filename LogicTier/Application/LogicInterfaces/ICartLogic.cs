@@ -5,9 +5,11 @@ namespace Application.LogicInterfaces;
 
 public interface ICartLogic
 {
-    public Task AddToCartAsync(CartDTO dto);
+    /*public Task RegisterCartAsync(CartCreationDTO dto);*/
+    
+    public Task RegisterCartItemAsync(CartItemCreationDTO dto);
 
-    public Task<ICollection<Cart>> GetAllFromCartAsync(string username);
+    public Task<ICollection<CartItem>> GetAllFromCartAsync(string username);
 
     public Task DeleteAllFromCartAsync(string username);
 }

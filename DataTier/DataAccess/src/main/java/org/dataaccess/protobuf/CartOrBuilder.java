@@ -26,19 +26,7 @@ public interface CartOrBuilder extends
       getUsernameBytes();
 
   /**
-   * <code>int32 productId = 3;</code>
-   * @return The productId.
-   */
-  int getProductId();
-
-  /**
-   * <code>int32 quantity = 4;</code>
-   * @return The quantity.
-   */
-  int getQuantity();
-
-  /**
-   * <code>int32 total = 5;</code>
+   * <code>int32 total = 3;</code>
    * @return The total.
    */
   int getTotal();

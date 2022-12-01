@@ -9,10 +9,12 @@ public class UserLogic : IUserLogic
 {
 
     private readonly IUserDAO userDao;
+    private readonly ICartDAO cartDao;
 
-    public UserLogic(IUserDAO userDao)
+    public UserLogic(IUserDAO userDao, ICartDAO cartDao)
     {
         this.userDao = userDao;
+        this.cartDao = cartDao;
     }
     
     public async Task<User> CreateUserAsync(UserCreationDTO userCreationDto)
@@ -34,7 +36,16 @@ public class UserLogic : IUserLogic
             LastName = userCreationDto.LastName
         };
 
-        return await userDao.CreateUserAsync(user);
+        var cart = new Cart
+        {
+            UserName = userCreationDto.userName
+        };
+
+        User userToSend = await userDao.CreateUserAsync(user);
+        
+        await cartDao.RegisterCartAsync(cart);
+
+        return userToSend;
     }
 
     public async Task<User> LoginUserAsync(UserLoginDTO userLoginDto)

@@ -8,26 +8,26 @@ public interface CartItemsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .Cart cartProducts = 1;</code>
+   * <code>repeated .CartItem cartItems = 1;</code>
    */
-  java.util.List<org.dataaccess.protobuf.Cart> 
-      getCartProductsList();
+  java.util.List<org.dataaccess.protobuf.CartItem> 
+      getCartItemsList();
   /**
-   * <code>repeated .Cart cartProducts = 1;</code>
+   * <code>repeated .CartItem cartItems = 1;</code>
    */
-  org.dataaccess.protobuf.Cart getCartProducts(int index);
+  org.dataaccess.protobuf.CartItem getCartItems(int index);
   /**
-   * <code>repeated .Cart cartProducts = 1;</code>
+   * <code>repeated .CartItem cartItems = 1;</code>
    */
-  int getCartProductsCount();
+  int getCartItemsCount();
   /**
-   * <code>repeated .Cart cartProducts = 1;</code>
+   * <code>repeated .CartItem cartItems = 1;</code>
    */
-  java.util.List<? extends org.dataaccess.protobuf.CartOrBuilder> 
-      getCartProductsOrBuilderList();
+  java.util.List<? extends org.dataaccess.protobuf.CartItemOrBuilder> 
+      getCartItemsOrBuilderList();
   /**
-   * <code>repeated .Cart cartProducts = 1;</code>
+   * <code>repeated .CartItem cartItems = 1;</code>
    */
-  org.dataaccess.protobuf.CartOrBuilder getCartProductsOrBuilder(
+  org.dataaccess.protobuf.CartItemOrBuilder getCartItemsOrBuilder(
       int index);
 }

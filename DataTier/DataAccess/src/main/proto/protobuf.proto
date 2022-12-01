@@ -20,7 +20,9 @@ service ProductService{
 }
 
 service CartService{
-  rpc AddToCart(Cart) returns (Void);
+  rpc RegisterCart(Cart) returns (Void);
+  rpc RegisterCartItem(CartItem) returns (Void);
+  rpc FindCart(SearchField) returns (Cart);
   rpc GetAllFromCart(SearchField) returns (CartItems);
   rpc DeleteAllFromCart(SearchField) returns (Void);
 }
@@ -73,13 +75,17 @@ message Category{
 message Cart{
   int32 id = 1;
   string username = 2;
-  int32 productId =3;
-  int32 quantity = 4;
-  int32 total = 5;
+  int32 total = 3;
+}
+
+message CartItem{
+  int32 id = 1;
+  int32 cartId = 2;
+  int32 productId = 3;
 }
 
 message CartItems{
-  repeated Cart cartProducts = 1;
+  repeated CartItem cartItems = 1;
 }
 
 message SearchField{

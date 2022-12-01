@@ -4,13 +4,14 @@ import io.grpc.stub.StreamObserver;
 import org.dataaccess.DAOInterfaces.CartDAO;
 import org.dataaccess.DAOInterfaces.ProductDAO;
 import org.dataaccess.DAOInterfaces.UserDAO;
+import org.dataaccess.mappers.CartItemMapper;
 import org.dataaccess.mappers.CartMapper;
 import org.dataaccess.protobuf.*;
 import org.dataaccess.protobuf.Void;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -30,14 +31,14 @@ public class CartService extends CartServiceGrpc.CartServiceImplBase
     }
 
     @Override
-    public void addToCart(Cart request, StreamObserver<Void> responseObserver)
+    public void registerCart(Cart request, StreamObserver<Void> responseObserver)
     {
-        org.dataaccess.Shared.Cart cart = new org.dataaccess.Shared.Cart(
-                userDAO.findUser(request.getUsername()),
-                productDAO.findProduct(String.valueOf(request.getProductId())),
-                request.getQuantity(),
-                request.getTotal()
-        );
+        org.dataaccess.Shared.Cart cart = new org.dataaccess.Shared.Cart();
+
+        org.dataaccess.Shared.User user = userDAO.findUser(request.getUsername());
+
+
+        cart.setUser(user);
 
         cartDAO.registerCart(cart);
 
@@ -46,26 +47,61 @@ public class CartService extends CartServiceGrpc.CartServiceImplBase
     }
 
     @Override
-    public void getAllFromCart(SearchField request, StreamObserver<CartItems> responseObserver)
+    public void registerCartItem(CartItem request, StreamObserver<Void> responseObserver)
+    {
+        org.dataaccess.Shared.Cart cart = cartDAO.getCartById(request.getCartId());
+
+        org.dataaccess.Shared.Product product = productDAO.findProduct(String.valueOf(request.getProductId()));
+
+        org.dataaccess.Shared.CartItem cartItem = new org.dataaccess.Shared.CartItem(
+                cart,
+                product
+        );
+
+        cartDAO.registerCartItem(cartItem);
+
+        responseObserver.onNext(Void.newBuilder().build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void findCart(SearchField request, StreamObserver<Cart> responseObserver)
     {
         org.dataaccess.Shared.User user = userDAO.findUser(request.getSearch());
-        Collection<org.dataaccess.Shared.Cart> cartItemsByUsername = cartDAO.getFromCartByUsername(user);
 
-        Collection<Cart> cartProto = new ArrayList<>();
+        org.dataaccess.Shared.Cart cart = cartDAO.getCartByUser(user);
 
-        if (cartItemsByUsername == null){
+        if (cart == null)
+        {
+            responseObserver.onError(new Exception("Cart does not exist"));
+            return;
+        }
+
+        responseObserver.onNext(CartMapper.mapToProto(cart));
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void getAllFromCart(SearchField request, StreamObserver<CartItems> responseObserver)
+    {
+        Collection<org.dataaccess.Shared.CartItem> cartItems = cartDAO.getAllFromCartItemsByCartUser(userDAO.findUser(request.getSearch()));
+
+        Collection<CartItem> cartItemsProto = new ArrayList<>();
+
+        if (cartItems == null)
+        {
             responseObserver.onError(new Exception("Cart products not found"));
             return;
         }
 
-        for (org.dataaccess.Shared.Cart cartItems : cartItemsByUsername)
+        for (org.dataaccess.Shared.CartItem cartItem : cartItems)
         {
-            cartProto.add(CartMapper.mapToProto(cartItems));
+            cartItemsProto.add(CartItemMapper.mapToProto(cartItem));
         }
 
-        CartItems cart = CartItems.newBuilder().addAllCartProducts(cartProto).build();
+        CartItems cartItemsToSend = CartItems.newBuilder().addAllCartItems(cartItemsProto).build();
 
-        responseObserver.onNext(cart);
+        responseObserver.onNext(cartItemsToSend);
         responseObserver.onCompleted();
     }
 
@@ -73,7 +109,7 @@ public class CartService extends CartServiceGrpc.CartServiceImplBase
     @Override
     public void deleteAllFromCart(SearchField request, StreamObserver<Void> responseObserver)
     {
-        cartDAO.deleteFromCartByUsername(request.getSearch());
+        cartDAO.deleteFromCartItemsByUsername(request.getSearch());
 
         responseObserver.onNext(Void.newBuilder().build());
         responseObserver.onCompleted();

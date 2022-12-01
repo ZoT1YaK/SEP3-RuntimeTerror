@@ -12,9 +12,7 @@ import java.util.Collection;
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Integer>
 {
-    Collection<Cart> findAllByUsername(User username);
+    Cart findByUser(User username);
 
-    @Modifying
-    @Query("DELETE FROM Cart c WHERE c.username = ?1")
-    void deleteFromCartByUsername(String userName);
+    Cart findById(int cartId);
 }

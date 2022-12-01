@@ -33,23 +33,26 @@ public static partial class ProtobufReflection {
           "CRINCgVwcmljZRgEIAEoBRITCgtkZXNjcmlwdGlvbhgFIAEoCRIbCghjYXRl",
           "Z29yeRgGIAEoCzIJLkNhdGVnb3J5Eg8KB2luU3RvY2sYByABKAgiKQoMUHJv",
           "ZHVjdEl0ZW1zEhkKB3Byb2R1Y3QYASADKAsyCC5Qcm9kdWN0IiEKCENhdGVn",
-          "b3J5EhUKDWNhdGVnb3J5X25hbWUYASABKAkiWAoEQ2FydBIKCgJpZBgBIAEo",
-          "BRIQCgh1c2VybmFtZRgCIAEoCRIRCglwcm9kdWN0SWQYAyABKAUSEAoIcXVh",
-          "bnRpdHkYBCABKAUSDQoFdG90YWwYBSABKAUiKAoJQ2FydEl0ZW1zEhsKDGNh",
-          "cnRQcm9kdWN0cxgBIAMoCzIFLkNhcnQiHQoLU2VhcmNoRmllbGQSDgoGc2Vh",
-          "cmNoGAEgASgJIgYKBFZvaWQyvAEKC1VzZXJTZXJ2aWNlEiIKCkNyZWF0ZVVz",
-          "ZXISDS5SZWdpc3RlclVzZXIaBS5Vc2VyEh8KCkxvZ2luVXNlcnMSCi5Mb2dp",
-          "blVzZXIaBS5Vc2VyEh8KCEZpbmRVc2VyEgwuU2VhcmNoRmllbGQaBS5Vc2Vy",
-          "EiEKCkFkZENyZWRpdHMSDC5DcmVkaXRzVXNlchoFLlZvaWQSJAoNUmVtb3Zl",
-          "Q3JlZGl0cxIMLkNyZWRpdHNVc2VyGgUuVm9pZDLLAQoOUHJvZHVjdFNlcnZp",
-          "Y2USJQoPUmVnaXN0ZXJQcm9kdWN0EgguUHJvZHVjdBoILlByb2R1Y3QSIwoL",
-          "R2V0UHJvZHVjdHMSBS5Wb2lkGg0uUHJvZHVjdEl0ZW1zEiUKC0ZpbmRQcm9k",
-          "dWN0EgwuU2VhcmNoRmllbGQaCC5Qcm9kdWN0EiAKDVVwZGF0ZVByb2R1Y3QS",
-          "CC5Qcm9kdWN0GgUuVm9pZBIkCg1EZWxldGVQcm9kdWN0EgwuU2VhcmNoRmll",
-          "bGQaBS5Wb2lkMn4KC0NhcnRTZXJ2aWNlEhkKCUFkZFRvQ2FydBIFLkNhcnQa",
-          "BS5Wb2lkEioKDkdldEFsbEZyb21DYXJ0EgwuU2VhcmNoRmllbGQaCi5DYXJ0",
-          "SXRlbXMSKAoRRGVsZXRlQWxsRnJvbUNhcnQSDC5TZWFyY2hGaWVsZBoFLlZv",
-          "aWRCGwoXb3JnLmRhdGFhY2Nlc3MucHJvdG9idWZQAWIGcHJvdG8z"));
+          "b3J5EhUKDWNhdGVnb3J5X25hbWUYASABKAkiMwoEQ2FydBIKCgJpZBgBIAEo",
+          "BRIQCgh1c2VybmFtZRgCIAEoCRINCgV0b3RhbBgDIAEoBSI5CghDYXJ0SXRl",
+          "bRIKCgJpZBgBIAEoBRIOCgZjYXJ0SWQYAiABKAUSEQoJcHJvZHVjdElkGAMg",
+          "ASgFIikKCUNhcnRJdGVtcxIcCgljYXJ0SXRlbXMYASADKAsyCS5DYXJ0SXRl",
+          "bSIdCgtTZWFyY2hGaWVsZBIOCgZzZWFyY2gYASABKAkiBgoEVm9pZDK8AQoL",
+          "VXNlclNlcnZpY2USIgoKQ3JlYXRlVXNlchINLlJlZ2lzdGVyVXNlchoFLlVz",
+          "ZXISHwoKTG9naW5Vc2VycxIKLkxvZ2luVXNlchoFLlVzZXISHwoIRmluZFVz",
+          "ZXISDC5TZWFyY2hGaWVsZBoFLlVzZXISIQoKQWRkQ3JlZGl0cxIMLkNyZWRp",
+          "dHNVc2VyGgUuVm9pZBIkCg1SZW1vdmVDcmVkaXRzEgwuQ3JlZGl0c1VzZXIa",
+          "BS5Wb2lkMssBCg5Qcm9kdWN0U2VydmljZRIlCg9SZWdpc3RlclByb2R1Y3QS",
+          "CC5Qcm9kdWN0GgguUHJvZHVjdBIjCgtHZXRQcm9kdWN0cxIFLlZvaWQaDS5Q",
+          "cm9kdWN0SXRlbXMSJQoLRmluZFByb2R1Y3QSDC5TZWFyY2hGaWVsZBoILlBy",
+          "b2R1Y3QSIAoNVXBkYXRlUHJvZHVjdBIILlByb2R1Y3QaBS5Wb2lkEiQKDURl",
+          "bGV0ZVByb2R1Y3QSDC5TZWFyY2hGaWVsZBoFLlZvaWQyyAEKC0NhcnRTZXJ2",
+          "aWNlEhwKDFJlZ2lzdGVyQ2FydBIFLkNhcnQaBS5Wb2lkEiQKEFJlZ2lzdGVy",
+          "Q2FydEl0ZW0SCS5DYXJ0SXRlbRoFLlZvaWQSHwoIRmluZENhcnQSDC5TZWFy",
+          "Y2hGaWVsZBoFLkNhcnQSKgoOR2V0QWxsRnJvbUNhcnQSDC5TZWFyY2hGaWVs",
+          "ZBoKLkNhcnRJdGVtcxIoChFEZWxldGVBbGxGcm9tQ2FydBIMLlNlYXJjaEZp",
+          "ZWxkGgUuVm9pZEIbChdvcmcuZGF0YWFjY2Vzcy5wcm90b2J1ZlABYgZwcm90",
+          "bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,8 +63,9 @@ public static partial class ProtobufReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::Product), global::Product.Parser, new[]{ "Id", "Name", "ImgPath", "Price", "Description", "Category", "InStock" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ProductItems), global::ProductItems.Parser, new[]{ "Product" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::Category), global::Category.Parser, new[]{ "CategoryName" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::Cart), global::Cart.Parser, new[]{ "Id", "Username", "ProductId", "Quantity", "Total" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::CartItems), global::CartItems.Parser, new[]{ "CartProducts" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Cart), global::Cart.Parser, new[]{ "Id", "Username", "Total" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::CartItem), global::CartItem.Parser, new[]{ "Id", "CartId", "ProductId" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::CartItems), global::CartItems.Parser, new[]{ "CartItems_" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::SearchField), global::SearchField.Parser, new[]{ "Search" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::Void), global::Void.Parser, null, null, null, null, null)
         }));
@@ -2019,8 +2023,6 @@ public sealed partial class Cart : pb::IMessage<Cart>
   public Cart(Cart other) : this() {
     id_ = other.id_;
     username_ = other.username_;
-    productId_ = other.productId_;
-    quantity_ = other.quantity_;
     total_ = other.total_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -2055,32 +2057,8 @@ public sealed partial class Cart : pb::IMessage<Cart>
     }
   }
 
-  /// <summary>Field number for the "productId" field.</summary>
-  public const int ProductIdFieldNumber = 3;
-  private int productId_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public int ProductId {
-    get { return productId_; }
-    set {
-      productId_ = value;
-    }
-  }
-
-  /// <summary>Field number for the "quantity" field.</summary>
-  public const int QuantityFieldNumber = 4;
-  private int quantity_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public int Quantity {
-    get { return quantity_; }
-    set {
-      quantity_ = value;
-    }
-  }
-
   /// <summary>Field number for the "total" field.</summary>
-  public const int TotalFieldNumber = 5;
+  public const int TotalFieldNumber = 3;
   private int total_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2108,8 +2086,6 @@ public sealed partial class Cart : pb::IMessage<Cart>
     }
     if (Id != other.Id) return false;
     if (Username != other.Username) return false;
-    if (ProductId != other.ProductId) return false;
-    if (Quantity != other.Quantity) return false;
     if (Total != other.Total) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -2120,8 +2096,6 @@ public sealed partial class Cart : pb::IMessage<Cart>
     int hash = 1;
     if (Id != 0) hash ^= Id.GetHashCode();
     if (Username.Length != 0) hash ^= Username.GetHashCode();
-    if (ProductId != 0) hash ^= ProductId.GetHashCode();
-    if (Quantity != 0) hash ^= Quantity.GetHashCode();
     if (Total != 0) hash ^= Total.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -2149,16 +2123,8 @@ public sealed partial class Cart : pb::IMessage<Cart>
       output.WriteRawTag(18);
       output.WriteString(Username);
     }
-    if (ProductId != 0) {
-      output.WriteRawTag(24);
-      output.WriteInt32(ProductId);
-    }
-    if (Quantity != 0) {
-      output.WriteRawTag(32);
-      output.WriteInt32(Quantity);
-    }
     if (Total != 0) {
-      output.WriteRawTag(40);
+      output.WriteRawTag(24);
       output.WriteInt32(Total);
     }
     if (_unknownFields != null) {
@@ -2179,16 +2145,8 @@ public sealed partial class Cart : pb::IMessage<Cart>
       output.WriteRawTag(18);
       output.WriteString(Username);
     }
-    if (ProductId != 0) {
-      output.WriteRawTag(24);
-      output.WriteInt32(ProductId);
-    }
-    if (Quantity != 0) {
-      output.WriteRawTag(32);
-      output.WriteInt32(Quantity);
-    }
     if (Total != 0) {
-      output.WriteRawTag(40);
+      output.WriteRawTag(24);
       output.WriteInt32(Total);
     }
     if (_unknownFields != null) {
@@ -2206,12 +2164,6 @@ public sealed partial class Cart : pb::IMessage<Cart>
     }
     if (Username.Length != 0) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
-    }
-    if (ProductId != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProductId);
-    }
-    if (Quantity != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
     }
     if (Total != 0) {
       size += 1 + pb::CodedOutputStream.ComputeInt32Size(Total);
@@ -2233,12 +2185,6 @@ public sealed partial class Cart : pb::IMessage<Cart>
     }
     if (other.Username.Length != 0) {
       Username = other.Username;
-    }
-    if (other.ProductId != 0) {
-      ProductId = other.ProductId;
-    }
-    if (other.Quantity != 0) {
-      Quantity = other.Quantity;
     }
     if (other.Total != 0) {
       Total = other.Total;
@@ -2267,14 +2213,6 @@ public sealed partial class Cart : pb::IMessage<Cart>
           break;
         }
         case 24: {
-          ProductId = input.ReadInt32();
-          break;
-        }
-        case 32: {
-          Quantity = input.ReadInt32();
-          break;
-        }
-        case 40: {
           Total = input.ReadInt32();
           break;
         }
@@ -2302,15 +2240,270 @@ public sealed partial class Cart : pb::IMessage<Cart>
           break;
         }
         case 24: {
+          Total = input.ReadInt32();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
+public sealed partial class CartItem : pb::IMessage<CartItem>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<CartItem> _parser = new pb::MessageParser<CartItem>(() => new CartItem());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pb::MessageParser<CartItem> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::ProtobufReflection.Descriptor.MessageTypes[8]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public CartItem() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public CartItem(CartItem other) : this() {
+    id_ = other.id_;
+    cartId_ = other.cartId_;
+    productId_ = other.productId_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public CartItem Clone() {
+    return new CartItem(this);
+  }
+
+  /// <summary>Field number for the "id" field.</summary>
+  public const int IdFieldNumber = 1;
+  private int id_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int Id {
+    get { return id_; }
+    set {
+      id_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "cartId" field.</summary>
+  public const int CartIdFieldNumber = 2;
+  private int cartId_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CartId {
+    get { return cartId_; }
+    set {
+      cartId_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "productId" field.</summary>
+  public const int ProductIdFieldNumber = 3;
+  private int productId_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int ProductId {
+    get { return productId_; }
+    set {
+      productId_ = value;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as CartItem);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(CartItem other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Id != other.Id) return false;
+    if (CartId != other.CartId) return false;
+    if (ProductId != other.ProductId) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Id != 0) hash ^= Id.GetHashCode();
+    if (CartId != 0) hash ^= CartId.GetHashCode();
+    if (ProductId != 0) hash ^= ProductId.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Id != 0) {
+      output.WriteRawTag(8);
+      output.WriteInt32(Id);
+    }
+    if (CartId != 0) {
+      output.WriteRawTag(16);
+      output.WriteInt32(CartId);
+    }
+    if (ProductId != 0) {
+      output.WriteRawTag(24);
+      output.WriteInt32(ProductId);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Id != 0) {
+      output.WriteRawTag(8);
+      output.WriteInt32(Id);
+    }
+    if (CartId != 0) {
+      output.WriteRawTag(16);
+      output.WriteInt32(CartId);
+    }
+    if (ProductId != 0) {
+      output.WriteRawTag(24);
+      output.WriteInt32(ProductId);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    if (Id != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+    }
+    if (CartId != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(CartId);
+    }
+    if (ProductId != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProductId);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(CartItem other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Id != 0) {
+      Id = other.Id;
+    }
+    if (other.CartId != 0) {
+      CartId = other.CartId;
+    }
+    if (other.ProductId != 0) {
+      ProductId = other.ProductId;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 8: {
+          Id = input.ReadInt32();
+          break;
+        }
+        case 16: {
+          CartId = input.ReadInt32();
+          break;
+        }
+        case 24: {
           ProductId = input.ReadInt32();
           break;
         }
-        case 32: {
-          Quantity = input.ReadInt32();
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 8: {
+          Id = input.ReadInt32();
           break;
         }
-        case 40: {
-          Total = input.ReadInt32();
+        case 16: {
+          CartId = input.ReadInt32();
+          break;
+        }
+        case 24: {
+          ProductId = input.ReadInt32();
           break;
         }
       }
@@ -2334,7 +2527,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtobufReflection.Descriptor.MessageTypes[8]; }
+    get { return global::ProtobufReflection.Descriptor.MessageTypes[9]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2354,7 +2547,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public CartItems(CartItems other) : this() {
-    cartProducts_ = other.cartProducts_.Clone();
+    cartItems_ = other.cartItems_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -2364,15 +2557,15 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
     return new CartItems(this);
   }
 
-  /// <summary>Field number for the "cartProducts" field.</summary>
-  public const int CartProductsFieldNumber = 1;
-  private static readonly pb::FieldCodec<global::Cart> _repeated_cartProducts_codec
-      = pb::FieldCodec.ForMessage(10, global::Cart.Parser);
-  private readonly pbc::RepeatedField<global::Cart> cartProducts_ = new pbc::RepeatedField<global::Cart>();
+  /// <summary>Field number for the "cartItems" field.</summary>
+  public const int CartItems_FieldNumber = 1;
+  private static readonly pb::FieldCodec<global::CartItem> _repeated_cartItems_codec
+      = pb::FieldCodec.ForMessage(10, global::CartItem.Parser);
+  private readonly pbc::RepeatedField<global::CartItem> cartItems_ = new pbc::RepeatedField<global::CartItem>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public pbc::RepeatedField<global::Cart> CartProducts {
-    get { return cartProducts_; }
+  public pbc::RepeatedField<global::CartItem> CartItems_ {
+    get { return cartItems_; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2390,7 +2583,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if(!cartProducts_.Equals(other.cartProducts_)) return false;
+    if(!cartItems_.Equals(other.cartItems_)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -2398,7 +2591,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    hash ^= cartProducts_.GetHashCode();
+    hash ^= cartItems_.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2417,7 +2610,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    cartProducts_.WriteTo(output, _repeated_cartProducts_codec);
+    cartItems_.WriteTo(output, _repeated_cartItems_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -2428,7 +2621,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    cartProducts_.WriteTo(ref output, _repeated_cartProducts_codec);
+    cartItems_.WriteTo(ref output, _repeated_cartItems_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -2439,7 +2632,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    size += cartProducts_.CalculateSize(_repeated_cartProducts_codec);
+    size += cartItems_.CalculateSize(_repeated_cartItems_codec);
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
     }
@@ -2452,7 +2645,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
     if (other == null) {
       return;
     }
-    cartProducts_.Add(other.cartProducts_);
+    cartItems_.Add(other.cartItems_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
@@ -2469,7 +2662,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 10: {
-          cartProducts_.AddEntriesFrom(input, _repeated_cartProducts_codec);
+          cartItems_.AddEntriesFrom(input, _repeated_cartItems_codec);
           break;
         }
       }
@@ -2488,7 +2681,7 @@ public sealed partial class CartItems : pb::IMessage<CartItems>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 10: {
-          cartProducts_.AddEntriesFrom(ref input, _repeated_cartProducts_codec);
+          cartItems_.AddEntriesFrom(ref input, _repeated_cartItems_codec);
           break;
         }
       }
@@ -2512,7 +2705,7 @@ public sealed partial class SearchField : pb::IMessage<SearchField>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtobufReflection.Descriptor.MessageTypes[9]; }
+    get { return global::ProtobufReflection.Descriptor.MessageTypes[10]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2701,7 +2894,7 @@ public sealed partial class Void : pb::IMessage<Void>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtobufReflection.Descriptor.MessageTypes[10]; }
+    get { return global::ProtobufReflection.Descriptor.MessageTypes[11]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

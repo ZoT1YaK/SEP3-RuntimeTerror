@@ -67,6 +67,11 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
     {
         org.dataaccess.Shared.Product product = productDAO.findProduct(request.getSearch());
 
+        if (product==null) {
+            responseObserver.onError(new Exception("Product does not exist"));
+            return;
+        }
+
         responseObserver.onNext(ProductMapper.mapToProto(product));
         responseObserver.onCompleted();
     }

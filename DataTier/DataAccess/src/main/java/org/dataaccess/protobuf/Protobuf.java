@@ -55,6 +55,11 @@ public final class Protobuf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Cart_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CartItem_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CartItem_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CartItems_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -91,25 +96,27 @@ public final class Protobuf {
       "\010category\030\006 \001(\0132\t.Category\022\017\n\007inStock\030\007 " +
       "\001(\010\")\n\014ProductItems\022\031\n\007product\030\001 \003(\0132\010.P" +
       "roduct\"!\n\010Category\022\025\n\rcategory_name\030\001 \001(" +
-      "\t\"X\n\004Cart\022\n\n\002id\030\001 \001(\005\022\020\n\010username\030\002 \001(\t\022" +
-      "\021\n\tproductId\030\003 \001(\005\022\020\n\010quantity\030\004 \001(\005\022\r\n\005" +
-      "total\030\005 \001(\005\"(\n\tCartItems\022\033\n\014cartProducts" +
-      "\030\001 \003(\0132\005.Cart\"\035\n\013SearchField\022\016\n\006search\030\001" +
-      " \001(\t\"\006\n\004Void2\274\001\n\013UserService\022\"\n\nCreateUs" +
-      "er\022\r.RegisterUser\032\005.User\022\037\n\nLoginUsers\022\n" +
-      ".LoginUser\032\005.User\022\037\n\010FindUser\022\014.SearchFi" +
-      "eld\032\005.User\022!\n\nAddCredits\022\014.CreditsUser\032\005" +
-      ".Void\022$\n\rRemoveCredits\022\014.CreditsUser\032\005.V" +
-      "oid2\313\001\n\016ProductService\022%\n\017RegisterProduc" +
-      "t\022\010.Product\032\010.Product\022#\n\013GetProducts\022\005.V" +
-      "oid\032\r.ProductItems\022%\n\013FindProduct\022\014.Sear" +
-      "chField\032\010.Product\022 \n\rUpdateProduct\022\010.Pro" +
-      "duct\032\005.Void\022$\n\rDeleteProduct\022\014.SearchFie" +
-      "ld\032\005.Void2~\n\013CartService\022\031\n\tAddToCart\022\005." +
-      "Cart\032\005.Void\022*\n\016GetAllFromCart\022\014.SearchFi" +
-      "eld\032\n.CartItems\022(\n\021DeleteAllFromCart\022\014.S" +
-      "earchField\032\005.VoidB\033\n\027org.dataaccess.prot" +
-      "obufP\001b\006proto3"
+      "\t\"3\n\004Cart\022\n\n\002id\030\001 \001(\005\022\020\n\010username\030\002 \001(\t\022" +
+      "\r\n\005total\030\003 \001(\005\"9\n\010CartItem\022\n\n\002id\030\001 \001(\005\022\016" +
+      "\n\006cartId\030\002 \001(\005\022\021\n\tproductId\030\003 \001(\005\")\n\tCar" +
+      "tItems\022\034\n\tcartItems\030\001 \003(\0132\t.CartItem\"\035\n\013" +
+      "SearchField\022\016\n\006search\030\001 \001(\t\"\006\n\004Void2\274\001\n\013" +
+      "UserService\022\"\n\nCreateUser\022\r.RegisterUser" +
+      "\032\005.User\022\037\n\nLoginUsers\022\n.LoginUser\032\005.User" +
+      "\022\037\n\010FindUser\022\014.SearchField\032\005.User\022!\n\nAdd" +
+      "Credits\022\014.CreditsUser\032\005.Void\022$\n\rRemoveCr" +
+      "edits\022\014.CreditsUser\032\005.Void2\313\001\n\016ProductSe" +
+      "rvice\022%\n\017RegisterProduct\022\010.Product\032\010.Pro" +
+      "duct\022#\n\013GetProducts\022\005.Void\032\r.ProductItem" +
+      "s\022%\n\013FindProduct\022\014.SearchField\032\010.Product" +
+      "\022 \n\rUpdateProduct\022\010.Product\032\005.Void\022$\n\rDe" +
+      "leteProduct\022\014.SearchField\032\005.Void2\310\001\n\013Car" +
+      "tService\022\034\n\014RegisterCart\022\005.Cart\032\005.Void\022$" +
+      "\n\020RegisterCartItem\022\t.CartItem\032\005.Void\022\037\n\010" +
+      "FindCart\022\014.SearchField\032\005.Cart\022*\n\016GetAllF" +
+      "romCart\022\014.SearchField\032\n.CartItems\022(\n\021Del" +
+      "eteAllFromCart\022\014.SearchField\032\005.VoidB\033\n\027o" +
+      "rg.dataaccess.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -162,21 +169,27 @@ public final class Protobuf {
     internal_static_Cart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Cart_descriptor,
-        new java.lang.String[] { "Id", "Username", "ProductId", "Quantity", "Total", });
-    internal_static_CartItems_descriptor =
+        new java.lang.String[] { "Id", "Username", "Total", });
+    internal_static_CartItem_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_CartItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CartItem_descriptor,
+        new java.lang.String[] { "Id", "CartId", "ProductId", });
+    internal_static_CartItems_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CartItems_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CartItems_descriptor,
-        new java.lang.String[] { "CartProducts", });
+        new java.lang.String[] { "CartItems", });
     internal_static_SearchField_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_SearchField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SearchField_descriptor,
         new java.lang.String[] { "Search", });
     internal_static_Void_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_Void_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Void_descriptor,
