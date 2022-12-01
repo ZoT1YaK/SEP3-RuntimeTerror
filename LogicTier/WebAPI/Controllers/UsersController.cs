@@ -1,5 +1,9 @@
-﻿using Application.LogicInterfaces;
+﻿using System.Security.Claims;
+using Application.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 using Shared.DTOs;
 
 
@@ -10,27 +14,26 @@ namespace WebAPI.Controllers;
 public class UserController : ControllerBase
 {
     private readonly IUserLogic UserLogic;
-    /*private readonly IConfiguration config;*/
+    private readonly IConfiguration config;
 
-    public UserController(IUserLogic userLogic/*, IConfiguration config*/)
+    public UserController(IUserLogic userLogic, IConfiguration config)
     {
         UserLogic = userLogic;
-        /*this.config = config;*/
+        this.config = config;
     }
+
+
     
-    /*[HttpPost(), Route("register")]*/
-    
-    
-    //ADD user for action result??
     [HttpPost("register")]
     public async Task<IActionResult> CreateUserAsync(UserCreationDTO dto)
     {
         try
         {
-            /*Shared.Models.User user = await UserLogic.CreateUserAsync(dto);
-            return Created($"/users/{user.userName}", user);*/
+            
             var user = await UserLogic.CreateUserAsync(dto);
-            return Ok(user);
+            String token = GenerateJwt(user);
+            
+            return Ok(token);
         }
         catch (Exception e)
         {
@@ -45,7 +48,9 @@ public class UserController : ControllerBase
         try
         {
             var user = await UserLogic.LoginUserAsync(dto);
-            return Ok(user);
+            String token = GenerateJwt(user);
+            
+            return Ok(token);
         }
         catch (Exception e)
         {
@@ -82,5 +87,45 @@ public class UserController : ControllerBase
             Console.WriteLine(e);
             return StatusCode(500, e.Message);
         }
+    }
+    
+    
+    // JWT - Auth
+    private List<Claim> GenerateClaims(Shared.Models.User user)
+    {
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, config["Jwt:Subject"]),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
+            new Claim(ClaimTypes.Name, user.userName),
+            new Claim(ClaimTypes.Role, user.type),
+            new Claim("First Name", user.FirstName),
+            new Claim("Last Name", user.LastName),
+            new Claim("Credits", user.Credits.ToString())
+        };
+        return claims.ToList();
+    }
+    
+    private string GenerateJwt(Shared.Models.User user)
+    {
+        List<Claim> claims = GenerateClaims(user);
+    
+        SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+        SigningCredentials signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
+    
+        JwtHeader header = new JwtHeader(signIn);
+    
+        JwtPayload payload = new JwtPayload(
+            config["Jwt:Issuer"],
+            config["Jwt:Audience"],
+            claims, 
+            null,
+            DateTime.UtcNow.AddMinutes(60));
+    
+        JwtSecurityToken token = new JwtSecurityToken(header, payload);
+    
+        string serializedToken = new JwtSecurityTokenHandler().WriteToken(token);
+        return serializedToken;
     }
 }

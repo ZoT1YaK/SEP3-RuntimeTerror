@@ -19,7 +19,7 @@ public class UserHttpClient : IUserService
     
     public async Task<User> CreateAsync(UserCreationDTO dto)
     {
-        HttpResponseMessage response = await Client.PostAsJsonAsync("/user/register", dto);
+        HttpResponseMessage response = await Client.PostAsJsonAsync("/User/register", dto);
         
         if (!response.IsSuccessStatusCode)
         {
@@ -34,45 +34,28 @@ public class UserHttpClient : IUserService
             throw new Exception("Read User - Error");
         }
         return user;
-
-        // User user = JsonSerializer.Deserialize<User>(result, new JsonSerializerOptions
-        // {
-        //     PropertyNameCaseInsensitive = true
-        // })!;
-        // return user;
     }
 
     public async Task<User> LoginAsync(UserLoginDTO dto)
+    {
+        HttpResponseMessage response = await Client.PostAsJsonAsync("/User/login", dto);
+        if (!response.IsSuccessStatusCode)
+        {
+            string result = await response.Content.ReadAsStringAsync();
+            throw new Exception(result);
+        }
+        
+        var user = await response.Content.ReadFromJsonAsync<User>();
+        if (user == null)
+        {
+            throw new Exception("Read User - Error");
+        }
+        return user;
+    }
+
+    public Task LogoutAsync()
     {
-        HttpResponseMessage response = await Client.PostAsJsonAsync("/user/login", dto);
-        if (!response.IsSuccessStatusCode)
-        {
-            string result = await response.Content.ReadAsStringAsync();
-            throw new Exception(result);
-        }
-        
-        var user = await response.Content.ReadFromJsonAsync<User>();
-        if (user == null)
-        {
-            throw new Exception("Read User - Error");
-        }
-        return user;
+        throw new NotImplementedException();
     }
-
-    // public Task LoginAsync(string username, string password)
-    // {
-    //     throw new NotImplementedException();
-    // }
-    //
-    // public Task LogoutAsync()
-    // {
-    //     throw new NotImplementedException();
-    // }
-    //
-    // public Task<ClaimsPrincipal> GetAuthAsync()
-    // {
-    //     throw new NotImplementedException();
-    // }
-    //
-    // public Action<ClaimsPrincipal> OnAuthStateChanged { get; set; }
+    
 }

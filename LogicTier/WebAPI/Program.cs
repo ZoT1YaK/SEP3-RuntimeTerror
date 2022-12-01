@@ -5,6 +5,7 @@ using Application.LogicInterfaces;
 using GrpcClient.DAO;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Shared.Auth;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,24 +43,24 @@ builder.Services.AddGrpcClient<CartService.CartServiceClient>(o =>
 builder.Services.AddScoped<ICartDAO, CartDao>();
 builder.Services.AddScoped<ICartLogic, CartLogic>();
 
-// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-// {
-//     options.RequireHttpsMetadata = false;
-//     options.SaveToken = true;
-//     options.TokenValidationParameters = new TokenValidationParameters()
-//     {
-//         ValidateIssuer = true,
-//         ValidateAudience = true,
-//         ValidAudience = builder.Configuration["Jwt:Audience"],
-//         ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-//     };
-// });
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
+
+AuthorizationPolicies.AddPolicies(builder.Services);
 
 
 var app = builder.Build();
-
-/*app.UseAuthentication();*/
 
 
 

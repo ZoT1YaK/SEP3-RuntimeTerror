@@ -139,3 +139,6 @@ D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\
 D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\VIA\Semester Projects\Semester Project 3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

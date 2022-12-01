@@ -10,7 +10,7 @@ public interface IUserService
 
     Task<User> LoginAsync(UserLoginDTO dto);
     // public Task LoginAsync(string username, string password);
-    // public Task LogoutAsync();
+    public Task LogoutAsync();
     //
     // public Task<ClaimsPrincipal> GetAuthAsync();
     // public Action<ClaimsPrincipal> OnAuthStateChanged { get; set; }

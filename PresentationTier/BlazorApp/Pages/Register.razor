@@ -1,7 +1,8 @@
 ﻿@page "/Register"
 @using HttpClients.ClientInterfaces
 @using global::Shared.DTOs
-@inject IUserService UserService
+@using BlazorApp.Services
+@inject IAuthService _authService
 @inject NavigationManager NavManager
 
 <div class="container">
@@ -64,8 +65,8 @@
                 FirstName = fName,
                 LastName = lName
             };
-
-            await UserService.CreateAsync(dto);
+                
+            await _authService.RegisterAsync(dto);
             NavManager.NavigateTo("/Login");
         }
         catch (Exception e)
