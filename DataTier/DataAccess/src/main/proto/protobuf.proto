@@ -19,6 +19,12 @@ service ProductService{
   rpc DeleteProduct(SearchField) returns (Void);
 }
 
+service CartService{
+  rpc AddToCart(Cart) returns (Void);
+  rpc GetAllFromCart(SearchField) returns (CartItems);
+  rpc DeleteAllFromCart(SearchField) returns (Void);
+}
+
 message User{
   string username = 1;
   string password = 2;
@@ -45,9 +51,6 @@ message CreditsUser{
   string username = 2;
 }
 
-message SearchField{
-  string search = 1;
-}
 
 message Product{
   int32 id = 1;
@@ -65,6 +68,22 @@ message ProductItems{
 
 message Category{
   string category_name = 1;
+}
+
+message Cart{
+  int32 id = 1;
+  string username = 2;
+  int32 productId =3;
+  int32 quantity = 4;
+  int32 total = 5;
+}
+
+message CartItems{
+  repeated Cart cartProducts = 1;
+}
+
+message SearchField{
+  string search = 1;
 }
 
 message Void{}

@@ -2,6 +2,7 @@ package org.dataaccess.Shared;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "products", schema = "reverso_sep")
