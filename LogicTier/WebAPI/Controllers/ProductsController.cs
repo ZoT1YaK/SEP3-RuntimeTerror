@@ -30,13 +30,28 @@ public class ProductsController : ControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpGet("getAllProducts")]
     public async Task<IActionResult> GetAsync()
     {
         try
         {
             var created = await productLogic.GetProductsAsync();
             return Created($"/products", created);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpGet("getAllProductsFromCart")]
+    public async Task<IActionResult> GetProductsInCartByUserAsync([FromQuery] string username)
+    {
+        try
+        {
+            var products = await productLogic.GetProductsInCartByUserAsync(username);
+            return Created("/cartproducts", products);
         }
         catch (Exception e)
         {

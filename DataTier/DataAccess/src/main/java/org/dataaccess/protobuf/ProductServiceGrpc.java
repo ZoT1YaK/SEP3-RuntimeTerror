@@ -77,6 +77,37 @@ public final class ProductServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.ProductItems> getGetProductsInCartByUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProductsInCartByUser",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.ProductItems.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.ProductItems> getGetProductsInCartByUserMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.ProductItems> getGetProductsInCartByUserMethod;
+    if ((getGetProductsInCartByUserMethod = ProductServiceGrpc.getGetProductsInCartByUserMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getGetProductsInCartByUserMethod = ProductServiceGrpc.getGetProductsInCartByUserMethod) == null) {
+          ProductServiceGrpc.getGetProductsInCartByUserMethod = getGetProductsInCartByUserMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.ProductItems>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProductsInCartByUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.ProductItems.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("GetProductsInCartByUser"))
+              .build();
+        }
+      }
+    }
+    return getGetProductsInCartByUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
       org.dataaccess.protobuf.Product> getFindProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
@@ -233,6 +264,13 @@ public final class ProductServiceGrpc {
 
     /**
      */
+    public void getProductsInCartByUser(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.ProductItems> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsInCartByUserMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void findProduct(org.dataaccess.protobuf.SearchField request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Product> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindProductMethod(), responseObserver);
@@ -268,6 +306,13 @@ public final class ProductServiceGrpc {
                 org.dataaccess.protobuf.Void,
                 org.dataaccess.protobuf.ProductItems>(
                   this, METHODID_GET_PRODUCTS)))
+          .addMethod(
+            getGetProductsInCartByUserMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.ProductItems>(
+                  this, METHODID_GET_PRODUCTS_IN_CART_BY_USER)))
           .addMethod(
             getFindProductMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -325,6 +370,14 @@ public final class ProductServiceGrpc {
 
     /**
      */
+    public void getProductsInCartByUser(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.ProductItems> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetProductsInCartByUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void findProduct(org.dataaccess.protobuf.SearchField request,
         io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Product> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -374,6 +427,13 @@ public final class ProductServiceGrpc {
     public org.dataaccess.protobuf.ProductItems getProducts(org.dataaccess.protobuf.Void request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.ProductItems getProductsInCartByUser(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetProductsInCartByUserMethod(), getCallOptions(), request);
     }
 
     /**
@@ -430,6 +490,14 @@ public final class ProductServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.ProductItems> getProductsInCartByUser(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetProductsInCartByUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Product> findProduct(
         org.dataaccess.protobuf.SearchField request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -455,9 +523,10 @@ public final class ProductServiceGrpc {
 
   private static final int METHODID_REGISTER_PRODUCT = 0;
   private static final int METHODID_GET_PRODUCTS = 1;
-  private static final int METHODID_FIND_PRODUCT = 2;
-  private static final int METHODID_UPDATE_PRODUCT = 3;
-  private static final int METHODID_DELETE_PRODUCT = 4;
+  private static final int METHODID_GET_PRODUCTS_IN_CART_BY_USER = 2;
+  private static final int METHODID_FIND_PRODUCT = 3;
+  private static final int METHODID_UPDATE_PRODUCT = 4;
+  private static final int METHODID_DELETE_PRODUCT = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -482,6 +551,10 @@ public final class ProductServiceGrpc {
           break;
         case METHODID_GET_PRODUCTS:
           serviceImpl.getProducts((org.dataaccess.protobuf.Void) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.ProductItems>) responseObserver);
+          break;
+        case METHODID_GET_PRODUCTS_IN_CART_BY_USER:
+          serviceImpl.getProductsInCartByUser((org.dataaccess.protobuf.SearchField) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.ProductItems>) responseObserver);
           break;
         case METHODID_FIND_PRODUCT:
@@ -559,6 +632,7 @@ public final class ProductServiceGrpc {
               .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
               .addMethod(getRegisterProductMethod())
               .addMethod(getGetProductsMethod())
+              .addMethod(getGetProductsInCartByUserMethod())
               .addMethod(getFindProductMethod())
               .addMethod(getUpdateProductMethod())
               .addMethod(getDeleteProductMethod())

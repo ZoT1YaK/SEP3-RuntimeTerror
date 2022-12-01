@@ -11,6 +11,8 @@ public interface ProductDAO
 
     Collection<Product> getProducts();
 
+    Collection<Product> getAllProductFromCartByUsername(String username);
+
     Product findProduct(String productId);
 
     Category getCategory(String categoryName);

@@ -9,10 +9,13 @@ public class ProductLogic : IProductLogic
 {
 
     private readonly IProductDAO productDao;
+    
+    private readonly IUserDAO userDao;
 
-    public ProductLogic(IProductDAO productDao)
+    public ProductLogic(IProductDAO productDao, IUserDAO userDao)
     {
         this.productDao = productDao;
+        this.userDao = userDao;
     }
 
     public async Task<Product> RegisterProductAsync(ProductCreationDTO dto)
@@ -35,6 +38,33 @@ public class ProductLogic : IProductLogic
         var products = await productDao.GetProductsAsync();
 
         return products;
+    }
+
+    public async Task<IEnumerable<Product>> GetProductsInCartByUserAsync(string username)
+    {
+        User user = await userDao.FindUserAsync(username);
+
+        if (user == null)
+        {
+            throw new Exception("User not exists");
+        }
+        
+        var products = await productDao.GetProductsInCartByUserAsync(username);
+        
+        
+        return products;
+    }
+
+    public async Task<Product> FindProductByIdAsync(string productId)
+    {
+        var product = await productDao.FindProductByIdAsync(productId);
+
+        if (product == null)
+        {
+            throw new Exception("Product not exists");
+        }
+
+        return product;
     }
 
     public async Task DeleteProductAsync(string id)
