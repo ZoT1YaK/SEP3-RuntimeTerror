@@ -75,7 +75,7 @@ public class CartController : ControllerBase
         }
     }
 
-    [HttpDelete("DeleteCartItemsByUsername")]
+    [HttpDelete("DeleteAllFromCartAsync")]
     public async Task<ActionResult> DeleteAsync([FromQuery] string username)
     {
         try
@@ -90,12 +90,12 @@ public class CartController : ControllerBase
         }
     }
 
-    [HttpDelete("DeleteCartItemByProductId")]
-    public async Task<ActionResult> DeleteItemAsync([FromQuery] string productId)
+    [HttpDelete("DeleteFromCartAsync")]
+    public async Task<ActionResult> DeleteItemAsync(CartItemCreationDTO dto)
     {
         try
         {
-            await cartLogic.DeleteFromCartAsync(productId);
+            await cartLogic.DeleteFromCartAsync(dto);
             return Ok();
         }
         catch (Exception e)

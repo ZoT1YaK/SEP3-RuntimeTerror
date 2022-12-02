@@ -127,9 +127,18 @@ public class CartService extends CartServiceGrpc.CartServiceImplBase
 
     @Transactional
     @Override
-    public void deleteFromCart(SearchField request, StreamObserver<Void> responseObserver)
+    public void deleteFromCart(CartItem request, StreamObserver<Void> responseObserver)
     {
-        cartDAO.deleteCartItemByProduct_Id(request.getSearch());
+        org.dataaccess.Shared.Cart cart = cartDAO.getCartById(request.getCartId());
+
+        org.dataaccess.Shared.Product product = productDAO.findProduct(String.valueOf(request.getProductId()));
+
+        org.dataaccess.Shared.CartItem cartItem = new org.dataaccess.Shared.CartItem(
+                cart,
+                product
+        );
+
+        cartDAO.deleteCartItemByProduct_IdAndCart_User_Username(cartItem);
 
         responseObserver.onNext(Void.newBuilder().build());
         responseObserver.onCompleted();
