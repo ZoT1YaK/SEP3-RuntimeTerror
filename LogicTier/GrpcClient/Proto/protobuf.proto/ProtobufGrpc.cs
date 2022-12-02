@@ -583,6 +583,14 @@ public static partial class CartService
       __Marshaller_SearchField,
       __Marshaller_Void);
 
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::SearchField, global::Void> __Method_UpdateCartTotal = new grpc::Method<global::SearchField, global::Void>(
+      grpc::MethodType.Unary,
+      __ServiceName,
+      "UpdateCartTotal",
+      __Marshaller_SearchField,
+      __Marshaller_Void);
+
   /// <summary>Service descriptor</summary>
   public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
   {
@@ -715,6 +723,26 @@ public static partial class CartService
     public virtual grpc::AsyncUnaryCall<global::Void> DeleteAllFromCartAsync(global::SearchField request, grpc::CallOptions options)
     {
       return CallInvoker.AsyncUnaryCall(__Method_DeleteAllFromCart, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void UpdateCartTotal(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return UpdateCartTotal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::Void UpdateCartTotal(global::SearchField request, grpc::CallOptions options)
+    {
+      return CallInvoker.BlockingUnaryCall(__Method_UpdateCartTotal, null, options, request);
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> UpdateCartTotalAsync(global::SearchField request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return UpdateCartTotalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncUnaryCall<global::Void> UpdateCartTotalAsync(global::SearchField request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncUnaryCall(__Method_UpdateCartTotal, null, options, request);
     }
     /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

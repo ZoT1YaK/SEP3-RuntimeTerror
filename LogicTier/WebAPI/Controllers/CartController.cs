@@ -45,13 +45,28 @@ public class CartController : ControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpGet("getCartItems")]
     public async Task<IActionResult> GetAsync([FromQuery] string username)
     {
         try
         {
             var cart = await cartLogic.GetAllFromCartAsync(username);
             return Created("/cartitems", cart);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpGet("getCart")]
+    public async Task<IActionResult> FindCartAsync([FromQuery] string username)
+    {
+        try
+        {
+            var cart = await cartLogic.FindCartAsync(username);
+            return Created("/cart", cart);
         }
         catch (Exception e)
         {

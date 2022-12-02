@@ -92,4 +92,14 @@ public class CartDao : ICartDAO
 
         await cartService.DeleteAllFromCartAsync(sf);
     }
+
+    public async Task UpdateCartTotalAsync(string username)
+    {
+        var sf = new SearchField
+        {
+            Search = username
+        };
+
+        await cartService.UpdateCartTotalAsync(sf);
+    }
 }

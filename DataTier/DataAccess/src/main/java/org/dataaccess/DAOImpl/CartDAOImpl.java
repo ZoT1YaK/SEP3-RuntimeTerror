@@ -55,4 +55,9 @@ public class CartDAOImpl implements CartDAO
     public void deleteFromCartItemsByUsername(String username) {
         cartItemsRepository.deleteFromCartItemsByUsername(username);
     }
+
+    @Override
+    public void updateCartTotal(String cartUser) {
+        cartRepository.updateCartTotal(cartUser);
+    }
 }

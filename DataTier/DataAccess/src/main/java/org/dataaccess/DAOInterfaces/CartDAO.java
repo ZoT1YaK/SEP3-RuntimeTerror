@@ -19,4 +19,6 @@ public interface CartDAO
     Collection<CartItem> getAllFromCartItemsByCartUser(User user);
 
     void deleteFromCartItemsByUsername(String username);
+
+    void updateCartTotal(String cartUser);
 }

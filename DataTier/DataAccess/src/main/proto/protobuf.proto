@@ -26,6 +26,7 @@ service CartService{
   rpc FindCart(SearchField) returns (Cart);
   rpc GetAllFromCart(SearchField) returns (CartItems);
   rpc DeleteAllFromCart(SearchField) returns (Void);
+  rpc UpdateCartTotal(SearchField) returns (Void);
 }
 
 message User{
