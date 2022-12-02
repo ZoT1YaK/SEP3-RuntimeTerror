@@ -14,4 +14,6 @@ public interface ICartLogic
     public Task<ICollection<CartItem>> GetAllFromCartAsync(string username);
 
     public Task DeleteAllFromCartAsync(string username);
+
+    public Task DeleteFromCartAsync(string productId);
 }

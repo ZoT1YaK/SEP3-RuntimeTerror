@@ -41,8 +41,6 @@ public class CartLogic : ICartLogic
 
         Product product = await productDao.FindProductByIdAsync(dto.ProductId.ToString());
 
-        product.inStock = false;
-
         if (cart == null)
         {
             throw new Exception("Cart does not exist");
@@ -70,8 +68,6 @@ public class CartLogic : ICartLogic
         };
 
         await cartDao.RegisterCartItemAsync(cartItem);
-        
-        await cartDao.UpdateCartTotalAsync(cart.UserName);
     }
 
     public async Task<Cart> FindCartAsync(string username)
@@ -90,6 +86,7 @@ public class CartLogic : ICartLogic
         {
             throw new Exception("The cart does not exists");
         }
+        await cartDao.UpdateCartTotalAsync(username);
 
         return await cartDao.GetAllFromCartAsync(username);
     }
@@ -102,5 +99,17 @@ public class CartLogic : ICartLogic
         }
 
         await cartDao.DeleteAllFromCartAsync(username);
+    }
+
+    public async Task DeleteFromCartAsync(string productId)
+    {
+        Product product = await productDao.FindProductByIdAsync(productId);
+        
+        if (product == null)
+        {
+            throw new Exception("Product does not exist");
+        }
+
+        await cartDao.DeleteFromCartAsync(productId);
     }
 }

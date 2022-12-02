@@ -75,12 +75,27 @@ public class CartController : ControllerBase
         }
     }
 
-    [HttpDelete]
+    [HttpDelete("DeleteCartItemsByUsername")]
     public async Task<ActionResult> DeleteAsync([FromQuery] string username)
     {
         try
         {
             await cartLogic.DeleteAllFromCartAsync(username);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete("DeleteCartItemByProductId")]
+    public async Task<ActionResult> DeleteItemAsync([FromQuery] string productId)
+    {
+        try
+        {
+            await cartLogic.DeleteFromCartAsync(productId);
             return Ok();
         }
         catch (Exception e)

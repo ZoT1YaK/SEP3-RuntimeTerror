@@ -21,4 +21,6 @@ public interface CartDAO
     void deleteFromCartItemsByUsername(String username);
 
     void updateCartTotal(String cartUser);
+
+    void deleteCartItemByProduct_Id(String productId);
 }
