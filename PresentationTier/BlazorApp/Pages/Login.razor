@@ -59,7 +59,8 @@
         try
         {
             await _authService.LoginAsync(userName, password);
-            NavManager.NavigateTo("/");
+            // NavManager.NavigateTo("/");
+            NavManager.NavigateTo("/Profile");
         }
         catch (Exception e)
         {
