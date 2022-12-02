@@ -45,7 +45,7 @@ public class CartController : ControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpGet("getCartItems")]
     public async Task<IActionResult> GetAsync([FromQuery] string username)
     {
         try
@@ -60,12 +60,42 @@ public class CartController : ControllerBase
         }
     }
 
-    [HttpDelete]
+    [HttpGet("getCart")]
+    public async Task<IActionResult> FindCartAsync([FromQuery] string username)
+    {
+        try
+        {
+            var cart = await cartLogic.FindCartAsync(username);
+            return Created("/cart", cart);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete("DeleteCartItemsByUsername")]
     public async Task<ActionResult> DeleteAsync([FromQuery] string username)
     {
         try
         {
             await cartLogic.DeleteAllFromCartAsync(username);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete("DeleteCartItemByProductId")]
+    public async Task<ActionResult> DeleteItemAsync([FromQuery] string productId)
+    {
+        try
+        {
+            await cartLogic.DeleteFromCartAsync(productId);
             return Ok();
         }
         catch (Exception e)

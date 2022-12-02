@@ -114,4 +114,24 @@ public class CartService extends CartServiceGrpc.CartServiceImplBase
         responseObserver.onNext(Void.newBuilder().build());
         responseObserver.onCompleted();
     }
+
+    @Transactional
+    @Override
+    public void updateCartTotal(SearchField request, StreamObserver<Void> responseObserver)
+    {
+        cartDAO.updateCartTotal(request.getSearch());
+
+        responseObserver.onNext(Void.newBuilder().build());
+        responseObserver.onCompleted();
+    }
+
+    @Transactional
+    @Override
+    public void deleteFromCart(SearchField request, StreamObserver<Void> responseObserver)
+    {
+        cartDAO.deleteCartItemByProduct_Id(request.getSearch());
+
+        responseObserver.onNext(Void.newBuilder().build());
+        responseObserver.onCompleted();
+    }
 }

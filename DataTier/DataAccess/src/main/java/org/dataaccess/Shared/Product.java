@@ -20,6 +20,7 @@ public class Product implements Serializable
 
     private String description;
 
+    @Column(columnDefinition = "boolean default true")
     private boolean inStock;
 
     @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)

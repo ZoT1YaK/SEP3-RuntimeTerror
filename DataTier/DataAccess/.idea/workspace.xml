@@ -7,64 +7,37 @@
     <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="CartItems Update DataTier/LogicTier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/CartDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/CartDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/UserDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/CartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/Shared/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/mappers/CartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/mappers/CartMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartItemsOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartItemsOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartOrBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartServiceGrpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/CartItemsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/CartItemsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/protobuf.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/protobuf.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/CartDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/CartDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/UserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOInterfaces/CartDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOInterfaces/CartDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/Shared/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/Shared/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/Shared/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/Shared/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/mappers/CartMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/mappers/CartMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Cart$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Cart$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Cart$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Cart$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartItems$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartItems$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartItemsOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartItemsOrBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartOrBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceBaseDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceBlockingStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceFileDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceFutureStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceImplBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceMethodDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$CartServiceStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc$MethodHandlers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/CartServiceGrpc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Protobuf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Protobuf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/repositories/CartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/repositories/CartRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/Protobuf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/Protobuf.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/ProtobufGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/Proto/protobuf.proto/ProtobufGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/DTOs/CartDTO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/Models/Cart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/Models/Cart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/Shared/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Shared/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,31 +65,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/VIA_SEP/SEP3/Other Group/MANGO-SEP3/DataTier/DatabaseAccess",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors",
-    "spring.configuration.checksum": "ecef4e1421e9950c84f3fbd46c0935d4"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/VIA_SEP/SEP3/Other Group/MANGO-SEP3/DataTier/DatabaseAccess&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;ecef4e1421e9950c84f3fbd46c0935d4&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="GrpcServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GrpcServer" />
@@ -178,7 +151,9 @@
       <workItem from="1669748826442" duration="18099000" />
       <workItem from="1669768677435" duration="328000" />
       <workItem from="1669834452385" duration="15681000" />
-      <workItem from="1669907716471" duration="22247000" />
+      <workItem from="1669907716471" duration="28174000" />
+      <workItem from="1669938415876" duration="4120000" />
+      <workItem from="1670010566157" duration="9707000" />
     </task>
     <task id="LOCAL-00001" summary="T2 commit">
       <created>1667754724100</created>

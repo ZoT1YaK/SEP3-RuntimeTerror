@@ -29,7 +29,8 @@ public class ProductsController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-
+    
+    [Route("getproducts")]
     [HttpGet]
     public async Task<IActionResult> GetAsync()
     {
@@ -37,6 +38,21 @@ public class ProductsController : ControllerBase
         {
             var created = await productLogic.GetProductsAsync();
             return Created($"/products", created);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetProductsInCartByUserAsync([FromQuery] string username)
+    {
+        try
+        {
+            var products = await productLogic.GetProductsInCartByUserAsync(username);
+            return Created("/cartproducts", products);
         }
         catch (Exception e)
         {

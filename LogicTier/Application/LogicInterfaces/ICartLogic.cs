@@ -9,7 +9,11 @@ public interface ICartLogic
     
     public Task RegisterCartItemAsync(CartItemCreationDTO dto);
 
+    public Task<Cart> FindCartAsync(string username);
+
     public Task<ICollection<CartItem>> GetAllFromCartAsync(string username);
 
     public Task DeleteAllFromCartAsync(string username);
+
+    public Task DeleteFromCartAsync(string productId);
 }

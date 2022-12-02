@@ -14,6 +14,7 @@ service UserService{
 service ProductService{
   rpc RegisterProduct(Product) returns (Product);
   rpc GetProducts(Void) returns (ProductItems);
+  rpc GetProductsInCartByUser(SearchField) returns (ProductItems);
   rpc FindProduct(SearchField) returns (Product);
   rpc UpdateProduct(Product) returns (Void);
   rpc DeleteProduct(SearchField) returns (Void);
@@ -25,6 +26,8 @@ service CartService{
   rpc FindCart(SearchField) returns (Cart);
   rpc GetAllFromCart(SearchField) returns (CartItems);
   rpc DeleteAllFromCart(SearchField) returns (Void);
+  rpc UpdateCartTotal(SearchField) returns (Void);
+  rpc DeleteFromCart(SearchField) returns (Void);
 }
 
 message User{

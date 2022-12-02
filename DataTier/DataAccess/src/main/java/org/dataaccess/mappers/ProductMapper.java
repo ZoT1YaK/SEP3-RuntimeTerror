@@ -13,6 +13,7 @@ public abstract class ProductMapper
                 .setPrice(product.getPrice())
                 .setDescription(product.getDescription())
                 .setCategory(CategoryMapper.mapToProto(product.getCategory()))
+                .setInStock(product.isInStock())
                 .build();
     }
 }

@@ -63,6 +63,29 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase
     }
 
     @Override
+    public void getProductsInCartByUser(SearchField request, StreamObserver<ProductItems> responseObserver)
+    {
+        Collection<org.dataaccess.Shared.Product> products = productDAO.getAllProductFromCartByUsername(request.getSearch());
+
+        if (products.isEmpty()) {
+            responseObserver.onError(new Exception("No products in cart"));
+            return;
+        }
+
+        Collection<Product> productCollection = new ArrayList<>();
+
+        for (var product : products)
+        {
+            productCollection.add(ProductMapper.mapToProto(product));
+        }
+
+        ProductItems productItems = ProductItems.newBuilder().addAllProduct(productCollection).build();
+
+        responseObserver.onNext(productItems);
+        responseObserver.onCompleted();
+    }
+
+    @Override
     public void findProduct(SearchField request, StreamObserver<Product> responseObserver)
     {
         org.dataaccess.Shared.Product product = productDAO.findProduct(request.getSearch());

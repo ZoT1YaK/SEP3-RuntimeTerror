@@ -105,18 +105,22 @@ public final class Protobuf {
       "\032\005.User\022\037\n\nLoginUsers\022\n.LoginUser\032\005.User" +
       "\022\037\n\010FindUser\022\014.SearchField\032\005.User\022!\n\nAdd" +
       "Credits\022\014.CreditsUser\032\005.Void\022$\n\rRemoveCr" +
-      "edits\022\014.CreditsUser\032\005.Void2\313\001\n\016ProductSe" +
+      "edits\022\014.CreditsUser\032\005.Void2\203\002\n\016ProductSe" +
       "rvice\022%\n\017RegisterProduct\022\010.Product\032\010.Pro" +
       "duct\022#\n\013GetProducts\022\005.Void\032\r.ProductItem" +
-      "s\022%\n\013FindProduct\022\014.SearchField\032\010.Product" +
-      "\022 \n\rUpdateProduct\022\010.Product\032\005.Void\022$\n\rDe" +
-      "leteProduct\022\014.SearchField\032\005.Void2\310\001\n\013Car" +
-      "tService\022\034\n\014RegisterCart\022\005.Cart\032\005.Void\022$" +
-      "\n\020RegisterCartItem\022\t.CartItem\032\005.Void\022\037\n\010" +
-      "FindCart\022\014.SearchField\032\005.Cart\022*\n\016GetAllF" +
-      "romCart\022\014.SearchField\032\n.CartItems\022(\n\021Del" +
-      "eteAllFromCart\022\014.SearchField\032\005.VoidB\033\n\027o" +
-      "rg.dataaccess.protobufP\001b\006proto3"
+      "s\0226\n\027GetProductsInCartByUser\022\014.SearchFie" +
+      "ld\032\r.ProductItems\022%\n\013FindProduct\022\014.Searc" +
+      "hField\032\010.Product\022 \n\rUpdateProduct\022\010.Prod" +
+      "uct\032\005.Void\022$\n\rDeleteProduct\022\014.SearchFiel" +
+      "d\032\005.Void2\227\002\n\013CartService\022\034\n\014RegisterCart" +
+      "\022\005.Cart\032\005.Void\022$\n\020RegisterCartItem\022\t.Car" +
+      "tItem\032\005.Void\022\037\n\010FindCart\022\014.SearchField\032\005" +
+      ".Cart\022*\n\016GetAllFromCart\022\014.SearchField\032\n." +
+      "CartItems\022(\n\021DeleteAllFromCart\022\014.SearchF" +
+      "ield\032\005.Void\022&\n\017UpdateCartTotal\022\014.SearchF" +
+      "ield\032\005.Void\022%\n\016DeleteFromCart\022\014.SearchFi" +
+      "eld\032\005.VoidB\033\n\027org.dataaccess.protobufP\001b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,4 +14,8 @@ public interface ICartDAO
     public Task<ICollection<CartItem>> GetAllFromCartAsync(string username);
 
     public Task DeleteAllFromCartAsync(string username);
+
+    public Task UpdateCartTotalAsync(string username);
+
+    public Task DeleteFromCartAsync(string productId);
 }

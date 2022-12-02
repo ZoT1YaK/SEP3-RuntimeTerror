@@ -169,6 +169,68 @@ public final class CartServiceGrpc {
     return getDeleteAllFromCartMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getUpdateCartTotalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateCartTotal",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.Void.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getUpdateCartTotalMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void> getUpdateCartTotalMethod;
+    if ((getUpdateCartTotalMethod = CartServiceGrpc.getUpdateCartTotalMethod) == null) {
+      synchronized (CartServiceGrpc.class) {
+        if ((getUpdateCartTotalMethod = CartServiceGrpc.getUpdateCartTotalMethod) == null) {
+          CartServiceGrpc.getUpdateCartTotalMethod = getUpdateCartTotalMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCartTotal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Void.getDefaultInstance()))
+              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("UpdateCartTotal"))
+              .build();
+        }
+      }
+    }
+    return getUpdateCartTotalMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getDeleteFromCartMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteFromCart",
+      requestType = org.dataaccess.protobuf.SearchField.class,
+      responseType = org.dataaccess.protobuf.Void.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField,
+      org.dataaccess.protobuf.Void> getDeleteFromCartMethod() {
+    io.grpc.MethodDescriptor<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void> getDeleteFromCartMethod;
+    if ((getDeleteFromCartMethod = CartServiceGrpc.getDeleteFromCartMethod) == null) {
+      synchronized (CartServiceGrpc.class) {
+        if ((getDeleteFromCartMethod = CartServiceGrpc.getDeleteFromCartMethod) == null) {
+          CartServiceGrpc.getDeleteFromCartMethod = getDeleteFromCartMethod =
+              io.grpc.MethodDescriptor.<org.dataaccess.protobuf.SearchField, org.dataaccess.protobuf.Void>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFromCart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.SearchField.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.dataaccess.protobuf.Void.getDefaultInstance()))
+              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("DeleteFromCart"))
+              .build();
+        }
+      }
+    }
+    return getDeleteFromCartMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -252,6 +314,20 @@ public final class CartServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAllFromCartMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void updateCartTotal(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCartTotalMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deleteFromCart(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFromCartMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -289,6 +365,20 @@ public final class CartServiceGrpc {
                 org.dataaccess.protobuf.SearchField,
                 org.dataaccess.protobuf.Void>(
                   this, METHODID_DELETE_ALL_FROM_CART)))
+          .addMethod(
+            getUpdateCartTotalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.Void>(
+                  this, METHODID_UPDATE_CART_TOTAL)))
+          .addMethod(
+            getDeleteFromCartMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                org.dataaccess.protobuf.SearchField,
+                org.dataaccess.protobuf.Void>(
+                  this, METHODID_DELETE_FROM_CART)))
           .build();
     }
   }
@@ -346,6 +436,22 @@ public final class CartServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAllFromCartMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateCartTotal(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateCartTotalMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteFromCart(org.dataaccess.protobuf.SearchField request,
+        io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteFromCartMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -395,6 +501,20 @@ public final class CartServiceGrpc {
     public org.dataaccess.protobuf.Void deleteAllFromCart(org.dataaccess.protobuf.SearchField request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAllFromCartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.Void updateCartTotal(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateCartTotalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.dataaccess.protobuf.Void deleteFromCart(org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteFromCartMethod(), getCallOptions(), request);
     }
   }
 
@@ -451,6 +571,22 @@ public final class CartServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAllFromCartMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> updateCartTotal(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateCartTotalMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.dataaccess.protobuf.Void> deleteFromCart(
+        org.dataaccess.protobuf.SearchField request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteFromCartMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_CART = 0;
@@ -458,6 +594,8 @@ public final class CartServiceGrpc {
   private static final int METHODID_FIND_CART = 2;
   private static final int METHODID_GET_ALL_FROM_CART = 3;
   private static final int METHODID_DELETE_ALL_FROM_CART = 4;
+  private static final int METHODID_UPDATE_CART_TOTAL = 5;
+  private static final int METHODID_DELETE_FROM_CART = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -494,6 +632,14 @@ public final class CartServiceGrpc {
           break;
         case METHODID_DELETE_ALL_FROM_CART:
           serviceImpl.deleteAllFromCart((org.dataaccess.protobuf.SearchField) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
+          break;
+        case METHODID_UPDATE_CART_TOTAL:
+          serviceImpl.updateCartTotal((org.dataaccess.protobuf.SearchField) request,
+              (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
+          break;
+        case METHODID_DELETE_FROM_CART:
+          serviceImpl.deleteFromCart((org.dataaccess.protobuf.SearchField) request,
               (io.grpc.stub.StreamObserver<org.dataaccess.protobuf.Void>) responseObserver);
           break;
         default:
@@ -562,6 +708,8 @@ public final class CartServiceGrpc {
               .addMethod(getFindCartMethod())
               .addMethod(getGetAllFromCartMethod())
               .addMethod(getDeleteAllFromCartMethod())
+              .addMethod(getUpdateCartTotalMethod())
+              .addMethod(getDeleteFromCartMethod())
               .build();
         }
       }
