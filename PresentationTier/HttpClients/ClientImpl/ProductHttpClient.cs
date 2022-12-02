@@ -47,13 +47,27 @@ public class ProductHttpClient : IProductService
 
     public async Task<ICollection<Product>> GetProductsAsync()
     {
-        HttpResponseMessage response = await httpClient.GetAsync("/Products");
+        HttpResponseMessage response = await httpClient.GetAsync("/Products/getproducts");
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
-        {
             throw new Exception(result);
-        }
 
+            ICollection<Product> products = JsonSerializer.Deserialize<ICollection<Product>>(result, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        return products;
+    }
+
+    public async Task<ICollection<Product>> GetProductsInCartByUserAsync(string username)
+    {
+        HttpResponseMessage response =
+            await httpClient.GetAsync($"/Products?username={username}");
+        string result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+            throw new Exception(result);
+        
         ICollection<Product> products = JsonSerializer.Deserialize<ICollection<Product>>(result, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true

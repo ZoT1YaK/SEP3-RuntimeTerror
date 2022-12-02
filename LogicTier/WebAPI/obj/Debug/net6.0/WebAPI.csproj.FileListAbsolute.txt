@@ -195,3 +195,6 @@ C:\VIA_SEP\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.E
 C:\Users\diana\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\diana\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\diana\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\VIA\Semester_3\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\VIA\Semester_3\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\VIA\Semester_3\SEP3\SEP3-RuntimeTerror\LogicTier\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

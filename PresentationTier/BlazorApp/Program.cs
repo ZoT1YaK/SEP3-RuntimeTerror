@@ -23,5 +23,8 @@ builder.Services.AddScoped<IAuthService, JwtAuthService>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
 
 
+builder.Services.AddScoped<ICartService, CartHttpClient>();
+
+
 AuthorizationPolicies.AddPolicies(builder.Services);
 await builder.Build().RunAsync();

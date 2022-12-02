@@ -29,8 +29,9 @@ public class ProductsController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-
-    [HttpGet("getAllProducts")]
+    
+    [Route("getproducts")]
+    [HttpGet]
     public async Task<IActionResult> GetAsync()
     {
         try
@@ -45,7 +46,7 @@ public class ProductsController : ControllerBase
         }
     }
 
-    [HttpGet("getAllProductsFromCart")]
+    [HttpGet]
     public async Task<IActionResult> GetProductsInCartByUserAsync([FromQuery] string username)
     {
         try
