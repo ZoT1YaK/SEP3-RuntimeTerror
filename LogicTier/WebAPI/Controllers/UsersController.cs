@@ -100,8 +100,8 @@ public class UserController : ControllerBase
             new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
             new Claim(ClaimTypes.Name, user.userName),
             new Claim(ClaimTypes.Role, user.type),
-            new Claim("First Name", user.FirstName),
-            new Claim("Last Name", user.LastName),
+            new Claim("FirstName", user.FirstName),
+            new Claim("LastName", user.LastName),
             new Claim("Credits", user.Credits.ToString())
         };
         return claims.ToList();

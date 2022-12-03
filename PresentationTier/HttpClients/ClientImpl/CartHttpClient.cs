@@ -25,4 +25,15 @@ public class CartHttpClient : ICartService
             throw new Exception(result);
         
     }
+
+    public async Task RemoveItemFromCartAsync(CartItemCreationDTO dto)
+    {
+        HttpResponseMessage response = await httpClient.DeleteAsync("/Cart/DeleteFromCartAsync");
+        
+        string result = await response.Content.ReadAsStringAsync();
+        
+        if (!response.IsSuccessStatusCode)
+            throw new Exception(result);
+    }
+
 }

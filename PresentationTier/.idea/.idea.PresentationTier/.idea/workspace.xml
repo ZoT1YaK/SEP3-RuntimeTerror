@@ -5,24 +5,9 @@
     <projectFile profileName="IIS Express">BlazorApp/BlazorApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc8e711b-d5a5-453e-afdc-088fa1e7375f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../DataTier/DataAccess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTier/DataAccess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTier/DataAccess/src/main/java/org/dataaccess/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTier/DataAccess/src/main/java/org/dataaccess/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTier/DataAccess/target/classes/org/dataaccess/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTier/DataAccess/target/classes/org/dataaccess/repositories/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/Controllers/ProductsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/ref/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/ref/WebAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/refint/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/refint/WebAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
+    <list default="true" id="fc8e711b-d5a5-453e-afdc-088fa1e7375f" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/../DataTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTier/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PresentationTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PresentationTier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HttpClients/ClientImpl/ProductHttpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HttpClients/ClientImpl/ProductHttpClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HttpClients/bin/Debug/net6.0/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HttpClients/bin/Debug/net6.0/HttpClients.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HttpClients/bin/Debug/net6.0/HttpClients.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HttpClients/bin/Debug/net6.0/HttpClients.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HttpClients/obj/Debug/net6.0/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HttpClients/obj/Debug/net6.0/HttpClients.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HttpClients/obj/Debug/net6.0/HttpClients.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HttpClients/obj/Debug/net6.0/HttpClients.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +22,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5d938e1a52458be6d778788b5454cca6af63f3848625822d2877455acbcc3b/ClaimsPrincipal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LogicTier/Shared/DTOs/UserCreationDTO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LogicTier/Shared/Models/User.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LogicTier/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
