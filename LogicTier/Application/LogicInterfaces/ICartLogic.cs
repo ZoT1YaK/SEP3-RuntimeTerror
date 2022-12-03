@@ -15,5 +15,5 @@ public interface ICartLogic
 
     public Task DeleteAllFromCartAsync(string username);
 
-    public Task DeleteFromCartAsync(CartItemCreationDTO cartItem);
+    public Task DeleteFromCartAsync(string productId);
 }

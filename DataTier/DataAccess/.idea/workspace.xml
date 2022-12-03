@@ -6,7 +6,38 @@
   <component name="ChangeListManager">
     <list default="true" id="6124d17f-2f90-440f-bf6d-8657e14f3ef0" name="Changes" comment="CartItems Update DataTier/LogicTier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/CartDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOImpl/CartDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/DAOInterfaces/CartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/CartServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/protobuf/Protobuf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/CartItemsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dataaccess/repositories/CartItemsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/protobuf.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/protobuf.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/DataAccess-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/CartDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/DAOImpl/CartDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Protobuf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dataaccess/protobuf/Protobuf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/bin/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/Application/obj/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/../../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,8 +153,7 @@
       <workItem from="1669834452385" duration="15681000" />
       <workItem from="1669907716471" duration="28174000" />
       <workItem from="1669938415876" duration="4120000" />
-      <workItem from="1670010566157" duration="12237000" />
-      <workItem from="1670027133536" duration="1513000" />
+      <workItem from="1670010566157" duration="9707000" />
     </task>
     <task id="LOCAL-00001" summary="T2 commit">
       <created>1667754724100</created>
