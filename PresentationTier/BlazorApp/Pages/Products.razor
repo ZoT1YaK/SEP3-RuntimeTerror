@@ -39,7 +39,7 @@ else
                                         <p>@product.Description</p>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="wcf-left"><span class="price">@product.Price <i>dkk</i></span></div>
+                                        <div class="wcf-left"><span class="price">@product.Id <i>dkk</i></span></div>
                                         <div class="wcf-right"><a href="/Products" @onclick="() => AddToCart(product.Id)" class="buy-btn" style="background: url('https://api.iconify.design/zmdi/shopping-basket.svg') no-repeat center center / contain;"></a></div>
                                     </div>
                                 </div>
@@ -54,32 +54,32 @@ else
 
 
 @code {
-    
+
     [CascadingParameter]
     public Task<AuthenticationState> AuthState { get; set; } = null!;
 
     private string? name;
     private IEnumerable<Claim>? userClaims;
     private bool isLoggedIn;
-    
-    
+
+
     private ICollection<Product> products = new List<Product>();
     private string errormsg = "";
     private int productId;
-  
-  
+
+
     protected override async Task OnInitializedAsync()
     {
         try
         {
             products = await productService.GetProductsAsync();
-            
+
             AuthenticationState authState = await AuthState;
             ClaimsPrincipal user = authState.User;
             isLoggedIn = user.Identity != null;
-        
+
             if (!isLoggedIn) return;
-        
+
             userClaims = user.Claims;
             name = user.Identity!.Name!;
         }
@@ -89,14 +89,14 @@ else
             errormsg = e.Message;
         }
     }
-    
-    
+
+
 
     private async Task AddToCart(int id)
     {
         try
         {
-            
+
             var dto = new CartItemCreationDTO
             {
                 ProductId = id,
@@ -111,6 +111,9 @@ else
             errormsg = e.Message;
         }
     }
+    
 
-}
+
+
+  }
 }

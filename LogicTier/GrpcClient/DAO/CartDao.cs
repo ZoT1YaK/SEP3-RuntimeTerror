@@ -103,14 +103,13 @@ public class CartDao : ICartDAO
         await cartService.UpdateCartTotalAsync(sf);
     }
 
-    public async Task DeleteFromCartAsync(Shared.Models.CartItem cartItem)
+    public async Task DeleteFromCartAsync(string productId)
     {
-        var cartItemToSend = new CartItem
+        var sf = new SearchField
         {
-            CartId = cartItem.CartId,
-            ProductId = cartItem.ProductId
+            Search = productId
         };
 
-        await cartService.DeleteFromCartAsync(cartItemToSend);
+        await cartService.DeleteFromCartAsync(sf);
     }
 }
