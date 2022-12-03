@@ -46,6 +46,7 @@ public class ProductsController : ControllerBase
         }
     }
 
+    [Route("getcartproducts")]
     [HttpGet]
     public async Task<IActionResult> GetProductsInCartByUserAsync([FromQuery] string username)
     {

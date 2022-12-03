@@ -62,7 +62,7 @@ public class CartDAOImpl implements CartDAO
     }
 
     @Override
-    public void deleteCartItemByProduct_Id(String productId) {
-        cartItemsRepository.deleteCartItemByProduct_Id(Integer.parseInt(productId));
+    public void deleteCartItemByProduct_IdAndCart_User_Username(CartItem cartItem) {
+        cartItemsRepository.deleteCartItemByProduct_IdAndCart_User_Username(cartItem.getProduct().getId(), cartItem.getCart().getUser().getUsername());
     }
 }

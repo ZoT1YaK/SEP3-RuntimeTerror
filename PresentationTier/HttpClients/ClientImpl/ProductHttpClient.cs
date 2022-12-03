@@ -52,7 +52,7 @@ public class ProductHttpClient : IProductService
         if (!response.IsSuccessStatusCode)
             throw new Exception(result);
 
-            ICollection<Product> products = JsonSerializer.Deserialize<ICollection<Product>>(result, new JsonSerializerOptions
+        ICollection<Product> products = JsonSerializer.Deserialize<ICollection<Product>>(result, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         })!;
@@ -62,7 +62,7 @@ public class ProductHttpClient : IProductService
     public async Task<ICollection<Product>> GetProductsInCartByUserAsync(string username)
     {
         HttpResponseMessage response =
-            await httpClient.GetAsync($"/Products?username={username}");
+            await httpClient.GetAsync($"/Products/getcartproducts?username={username}");
         string result = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)

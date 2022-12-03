@@ -11,7 +11,7 @@ import java.util.Collection;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer>
 {
-    @Query("SELECT p FROM Product p WHERE p.id IN (SELECT ci.id FROM CartItem ci WHERE ci.cart.user.username = ?1)")
+    @Query("SELECT p FROM Product p WHERE p.id IN (SELECT ci.product.id FROM CartItem ci WHERE ci.cart.user.username = ?1)")
     Collection<Product> getAllProductFromCartByUsername(String username);
 
     @Modifying(clearAutomatically = true)
