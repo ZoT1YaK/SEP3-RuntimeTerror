@@ -1,8 +1,10 @@
 ﻿@page "/Cart"
 @using System.Security.Claims
+@using global::Shared.DTOs
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @inject IProductService productService;
+@inject ICartService cartService;
 
 
 @if (products == null)
@@ -36,6 +38,7 @@ else
                                 </div>
                                 <div class="card-footer">
                                     <div class="wcf-left"><span class="price">@product.Price <i>dkk</i></span></div>
+                                    <div class="wcf-right"><a href="/Cart" @onclick="() => RemoveItemFromCartAsync(product.Id)" class="buy-btn" style="background: url('https://api.iconify.design/zmdi/shopping-basket.svg') no-repeat center center / contain;"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +65,7 @@ else
 
     private string errormsg = "";
     private ICollection<Product> products = new List<Product>();
-
+    private int productId;
 
 
     protected override async Task OnInitializedAsync()
@@ -79,6 +82,26 @@ else
             name = user.Identity!.Name!;
             
             products = await productService.GetProductsInCartByUserAsync(name);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errormsg = e.Message;
+        }
+    }
+    
+    private async Task RemoveItemFromCartAsync(int id)
+    {
+        try
+        {
+
+            var dto = new CartItemCreationDTO
+            {
+                ProductId = id,
+                UserName = name
+            };
+
+            await cartService.RemoveItemFromCartAsync(dto);
         }
         catch (Exception e)
         {
