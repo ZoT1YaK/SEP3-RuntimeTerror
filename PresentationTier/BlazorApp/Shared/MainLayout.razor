@@ -3,6 +3,7 @@
 @inject IAuthService _authService
 @inject NavigationManager NavManager
 
+
 <div class="page">
     <div class="sidebar">
         <NavMenu/>
@@ -12,7 +13,6 @@
         <AuthorizeView>
             <Authorized>
                 <div class="top-row px-4">
-                    <span class="oi oi-cart m-xl-auto">Total Price</span>
                     <button class="btn btn-primary" type="button" @onclick="LogOut">Log Out</button>
                 </div>
             </Authorized>
