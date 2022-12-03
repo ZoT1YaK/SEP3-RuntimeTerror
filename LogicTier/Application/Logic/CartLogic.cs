@@ -101,28 +101,15 @@ public class CartLogic : ICartLogic
         await cartDao.DeleteAllFromCartAsync(username);
     }
 
-    public async Task DeleteFromCartAsync(CartItemCreationDTO dto)
+    public async Task DeleteFromCartAsync(string productId)
     {
-        Cart cart = await cartDao.FindCartAsync(dto.UserName);
+        Product product = await productDao.FindProductByIdAsync(productId);
         
-        Product product = await productDao.FindProductByIdAsync(dto.ProductId.ToString());
-
-        if (cart == null)
-        {
-            throw new Exception("Cart does not exist");
-        }
-
         if (product == null)
         {
             throw new Exception("Product does not exist");
         }
 
-        CartItem cartItem = new CartItem
-        {
-            CartId = cart.Id,
-            ProductId = dto.ProductId
-        };
-
-        await cartDao.DeleteFromCartAsync(cartItem);
+        await cartDao.DeleteFromCartAsync(productId);
     }
 }

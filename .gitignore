@@ -1,2 +1,5 @@
 ﻿/PresentationTier/BlazorApp/obj/
 /PresentationTier/BlazorApp/bin/
+*.dll
+*.dll
+LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll

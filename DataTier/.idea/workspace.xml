@@ -5,24 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eafd07b0-8a5d-47a9-8ed9-0ce1ba3448be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/bin/Debug/net6.0/WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/Debug/net6.0/WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/../LogicTier/WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PresentationTier/.idea/.idea.PresentationTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2022_11_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/.idea/.idea.PresentationTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2022_11_11_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PresentationTier/.idea/.idea.PresentationTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2022_11_51_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/.idea/.idea.PresentationTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2022_11_51_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/.idea/.idea.PresentationTier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/BlazorApp/Pages/Profile.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/BlazorApp/Pages/Profile.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/BlazorApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/BlazorApp/Shared/NavMenu.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/bin/Debug/net6.0/HttpClients.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/Debug/net6.0/HttpClients.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/HttpClients.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationTier/HttpClients/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +120,8 @@
       <workItem from="1669325348068" duration="1308000" />
       <workItem from="1669574291822" duration="238000" />
       <workItem from="1669675624230" duration="2015000" />
-      <workItem from="1669920763550" duration="6398000" />
+      <workItem from="1669920763550" duration="9531000" />
+      <workItem from="1670018685778" duration="1568000" />
     </task>
     <servers />
   </component>
